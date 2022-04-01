@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Archivos multimedia</h1>
+            <hr>
+            <!-- etiqueta "img" para insertar imagen. 2 atirbutos "src" para ver donde está la fuente y "alt" como texto alternativo, para explicar a google la imagen o si no sale que tenga texto -->
+            <!-- etiqueta "figure" agrupa archivo con un texto para que estén íntimamente relacionados. -->
+            <!-- etiqueta "figcaption" inserta en texto el nombre de la fotografía -->
+            <article>
+                <h2>Imágenes</h2>
+                <figure>
+                    <img src="./assets/pexels-cottonbro-5192247.jpg" alt="Fotografia de una motocicleta" width="50%">
+                    <figcaption>Moto chopper</figcaption>
+                </figure>
+                <figure>
+                    <img src="./assets/pexels-cottonbro-5803320.jpg" alt="Fotografia de una motocicleta" width="50%">
+                    <figcaption>Moto de campo</figcaption>
+                </figure>
+                <hr>
+            </article>
+            <!-- eitqueta "video para insertar el video" -->
+            <!-- se puede insertar desde archivo o desde source -->
+            <!-- atributo "controls" para la botonera de control del video -->
+            <article>
+                <h2>Vídeos</h2>
+                <figure>
+                    <video src="./assets/Pexels Videos 2795749.mp4" controls width="50%"></video>
+                    <figcaption>Tio bailando</figcaption>
+                </figure>
+            <!-- si el video tuviera varios formatos, se añade de forma diferente y con type -->
+            <!-- primero etiqueta "video" y dentro etiqueta "source" dandole atributos a cual corresponda -->
+            <figure>
+                <video width="50%" controls>
+                    <source src="./assets/production ID_5207049.mp4" type="video/mp4">
+                    <source src="./assets/production ID_5207049.ogg" type="video/ogg">
+                    <source src="./assets/production ID_5207049.webm" type="video/webm">
+                    Tu navegador no soporta elementos de video
+                </video>
+                <figcaption>Tio montando en moto</figcaption>
+            </figure>
+            <hr>
+            </article>
+            <article>
+                <!-- etiqueta "audio" para insertar el audio -->
+                <!-- volvemos a poner atributo control, porque si no no sale ni el reproductor. -->
+                <h2>Audio</h2>
+                <figure>
+                    <audio src="./assets/At First Sight - FiftySounds.mp3" controls>
+                        Tu navegador no soporta audio.
+                    </audio>
+                    <figcaption>Cancion que me he descargado</figcaption>
+                </figure>
+                <!-- Otra forma de insertarlo -->
+                <figure>
+                    <audio controls>
+                        <source src="./assets/At First Sight - FiftySounds.mp3" type="audio/mpeg">
+                        <source src="./assets/At First Sight - FiftySounds.ogg" type="audio/ogg">
+                        <source src="./assets/At First Sight - FiftySounds.flac" type="audio/flac">
+                        Tu navegador no soporta audio
+                    </audio>
+                    <figcaption>Cancion que me he descargado</figcaption>
+                </figure>
+                <hr>
+            </article>
+            <article>
+                <!-- etiqueta "iframe" podemos ver una web externa dentro de la nuestra (No recomendable) -->
+                <h2>Iframes</h2>
+                <figure>
+                    <iframe src="./assets/Pexels Videos 2795749.mp4"></iframe>
+                    <figcaption>Iframe del video del tio bailando</figcaption>
+                </figure>
+                <figure>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25227.39462813524!2d-3.7968650000000137!3d37.78009435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6dd713cb5302c7%3A0x9cfb2c858b405702!2zSmHDqW4!5e0!3m2!1ses!2ses!4v1648810562356!5m2!1ses!2ses" width="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <figcaption>JNP</figcaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

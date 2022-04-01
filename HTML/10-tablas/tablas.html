@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/459/459695.png">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Tablas HTML</h1>
+            <hr>
+            <article>
+                <h2>Listado de cursos</h2>
+                <!-- etiqueta "table" indica el trozo de codigo donde va a ir la tabla -->
+                <!-- etiqueta "tr" table row por cada fila que queramos (FILAS)-->
+                <!-- etiqueta "td" table datacel una por celda. (COLUMNAS) -->
+                <table border="1px">
+                    <tr>
+                        <td>Curso</td>
+                        <td>Horas</td>
+                        <td>Horario</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>20</td>
+                        <td>16.00 - 20.00</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>20</td>
+                        <td>16.00 - 20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Dreamweaver</td>
+                        <td>60</td>
+                        <td>13.00 - 16.00</td>
+                    </tr>
+                </table>
+                <hr>
+            </article>
+            <!-- etiqueta "th" table head se indica el encabezamiento de la tabla -->
+            <article>
+                <h1>Tabla con cabecera</h1>
+                <table border="1px">
+                    <tr>
+                        <th>Curso</th>
+                        <th>Horas</th>
+                        <th>Horario</th>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>20</td>
+                        <td>16.00 - 20.00</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>20</td>
+                        <td>16.00 - 20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Dreamweaver</td>
+                        <td>60</td>
+                        <td>13.00 - 16.00</td>
+                    </tr>
+                </table>
+                <hr>
+            </article>
+            <article>
+                <h1>Tabla con Titulo de columna</h1>
+                <!-- se añade atributo "scope="col" " para indicar que es el TITULO de la columna -->
+                <!-- se añade atributo "scope="row" " para indicar que es el TITULO de la fila (td) table datacell -->
+
+                <table border="1px">
+                    <tr>
+                        <th scope="col">Curso</th>
+                        <th scope="col">Horas</th>
+                        <th scope="col">Horario</th>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>20</td>
+                        <td>16.00 - 20.00</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>20</td>
+                        <td>16.00 - 20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Dreamweaver</td>
+                        <td>60</td>
+                        <td>13.00 - 16.00</td>
+                    </tr>
+                </table>
+                <hr>
+            </article>
+            <article>
+                <h2>Tabla con combinación de celdas</h2>
+                <!-- etiqueta "caption" da nombre a la tabla -->
+                <!-- se combinan celdas con atributo "colspan="Nº" siempre borrando el nº de celdas para que no descuadre" -->
+                <!-- se combinan columnas con atributo "rowspam="Nº" siempre borrando el nº de columnas para que no descuadre" -->
+                <table border="1px">
+                    <caption>Nombre de tabla</caption>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Celda</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                </table>
+                <hr>
+            </article>
+            <article>
+                <h2>Tabla con thead tbody y tfoot</h2>
+                <table border="1px">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PAIS</th>
+                            <th scope="col">DINERO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Panamá</td>
+                            <td rowspan="2">2000€</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Argentina</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>España</td>
+                            <td>3000€</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2">Total</th>
+                            <td scope="row">5000€</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

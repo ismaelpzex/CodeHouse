@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separadores y espacios en blanco</title>
+</head>
+<body>
+    <!-- Separador más basico cuando queremos cambiar de tema, etiqueta "hr" crea como una pequeña linea -->
+    <h1>Separador básico, etiqueta "hr"</h1>
+    <p>Tema 1 desarrollado.</p>
+    <hr>
+    <p>Tema 2 desarrollado</p>
+    <!-- Salto de linea con etiqueta br -->
+    <h1>Salto de línea</h1>
+    <p>ponemos un parrafo y con etiqueta "br" <br>hacemos un salto de línea</p>
+    <!-- Para escribir un texto y que el navegador respete completamente la forma en la que lo hemos escrito usamos etiqueta "pre" -->
+    <h1>Para escribir texto y que el navegador respete la forma etiqueta "pre"</h1>
+    <pre>Con dienz cañones por banda,
+        viento en popa, a toda vela,
+        no corta el mar, si no vuela...
+    </pre>
+    <!-- Para escribir código, se utiliza la etiqueta "code" para fijar la identacón junto con el codigo-->
+    <h1>Para escribir código, se utiliza etiqueta "code"</h1>
+    <p>En HTML la primera etiqueta que hay que escribir es<code>!DOCTYPE html </code></p>
+    <h1>también podemos mezclar etiqueta "pre" y "code"</h1>
+    <pre>
+        <code>
+            fuction suma(a+b) {
+                var suma = a + b;
+                return suma
+            }
+            suma()
+        </code>
+    </pre>
+<!-- Si podemos cambiar "<" de la etiqueta por "&lt;" con el fin de que se muestren las etiquetas -->
+    <pre>
+        <code>
+            &lt;ol>
+                &lt;li>Perro grande
+                    &lt;ul>Dogo Argentino &lt;/ul>
+                    &lt;ul>Pastor Aleman &lt;/ul>
+                 &lt;/li>
+                &lt;li>Perro mediano
+                    &lt;ul>Husky siberiano &lt;/ul>
+                    &lt;ul>American stanford &lt;/ul>
+                 &lt;/li>
+                &lt;li>Perro pequeño
+                    &lt;ul>Yorkshire &lt;/ul>
+                    &lt;ul>chiuaua &lt;ul>
+                &lt;/li>
+            &lt;/ol>
+        </code>
+    </pre>
+    <!-- carácteres especiales  -->
+    <h1>Caracteres especiales</h1>
+    <p>&copy;</p>
+    <p>&euro;</p>
+    <p>&lt;</p>
+    <p>&gt;</p>
+
+    <h1>Para hablar de teclas del teclado utilizamos "kbd"</h1>
+    <p>para copiar un texto pulsamos "<kbd>Ctrl</kbd> + <kbd>C</kbd>"</p>
+</body>
+</html>
