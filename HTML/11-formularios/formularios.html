@@ -1,19 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/459/459695.png">
-    <title>Document</title>
+    <title>Formularios</title>
 </head>
+
 <body>
+    <header>
+
+    </header>
     <main>
+        <h1>Formularios en HTML</h1>
+        <hr>
         <section>
             <article>
-
+                <!-- todo lo que esté envuelto en la etiqueta "form" será el formulario-->
+                <form action="">
+                    <!-- el input mas común es text -->
+                    <input type="text">
+                    <!-- el type submit o etiqueta button es para insertar un boton, para que se envíe el formulario -->
+                    <input type="submit">
+                    <input type="button" value="Enviar">
+                    <button>Enviar</button>
+                    <!-- se puede hacer que el button, no sea de tipo submit -->
+                    <button type="button">Button</button>
+                    <!-- button para resetear el formulario -->
+                    <button type="reset">Resetear</button>
+                </form>
+                <hr>
+            </article>
+            <article>
+                <form>
+                    <!-- Etiqueta label es el título fuera de la caja, se suele utilizar placeholder-->
+                    <!-- el atributo for es para relacionar el label con el input -->
+                    <label for="nombre">Nombre</label>
+                    <!-- input con placeholder -->
+                    <!-- lo relacionamos con el input a través del atributo id -->
+                    <input type="text" name="nombre" placeholder="placeholder" id="nombre">
+                    <hr>
+                    <!-- el email se hace con el atributo type email-->
+                    <!-- El atributo name sirve para que quien recoja los datos sepa de donde viene cada valor -->
+                    <!-- el atributo requiered sirve para obligar a completar campos -->
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="test@test" required>
+                    <hr>
+                    <!-- el tipo password tapa los caracteres y da dormato de contraseña -->
+                    <label for="passwd">Contraseña</label>
+                    <input type="password" name="contraseña" id="passwd" placeholder="****">
+                    <hr>
+                    <!-- tipo numero para edad.... etc -->
+                    <!-- atributo max para delimitar el numero maximo -->
+                    <!-- atributo min para delimitar el numero mínimo -->
+                    <label for="edad">Edad</label>
+                    <input type="numer" name="edad" id="edad" max="130" min="18">
+                    <hr>
+                    <!-- el tipo phone es para el telefono -->
+                    <label for="tel">Teléfono</label>
+                    <input type="phone" name="telefono" id="tel">
+                    <hr>
+                    <!-- tipo url para páginas web -->
+                    <label for="url">Tu página web</label>
+                    <input type="url" name="url" id="url">
+                    <hr>
+                    <!-- tipo file es para subir archivos -->
+                    <!-- para el tipo file en la etiqueta form tienes que ponerle atributo enctype para encriptar la infomración (consultar MDN) -->
+                    <!-- atributo accept sirve para saber que tipo de archivos puede subir -->
+                    <label for="photo">Envia tu foto</label>
+                    <input type="file" name="file" id="photo" accept="image/*">
+                    <hr>
+                    <!-- el tipo checkbox es para seleccionar puede haber seleccionados varios a la vez -->
+                    <label for="check">checkbox</label>
+                    <input type="checkbox" name="checkbox" id="check">
+                    <label for="check">checkbox</label>
+                    <input type="checkbox" name="checkbox" id="check">
+                    <hr>
+                    <!-- el tipo radio es para seleccionar uno u otro -->
+                    <label for="radio">Hombre</label>
+                    <input type="radio" name="sexo" id="radio">
+                    <label for="radio">Mujer</label>
+                    <input type="radio" name="sexo" id="radio">
+                    <hr>
+                    <!-- el tag select es una pestaña seleccionable y dentro se pone el tag options -->
+                    <label for="aficiones">Aficiones</label>
+                    <select name="select" id="aficiones">
+                    <!-- el tag options es para dar las opciones importante siempre poner el atributo value-->
+                        <option value="conducir" id="aficiones">Conducir</option>
+                        <option value="nadar">Nadar</option>
+                        <option value="pescar">Pescar</option>
+                        <option value="patinar">Patinar</option>
+                    </select>
+                    <hr>
+                    <!-- ejemplo de un select multiple se hace con el atributo multiple-->
+                    <label for="Estudios">Estudios</label>
+                    <select name="select" id="aficiones" multiple>
+                        <option value="conducir">ESO</option>
+                        <option value="nadar">Bachiller</option>
+                        <option value="pescar">Universidad</option>
+                        <option value="patinar">Master</option>
+                    </select>
+                    <hr>
+                    <!-- ejemplo de un select multiple con el tag optgroup-->
+                    <label for="lenguajes">Lenguajes</label>
+                    <select name="select" id="lenguajes" multiple>
+                        <optgroup label="Front end">
+                            <option value="conducir">ESO</option>
+                            <option value="nadar">Bachiller</option>
+                        </optgroup>
+                        <optgroup label="Back end">
+                            <option value="pescar">Universidad</option>
+                            <option value="patinar">Master</option>
+                        </optgroup>
+                    </select>
+                    <hr>
+                    <!-- !imput secundarios -->
+                    <!-- * OJO!!! ATRIBUTOS NUEVOS EN ESTA ZONA -->
+                    <!-- input date tag para poner fecha -->
+                    <label for="date">Fecha nacimiento</label>
+                    <input type="date" name="fecha" id="date">
+                    <hr>
+                    <!-- input color es para la paleta de colores -->
+                    <label for="color">Selecciona color</label>
+                    <input type="color" name="color" id="color">
+                    <hr>
+                    <!-- input range con atributo max o min delimitamos el numero maximo y el minimo-->
+                    <!-- atributo step es para los saltos de la barra -->
+                    <!-- atriburo value es para fijar como empieza -->
+                    <label for="range">pon una nota del 0 al 5</label>
+                    <input type="range" name="range" id="range" min="0" max="5" step="1" value="5">
+                    <hr>
+                    <!-- Cuando necesitas un area de texto se utiliza un textarea -->
+                    <!-- atributo maxlength es para el maximo de caracteres que puede escribir, minlength lo contrario -->
+                    <label for="mensaje">introduce tu texto aqui</label>
+                    <textarea name="mensaje" id="mensaje" maxlength="10"></textarea>
+                    <hr>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar campos</button>
+                </form>
             </article>
         </section>
     </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
