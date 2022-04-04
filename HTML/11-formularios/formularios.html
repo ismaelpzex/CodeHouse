@@ -35,28 +35,33 @@
             </article>
             <article>
                 <form>
-                    <!-- Etiqueta label es el título fuera de la caja, se suele utilizar placeholder-->
-                    <!-- el atributo for es para relacionar el label con el input -->
-                    <label for="nombre">Nombre</label>
-                    <!-- input con placeholder -->
-                    <!-- lo relacionamos con el input a través del atributo id -->
-                    <input type="text" name="nombre" placeholder="placeholder" id="nombre">
-                    <hr>
-                    <!-- el email se hace con el atributo type email-->
-                    <!-- El atributo name sirve para que quien recoja los datos sepa de donde viene cada valor -->
-                    <!-- el atributo requiered sirve para obligar a completar campos -->
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="test@test" required>
+                    <!-- Agrupamos varios imputs relacionados con tag fieldset -->
+                    <fieldset>
+                        <!-- Etiqueta label es el título fuera de la caja, se suele utilizar placeholder-->
+                        <!-- el atributo for es para relacionar el label con el input -->
+                        <label for="nombre">Nombre</label>
+                        <!-- input con placeholder -->
+                        <!-- lo relacionamos con el input a través del atributo id -->
+                        <input type="text" name="nombre" placeholder="placeholder" id="nombre">
+                        <hr>
+                        <!-- el email se hace con el atributo type email-->
+                        <!-- El atributo name sirve para que quien recoja los datos sepa de donde viene cada valor -->
+                        <!-- el atributo requiered sirve para obligar a completar campos -->
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="test@test" required>
+                        <hr>
+                        <!-- tipo numero para edad.... etc -->
+                        <!-- atributo max para delimitar el numero maximo -->
+                        <!-- atributo min para delimitar el numero mínimo -->
+                        <label for="edad">Edad</label>
+                        <input type="numer" name="edad" id="edad" max="130" min="18">
+                        <!-- la leyenda del fieldset se pone con el tag legend dentro de la etiqueta fieldset -->
+                        <legend>Datos personales</legend>
+                    </fieldset>
                     <hr>
                     <!-- el tipo password tapa los caracteres y da dormato de contraseña -->
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="contraseña" id="passwd" placeholder="****">
-                    <hr>
-                    <!-- tipo numero para edad.... etc -->
-                    <!-- atributo max para delimitar el numero maximo -->
-                    <!-- atributo min para delimitar el numero mínimo -->
-                    <label for="edad">Edad</label>
-                    <input type="numer" name="edad" id="edad" max="130" min="18">
                     <hr>
                     <!-- el tipo phone es para el telefono -->
                     <label for="tel">Teléfono</label>
@@ -78,11 +83,12 @@
                     <label for="check">checkbox</label>
                     <input type="checkbox" name="checkbox" id="check">
                     <hr>
-                    <!-- el tipo radio es para seleccionar uno u otro -->
+                    <!-- el tipo radio es para seleccionar uno u otro "TIENE QUE TENER EL MISMO NAME"-->
+                    <!-- para obtener respuesta de que botón hemos escogido, hemos de poner el atributo value -->
                     <label for="radio">Hombre</label>
-                    <input type="radio" name="sexo" id="radio">
+                    <input type="radio" name="sexo" id="radio" value="Hombre">
                     <label for="radio">Mujer</label>
-                    <input type="radio" name="sexo" id="radio">
+                    <input type="radio" name="sexo" id="radio" value="Mujer">
                     <hr>
                     <!-- el tag select es una pestaña seleccionable y dentro se pone el tag options -->
                     <label for="aficiones">Aficiones</label>
@@ -116,7 +122,7 @@
                         </optgroup>
                     </select>
                     <hr>
-                    <!-- !imput secundarios -->
+                    <!-- !input secundarios -->
                     <!-- * OJO!!! ATRIBUTOS NUEVOS EN ESTA ZONA -->
                     <!-- input date tag para poner fecha -->
                     <label for="date">Fecha nacimiento</label>

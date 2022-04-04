@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/459/459695.png">
+    <title></title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <h1>Ejercicio Formularios</h1>
+            <hr>
+            <br>
+            <p><strong>*denotes mandatory</strong></p>
+            <form action="">
+                <label for="nombre">Full Name*</label>
+                <br>
+                <input type="text" name="nombre" id="nombre" placeholder="firstane and lastame" required>
+                <br>
+                <br>
+                <label for="email">Email address*</label>
+                <br>
+                <input type="email" name="direccion" id="direccion" placeholder="email adress" required>
+                <br>
+                <br>
+                <label for="package">Coose your package</label>
+                <br>
+                <select value="package" id="package" name="select">
+                    <option value="goa">GOA</option>
+                    <option value="toa">TOA</option>
+                </select>
+                <br>
+                <br>
+                <label for="date">Arrival date*</label>
+                <br>
+                <input type="date" name="date" id="date" required>
+                <br>
+                <br>
+                <label for="persons">Number of persons*</label>
+                <br>
+                <input type="number" name="persons" id="persons" required>
+                <br>
+                <p>What would you want to avail?</p>
+                <label for="avail">Boarding</label>
+                <input type="checkbox" name="boarding" id="avail">
+                <br>
+                <label for="avail">Fooding</label>
+                <input type="checkbox" name="fooding" id="avail">
+                <br>
+                <br>
+                <label for="coupon">Discount Coupon Code</label>
+                <br>
+                <input type="text" name="coupon" id="coupon" placeholder="UNKNOWN">
+                <br>
+                <p>Terms and conditions*</p>
+                <input type="radio" name="terms" id="terminos" value="agree" required>
+                <label for="terminos">I gree</label>
+                <input type="radio" name="terms" id="terminos" value="desagree">
+                <label for="radio">I desgree</label>
+                <br>
+                <br>
+                <button>Complete reservation</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
