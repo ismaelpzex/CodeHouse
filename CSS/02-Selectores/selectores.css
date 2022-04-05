@@ -1,0 +1,29 @@
+/* Selector por etiqueta */
+
+h1 {
+    color: chocolate;
+}
+
+.infoExtra {
+    color: rgb(254, 5, 242);
+}
+
+li {
+    color: rgb(246, 17, 17);
+}
+
+#selectorDeId {
+    color: green;
+}
+
+.selectorClass {
+    color: blueviolet;
+}
+
+p.infoEspects {
+    color: crimson;
+}
+
+p.infoEspects Code {
+    color: purple;
+}
