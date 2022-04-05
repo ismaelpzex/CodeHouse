@@ -1,0 +1,33 @@
+body {
+    font-family: "Playfair Display" , serif;
+}
+
+.title-center {
+    text-align: center;
+    font-weight: 900;
+}
+
+.title-uppercase {
+    text-transform: uppercase;
+}
+
+.time-tomato {
+    color: tomato;
+    font-weight: 600;
+}
+
+strong {
+    font-size: 24px;
+}
+
+.marianoVerde {
+    color: green;
+}
+
+p {
+    line-height: 20px;
+}
+
+.colorParrafo {
+    color: rgb(255, 255, 0);
+}

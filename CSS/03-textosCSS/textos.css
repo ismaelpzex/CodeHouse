@@ -1,0 +1,95 @@
+/* Estilo para textos */
+
+/* Tipos de fuente -> font-family */
+h1 {
+    font-family: "roboto mono";
+    font-weight: 100;
+}
+
+/* Tamaño de la fuente -> font-size */
+
+h2 {
+    font-size: 30px;
+    font-family: "roboto mono";
+}
+
+/* Gorsor de la fuente -> font-weight */
+/* Los números del 100 al 900 van de más fino al mas grueso y se suelen usar cuando tenemos fuentes con muchos grosores */
+
+p {
+    font-weight: bold;
+}
+
+/* Estilo de la letra -> font-style */
+
+li {
+    font-style: italic;
+}
+
+/* Letras subrayadas -> text-decoration*/
+
+.underline {
+    text-decoration: underline red 4px;
+}
+
+/* Altura de linea -> line-height */
+/* Separación de letras letter-spacing */
+
+p {
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+/* Mayusculas, minusculas, capitalizadas y small-caps */
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.minusculas {
+    text-transform: lowercase; 
+}
+
+.capitalizado {
+    text-transform: capitalize;
+}
+
+/* posición de texto dentro de su bloque */
+/* ! SI PONEMOS UN text-aling: center; a una etiqueta INLINE no hacemos nada, hay que ponerlo a su padre */
+
+.centrado {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/* añadir fuentes externas */
+/* ? desde web externa */
+.modifiedFont {
+    font-family: "roboto mono";
+    font-size: 100;
+}
+/* ? desde archivo */
+
+/* ! añadimos la fuente */
+
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/RobotoMono-Bold.ttf);
+    font-weight: bold;
+}
+
+.modifiedFont2 {
+    font-family: roboto;
+    font-size: blod;
+}
