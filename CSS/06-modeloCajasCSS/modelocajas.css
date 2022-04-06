@@ -1,0 +1,109 @@
+/* * el DISPLAY decide el tipo de caja que es, también podemos decir que no tenga display */
+
+/* * Tipos de DISPLAY
+? display: inline; -> convierte un block en inline
+? display: block; -> convierte un inline en block
+? display: none; -> lo oculta, pero sigue estando en el HTML (por ejemplo un navbar responsivo)
+
+*/
+.h2-display {
+    background-color: crimson;
+    display: inline;
+}
+
+.span-display {
+    background-color: crimson;
+    display: block;
+}
+
+/* 
+*Tamaño de las cajas.
+? Todas las cajas tipo block tienen un width por defecto
+? todas las cajas tipo block tienen un height por defecto
+!NUNCA DAR UNA ALTURA FIJA, LOS % SIEMPRE SON REFERENTES A LA CAJA QUE LOS CONTENGA
+
+
+*/
+
+.p-tamaño {
+    background-color: crimson;
+    width: 50%;
+    height: auto;
+/* width y height maximo lo usamos siempre con un width dinamico Y SIEMPRE SIEMPRE EL MAX LO UTILIZAS EN PX, PARA QUE SEA FIJO */
+    max-width: 600px;
+    min-width: 400px;
+}
+
+/* Padding, Margin, border
+? Padding -> espacio entre el contenido y el borde
+? border -> el borde que recubre el contenido y el padding
+? Margen -> separación entre cajas
+
+*/
+
+.caja {
+    background: tomato;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border: 5px solid hsl(0, 0%, 0%); /* ! ESTA ES LA MANERA ADECUADA DE CREAR BORDES */
+    margin-bottom: 0px;
+}
+
+.caja2 {
+    background: tomato;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border: 5px solid hsl(0, 0%, 0%); /* ! ESTA ES LA MANERA ADECUADA DE CREAR BORDES */
+    margin-top: 0px;
+    
+}
+
+.caja3 {
+    padding: 20px;
+    background-color: blue;
+    border: 4px solid black;
+    outline: 8px solid red; /* no forma parte del box model, es otro borde exterior que NO AFECTA AL TAMAÑO DE LA CAJA, ES INDEPENDIENTE */
+    outline-offset: 10px;
+}
+
+/* Cualquier caja INLINE no LE AFECTA EL width tampoco acepta margenes arriba y abajo  */
+
+.caja4 {
+    background-color: aqua;
+    padding: 5px;
+    margin-top: 20px; /* ! NO ACEPTA MARGEN ARRIBA O ABAJO, SOLO IZQ y DERECHA */
+}
+
+/* MEZCLA DE DISPLAY BLOCK E INLINE (COGE LO MEJOR DE CADA UNO) */
+/* ! PODEMOS RECUPERAR LOS MARGENES */
+
+.caja4 {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* BOX SIZING */
+/* ? Las cajas por defecto, para saber el ancho real hay que sumar el width + padding + border */
+/* ! CON box-sizing: border-box CONSEGUIMOS QUE EL TOTAL DEL EL BOX SIZING sea el WIDTH QUE HEMOS DEFINIDO */
+
+.cajaBoxSizing {
+    display: inline-block;
+    background-color: lightblue;
+    padding: 10px;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.cajaBoxSizing2 {
+    display: inline-block;
+    background-color: rgb(225, 230, 173);
+    padding: 10px;
+    width: 25%;
+    box-sizing: border-box;
+
+    
+}
