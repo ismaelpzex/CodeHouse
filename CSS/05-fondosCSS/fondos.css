@@ -1,0 +1,51 @@
+.title {
+    text-transform: uppercase;
+}
+
+/* fondo de color sencillo con hsl */
+
+.fondo-color {
+    background-color: hsl(180, 100%, 50%);
+}
+
+/* fondo con imagen, propiedad background-image y la funcion url  (POR DEFECTO SE REPITE LA IMAGEN)*/
+/* * con background-repeat ponemos que se repita en los ejes X o Y  O no-repeat para que no se repita*/
+/* * Eñ tamaño de imagen se hace con background-size CON COVER SIEMPRE NOS ASEGURAMOS QUE SIEMPRE VA A HABER IMAGEN EN LA CAJA */
+/* * lo más optimo es poner un cover, así nos ahorramos el no-repeat */
+/* * background-position tiene ejes X e Y por eso ponemos 2 valores (left, right, botton, center)*/
+
+.fondo-imagen {
+    background-image: url(../../HTML/09-media/assets/pexels-cottonbro-5192247.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(208, 86%, 65%);
+    background-position: center center;
+    font-weight: 900;
+}
+
+/* Fondo fijo se hace con background-attachmen y tiene FIXED o SCROLL para que queden fijas */
+
+.fondo-fijo {
+    color: hsl(253, 100%, 50%);
+    font-weight: 900;
+    background-image: url(../../HTML/09-media/assets/pexels-cottonbro-5803320.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* *Hay un atajo para definir valores en una sola linea... 
+
+.fondo-fijo {
+    color: hsl(253, 100%, 50%);
+    font-weight: 900;
+    background: red url(../../HTML/09-media/assets/pexels-cottonbro-5803320.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+*/
+
+/* Fondo degradado, se hace con la propiedad background: linear gradient (transición de un color a otro) */
+
+.fondo-degradado {
+background: linear-gradient( to right hsl(0, 100%, 50%), hsl(240, 100%, 50%));
+}

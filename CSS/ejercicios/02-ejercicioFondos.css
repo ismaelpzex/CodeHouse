@@ -1,0 +1,52 @@
+.title {
+    font-family: monospace;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: hsl(348, 83%, 47%);
+}
+
+.title-image {
+    font-family: monospace;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.p-image {
+    font-family: monospace;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.image1 {
+
+    background: linear-gradient(hsla(259, 100%, 50%, 0.5), hsla(259, 100%, 50%, 0.5)), url(../../HTML/09-media/assets/pexels-cottonbro-5192247.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.image2 {
+
+    background: linear-gradient(hsla(13, 100%, 50%, 0.5), hsla(13, 100%, 50%, 0.5)), url(../../HTML/09-media/assets/pexels-cottonbro-5192247.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.image3 {
+
+    background: linear-gradient(hsla(59, 100%, 50%, 0.5), hsla(59, 100%, 50%, 0.5)), url(../../HTML/09-media/assets/pexels-cottonbro-5192247.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.image4 {
+
+    background: linear-gradient(hsla(123, 100%, 50%, 0.5), hsla(123, 100%, 50%, 0.5)), url(../../HTML/09-media/assets/pexels-cottonbro-5192247.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.image5 {
+
+    background: linear-gradient(hsla(188, 100%, 50%, 0.5), hsla(188, 100%, 50%, 0.5)), url(../../HTML/09-media/assets/pexels-cottonbro-5192247.jpg);
+    background-size: cover;
+    background-position: center center;
+}
