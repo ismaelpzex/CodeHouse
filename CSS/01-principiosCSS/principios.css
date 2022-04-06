@@ -2,3 +2,14 @@
 .h2-stylesheet {
     color: orange;
 }
+
+/* 
+ 
+SINTAXIS
+Selector -> todo lo que hay dentro de las llaves (como si fuera una condición.)
+Llaves -> abren un bloque donde irán todas las propiedades CSS que tendra el selector.
+Propiedades -> cada una de las palabras que hay delante de los ":".
+Valor de la propiedad -> el valor que tiene la dicha propiedad, lo que hay después de los ":".
+
+
+*/

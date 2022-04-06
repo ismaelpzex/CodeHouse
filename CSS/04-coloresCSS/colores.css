@@ -1,0 +1,29 @@
+.underline {
+    text-decoration: underline overline;
+    text-transform: uppercase;
+}
+
+/* Maneras de llamar a los colores */
+
+/* * por su nombre propio */
+.color-nombre {
+    color: tomato;
+}
+
+/* por su RGB */ /* !RGBA (canal Alpha de la A es el que da la opcacidad) */
+.color-rgb {
+    color: rgb(50, 100, 200);
+}
+
+/* por su hexadecimal */
+
+.color-hexadecimal {
+    color: #900c3f;
+}
+
+/* color por su HSL (HUE -> TONO) (SATURATION % -> SATURACION) (LUMINOSITY % -> LUMINOSIDAD) */
+/* ? SE ESTÁ PONIENDO DE MODA */
+
+.color-hsl {
+    color: hsl(180, 100%, 25%);
+}
