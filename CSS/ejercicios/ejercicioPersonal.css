@@ -1,0 +1,115 @@
+
+body {
+    font-family: monospace;
+}
+
+.header {
+    display: inline-block;
+    background-color: hsl(223, 96%, 62%);
+    width: 100%;
+    padding: 5px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.nav-bar {
+    display: inline-block;
+    text-align: right;
+}
+
+.nav-items {
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px;
+    border: hsla(0, 0%, 100%, 0.791) solid 2px;
+    border-radius: 20px;
+    margin-top: 2%;
+}
+
+.link-nav {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+
+.img-nav {
+    width: 90px;
+    margin-top: 1%;
+    margin-left: 20px;
+ 
+}
+
+.nav-ul {
+    display: inline;
+    float: right;
+}
+
+nav.nav-bar {
+    display: inline;
+}
+
+.title-body {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: hsl(348, 83%, 47%);
+    padding: 4px;
+}
+
+.description-title {
+    text-align: justify;
+}
+
+.img-principal {
+    
+    display: block;
+    background-color: aquamarine;
+    height: 350px;  
+    background: linear-gradient(135deg ,hsla(59, 100%, 50%, 0.5), hsla(188, 100%, 50%, 0.3)), url(../../HTML/09-media/assets/pexels-cottonbro-5192247.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    display: block;
+
+}
+
+.img-description {
+    margin-top: 1%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid black;
+}
+
+.table {
+    background-color: hsl(348, 100%, 74%);
+    margin: auto;
+    text-align: center;
+    border: solid 1px hsl(0, 0%, 0%);
+    padding: 2px;
+    font-size: 30px;
+}
+
+.table-footer {
+    text-align: center;
+    margin-top: 1px;
+}
+
+.botton {
+    float: right;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: -1px;
+    margin-right: 10px;
+}
+
+form {
+    text-align: center;
+    margin: 0% 21%;
+}
+
+
+footer {
+    margin-top: 50px;
+}
