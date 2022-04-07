@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-MediumItalic.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'roboto slab';
+    src: url(../fonts/RobotoSlab-Regular.ttf);
+    font: 400;
+}
+
+
+body {
+    background-color: hsl(17, 100%, 74%);
+    font-family: 'Roboto';
+    margin: 0px;
+}
+
+.head {
+    background-color: hsl(0, 0%, 100%);
+    
+}
+
+.title {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 0%);
+    text-align: right;
+    font-size: 25px;
+    margin: 0px;
+    padding: 10px;
+}
+
+.navbar {
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px;
+    margin: auto;
+    margin-block-end: 20px;
+    margin-block-start: 20px;
+    border-radius: 5px;
+
+}
+
+.ancho {
+    width: 60%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.navbar-li {
+    font-weight: 100 ;
+    text-align: center;
+    background-color: hsl(0, 0%, 83%);
+    text-decoration: none;
+    margin-block-end: 2px;
+    margin-inline-end: 40px;
+    list-style: none;
+    padding-inline-start: 0;
+    padding-block: 5px;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+article {
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-block-end:0;
+    padding: 30px;
+    
+
+}
+
+.time {
+    background-color: hsl(17, 100%, 74%);
+    color: hsl(0, 0%, 100%);
+    width: 25%;
+    margin-inline: auto;
+    padding-inline: 5px;
+}
+
+.title-artic {
+    border-block-end: solid 1px hsl(0, 0%, 0%);
+    padding: 5px;
+    font-weight: 700;
+}
+
+.notice {
+
+    font-weight: 400;
+    text-align: left;
+    margin-block-end: 10px;
+    border-block-end: dashed 5px hsl(0, 0%, 0%);
+    padding-block-end: 50px;
+
+}
+
+.marcado {
+    background-color: hsl(0, 0%, 83%);
+    color: lightsalmon;
+}
+
+.azul {
+    color: blue;
+}
+
+q {
+    font-family: 'roboto slab';
+    font-size: 18px;
+    text-decoration: underline hsl(17, 100%, 74%) dashed;
+
+}

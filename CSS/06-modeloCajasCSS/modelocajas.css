@@ -107,3 +107,52 @@
 
     
 }
+
+/* *Contenido que se sale de la caja */
+/* overflow-y overflor-x VISIBLE, SCROLL, HIDDEN y AUTO */
+.overflow {
+    background: linear-gradient( to top, hsl(254, 100%, 50%), hsl(68, 100%, 50%));
+    height: 50px;  
+    overflow-y: visible;   /* por defecto */
+    overflow-y: scroll; /* pone barra horizontal para hacer scroll */
+    overflow-y: hidden; /* Cuando se pasa el contenido que no se vea */
+    overflow-y: auto; /* si la necesita pone barra de scroll de forma automatica */
+}
+
+/* * box-shadow sombra a las cajas */
+
+.box-shadow {
+    display: inline-block;
+    box-shadow: 6px 6px 10px 10px hsl(254, 100%, 50%); /* EJES X, Y, DIFUMINADO Y EXPANDIR */
+    /* ! PODEMOS PONER TANTOS BORDES COMO QUERAMOS */
+    box-shadow: 6px 6px 10px 10px hsl(254, 100%, 50%), -6px -6px 10px 10px hsl(71, 100%, 50%);
+}
+
+.box-shadow2 {
+    margin-left: 20%;
+    display: inline-block;
+    box-shadow: 1px 1px 10px 4px hsl(254, 100%, 50%) inset; /* con inset, el difuminado va de fuera hacia dentro */
+}
+
+/* * text-shadow sombra a los textos */
+
+.text-shadow {
+    margin-left: 20%;
+    display: inline-block;
+    text-shadow: 10px 10px 10px hsl(254, 100%, 50%), -10px -10px 10px hsl(71, 100%, 50%);
+}
+
+/* Redondeando cajas con border-radius */
+.radius {
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+/* Centrar una caja */
+/* * TRUCO CENTRAR UN BLOCK EN PANTALLA con margin:auto; */
+.centrar {
+    background-color: hsl(0, 100%, 50%);
+    width: 50%;
+    margin: auto
+}
