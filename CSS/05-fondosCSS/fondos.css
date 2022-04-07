@@ -47,5 +47,5 @@
 /* Fondo degradado, se hace con la propiedad background: linear gradient (transición de un color a otro) */
 
 .fondo-degradado {
-background: linear-gradient( to right hsl(0, 100%, 50%), hsl(240, 100%, 50%));
+background: linear-gradient( to right, hsl(0, 100%, 50%), hsl(240, 100%, 50%));
 }
