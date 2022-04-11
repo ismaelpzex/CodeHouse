@@ -1,0 +1,56 @@
+.main-menu {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    background-color: black;
+
+}
+
+.img-menu {
+    display: inline-block;
+    width: 20%;
+    background-size: cover;
+    margin-left: 2%;
+}
+
+.menu-item {
+    position: absolute;
+    display: inline-block;
+    color: white;
+    bottom: 3%;
+    right: 10%;
+    font-size: 20px;
+    
+}
+
+.menu-item__link {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.menu-item__link:hover {
+    background-color: rgb(84, 84, 84);
+}
+
+.menu-item__link:hover  + .submenu{
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    border: 1px solid white;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.submenu-item {
+    background-color: aqua;
+    border: 1px solid white;
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+}
+
+
