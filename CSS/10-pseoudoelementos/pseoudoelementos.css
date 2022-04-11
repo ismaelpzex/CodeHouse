@@ -1,0 +1,64 @@
+/* pseudoselectores */
+
+/* sintaxis selextor::pseudoselector */
+
+.parrafillo::first-letter { /* primera letra */
+    color: red;
+}
+
+.parrafillo::first-line {
+    text-decoration: underline; /* primera linea */
+}
+
+/* cambiar el color en la selección de texto */
+
+.parrafillo::selection {
+    background-color: blue;
+    color: white;
+}
+
+/* en un placeholder de un input */
+
+
+input::placeholder {
+    color: rgb(0, 255, 38);
+}
+
+/* Se puede convinar con un cambio de estado */
+
+input:focus::placeholder {
+    color: red;
+}
+
+/* Los marcadores de una lista */
+
+.lista li::marker {
+    content: "  ";
+    font-size: 20px;
+}
+
+/* ::before y ::after */
+
+h3.before::before {
+    content: "ANTES " ; /* PROPIEDAD OBLIGATORIA */
+    color: crimson;
+
+}
+
+
+h3.after::after {
+    content: " Después"; /* PROPIEDAD OBLIGATORIA */
+    color: crimson;
+}
+
+/* Los mezclamos en un h3 */
+
+h3.beforeafter::before {
+    content: " AQUÍ EL BEFORE  ";
+    color: blue;
+}
+
+h3.beforeafter::after {
+    content: "  AQUÍ EL AFTER ";
+    color: crimson;
+}

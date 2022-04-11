@@ -1,0 +1,72 @@
+/* Selector universal */
+
+* {
+    font-family: monospace;
+}
+
+/* Selector por etiqueta */
+
+h2 {
+    color: hsl(348, 83%, 47%);
+}
+
+/* por su clase */
+
+.parrafo {
+    text-transform: uppercase;
+}
+
+/* por si id */
+
+#parrafo {
+    text-align: justify;
+    color: hsl(120, 100%, 33%);
+}
+
+/* Mezclando etiquetas sin espacios */
+
+li.ementos {
+    color: hsl(120, 100%, 50%)
+}
+
+/* Propiedades duplicadas (CON COMAS ,) */
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+/* Por el atritubto que tenga (ATRIBUTO, EJEMPLO EN UN INPUT [TYPE=TEXT]) */
+
+[type=text] {
+    background-color: hsla(0, 100%, 50%, 0.409);
+}
+
+/* Combinación de selectores (CON SIMBOLO +) */
+
+h2 + p {
+    text-transform: uppercase;  /* ! Solo afecta al ultimo elemento, sería parrafo que tiene un hermano H2 */
+}                                
+
+/* Combinación por hermanos (SIMBOLO ~)*/
+
+h3 ~ p {
+    color: blue;
+}
+
+/* hijos directos (SIMBOLO >) */
+
+ul > li {
+    display: inline-block;
+    text-transform: uppercase;
+    list-style: none;
+    background-color: hsl(0, 0%, 0%);
+    cursor: none;
+}
+
+/* Hijos generales o descendientes (ESPACIO ENTRE ETIQUETA) */
+
+ul.lista li {
+    color: hsl(0, 100%, 50%);
+    text-transform: lowercase;
+    background: linear-gradient(rgb(0, 255, 68), rgb(121, 80, 255));
+}

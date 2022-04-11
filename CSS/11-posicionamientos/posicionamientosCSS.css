@@ -1,0 +1,56 @@
+.padre {
+    background-color: crimson;
+    height: 250px;
+    width: 60%;
+    margin-inline: 0;
+}
+
+.hijo-amarillo {
+    background: gold;
+    height: 60px;
+    width: 100px;
+}
+
+.hijo-verde {
+    background-color: lightgreen;
+    height: 100px;
+    width: 60px;
+}
+
+
+/* Por defecto, todas las cajas tienen un posición static */
+
+.padre {
+    position: static; /* position por defecto. */
+}
+
+/* ! POSITION RELATIVE */
+/* Aparentemente, cuando ponemos la propiedad no hay cambio en pantalla pero.. */
+/* Al ponersela, disponemos de 5 propiedades: TOP | RIGHT | BUTTON | LEFT | Z-INDEX*/
+/* Se utiliza, cuando queremos mover un POQUITO una caja, sin que cambien las demás */
+/* Cuando la movemos, e indicamos una propiedad, lo hace RESPECTO A SÍ MISMA */
+/* Ante un top y button, siempre gana button, igual con left y right, gana left */
+
+.hijo-amarillo {
+    position: relative;
+    top: 50px;
+}
+
+
+/* ! POSITION ABSOLUT */
+/* Nos posiciona la caja en relación a la caja más cercana QUE NO TENGA STATIC */
+
+.padre {
+    position: relative;
+}
+
+.hijo-amarillo {
+    position: absolute;
+    top: 50%
+}
+
+/* !POSITION FIXED */
+/* Nos deja la caja fijada, por ejemplo, un menú de navegación siempre visible */
+
+/* !POSITION STICKY */
+/* Nos deja la caja en un Z-INDEX por encima, y se quedara "Pegada" donde le digamos */

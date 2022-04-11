@@ -1,0 +1,44 @@
+table.table1 td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table.table2 td {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: green;
+}
+
+/* UTILIZAMOS NTH-CHILD(NUMERO) PARA INDICAR EL NUMERO DE HIJO */
+/* SE PODRIA HACER UNA OPERACIÓN MATEMATICA DENTRO DEL () POR EJEMPLO (2n) <- sacaria los pares*/
+
+table.table2 tr:nth-child(1), table.table2 tr:nth-child(4){
+    color: white;
+    background-color: white;
+}
+
+table.table2 td:nth-child(1), table.table2 td:nth-child(4){
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table.table3 td {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: green;
+}
+
+
+/* Utilizamos la negación para decir que a esos elementos no le ponga ese estilo */
+
+
+table.table3 td:not(:nth-child(2n)) {
+    color: white
+}

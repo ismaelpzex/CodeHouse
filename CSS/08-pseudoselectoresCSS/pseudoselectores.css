@@ -1,0 +1,65 @@
+/* pseudoselectores */
+
+
+/* Primer elemento de su tipo first-of-type */
+
+ul.lista li:first-of-type {
+    color: red;
+}
+
+/* Ultimo hijo */
+
+ul.lista li:last-child  {
+    color: blue;
+}
+
+/* LA NEGACIÓN LA HEMOS UTILIZADO EN LAS TABLAS */
+
+/* <!-- Pseudo selectores por un cambio de estado --> */
+
+
+.bottom {
+    padding: 5px;
+}
+
+/* Cuando pasamos por encima con el raton se utiliza eh :hover */
+
+.bottom:hover {
+    background-color: green;
+}
+
+/* cuando hacemos click se utiliza :active */
+
+.bottom:active {
+    background-color: red;
+}
+
+[type=text] {
+    display: block;
+    margin-block-start: 5px;
+}
+
+/* cuando se selecciona el elemento, seria :focus */
+
+[type=text]:focus {
+    background-color: red;
+}
+
+/* Cuando hemos apretado un checkbox */
+
+input[type=checkbox]:checked {
+    width: 20px;
+    height: 20px;
+}
+
+/* Cambiamos el estado de un elemento, indicando :hover hermano más cercano p */
+
+.bottom:hover ~ p {
+    color: red;
+}
+
+
+.bottom:hover ~ [type=text] {
+    background-color: aqua;
+}
+
