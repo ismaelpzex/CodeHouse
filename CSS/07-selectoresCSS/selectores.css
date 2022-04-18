@@ -23,7 +23,7 @@ h2 {
     color: hsl(120, 100%, 33%);
 }
 
-/* Mezclando etiquetas sin espacios */
+/* Mezclando etiquetas con clase sin espacios */
 
 li.ementos {
     color: hsl(120, 100%, 50%)
