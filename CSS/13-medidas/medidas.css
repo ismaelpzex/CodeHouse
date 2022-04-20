@@ -1,0 +1,68 @@
+.container {
+    /* % referente a su padre */
+    width: 80%;
+    /* pixeles siempre fijos */
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+/* Viedwidths y viewheights */
+/* !Estas medidas siempre serán respecto A LA PANTALLA, no al padre */
+
+.caja1 {
+    border: 1px solid black;
+    height: 50px;
+    background-color: crimson;
+    width: 50%;
+}
+
+.caja2 {
+    border: 1px solid black;
+    height: 50px;
+    margin-block-start: 5px;
+    background-color: lightcoral;
+    width: 50vw;
+    /* el vh funcionaria exactamente igual */
+}
+
+/* REM -> valor que se multiplicara por el font size que tenga la etiqueta raiz, es decir <html> */
+
+.parrafo-caja3 {
+    /* Por defecto el fontsize está en 16px, al ponerle 2rem multiplicamos 16*2 */
+    /* si el usuario utiliza el ZOOM del navegador, TODO AUMENTARA o DISMINUIRÁ ACORDE */
+    font-size: 2rem;
+}
+
+/* EM -> Valor que se multiplica por el font-size más cercano */
+
+.boton1 {
+    font-size: 20px;
+}
+
+/* el botón dos tendrá el dobre del tamaño de letra, 2em */
+.boton2 {
+    font-size: 2em;
+}
+
+/* !FUNCION IMPORTANTE calc() */
+/* se usa para hacer calculos matematicos */
+/* normalmente se utiliza para calcular valores dinamicos con fijos por ejemplo vh o vw con px */
+
+.caja4 {
+    background-color: gold;
+    height: 60px;
+}
+
+.caja5 {
+    background-color: lightgreen;
+    height: calc(100vw - 60px);
+    /* Hacemos el calculo de 100% de la pantalla menos 60px */
+}
+
+/* !FUNCION IMPORTANTE clamp() se utiliza para dar tamaño a cosas con maximos y minimos */
+
+/* clamp(MINIMO POR DEBAJO, LO DINAMICO, Y LO MAXIMO */
+
+h1 {
+    font-size: clamp(80px, 7vw, 90px);
+}

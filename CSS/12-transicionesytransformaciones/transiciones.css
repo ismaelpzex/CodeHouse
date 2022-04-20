@@ -1,0 +1,80 @@
+
+.container {
+    border: 1px solid black;
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+
+/* Botón en estado normal */
+
+/* Se añade la propiedad transition AL ESTADO NORMAL, para que aplique cuando cambie a HOVER */
+
+.boton {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    /* ? Propiedad transition */
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    transition-timing-function: ease ;
+
+    /* ahora lo hacemos con shorthand */
+
+    transition: all 0.5s ease-out; /* omitimos el delay por omitir.... */
+
+}
+
+/* Cambio de estado en el boton (hover) */
+
+.boton:hover {
+
+    background-color: red;
+    color: aqua;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 80px 80px 80px 80px red; 
+}
+
+
+/* transformaciones */
+
+.boton2 {
+    width: 30%;
+    height: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.boton2:hover {
+    transform: rotateZ(360deg); /* El rotate puede ser en eje Z X e Y */
+    transform: perspective(100px) rotateZ(360deg) translate(20px, 20px) scale(2); /* perspective se utiliza en las X y en las Y para que se note la perspectiva en 2d */
+    background-color: blue;
+    color: white;
+
+
+    /* Añadimos un translate a transfor, para moverlo por la pantalla */
+
+    /* para escalar elementos, utilizamos el scale en transform, ya que la hace mas grande */
+
+}
+
+
+/* FILTRO */
+
+img {
+    width: 80%;
+    filter: blur(10px);
+    transition: all 0.5s;
+}
+
+img:hover {
+    filter: blur(0px) drop-shadow(5px 5px 10px red);
+}
+
+/* consultar los tipos de filter en CDN */
+/* ! FILTRO INTERESANTE PARA IMAGENES TRANSPARENTES filter: drop-shadow */
