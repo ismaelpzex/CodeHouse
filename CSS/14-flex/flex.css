@@ -1,0 +1,139 @@
+.container {
+
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.padre {
+    border: 2px solid black;
+    background-color: pink;
+    height: 300px;
+    /* SIEMPRE SE LE DA LA PROPIEDAD FLEX AL PADRE */
+    /* AL DARLE DISPLAY FLEX POR DEFECTO SIEMPRE PONE TODOS LOS ELEMENTOS EN FILA */
+    display: flex;
+    /* PODEMOS DECIR QUE DIRECCION QUEREMOS QUE TENGA */
+    /* LO PONEMOS EN FILA CON ROW */
+/* !    flex-direction: row; */
+    /* PONEMOS EN ORDEN INVERSO CON ROW REVERSE */
+/* !    flex-direction: row-reverse; */
+    /* LO PONEMOS EN COLUMNA CON COLUM */
+ /* !   flex-direction: column; */
+    /* PONEMOS EN ORDEN INVERSO CON COLUMN REVERSE */
+/* !    flex-direction: column-reverse; */
+    /* ? ALINEAMOS ELEMENTOS SEGUN EL MAIN AXIS -> */
+    /* ALINEA AL PRINCIPIO */
+    justify-content: flex-start;
+    /* ALINEA AL FIN */
+    justify-content: flex-end;
+    /* ALINEA AL CENTRO */
+    justify-content: center;
+    /* ESPACIO EN MEDIO */
+    justify-content: space-between;
+    /* EL MISMO ESPACIO EN LOS BORDES */
+    justify-content: space-around;
+    /* ALINEA CON EL MISMO ESPACIO ENTRE SI */
+    justify-content: space-evenly;
+
+    /* ALINEAMOS ELEMENTO SEGUN EL CROSS-AXIS */
+
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    /* baseline alinea la base del texto independientemente de la tipografia */
+    align-items: baseline;
+    align-items: stretch; /* POR DEFECTO (lo estira) */
+
+
+/* SI QUEREMOS QUE CUANDO NO QUEPAN LAS CAJAS LA BAJE A LA SIGUIENTE LINEA UTILIZAMOS */
+
+    
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+
+/* PARA DECIDIR COMO SE ALINEAN LAS FILAS CUANDO EXISTE UN WRAP USAMOS ALIGN-CONTENT */
+
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
+    align-content: center;
+
+/* PARA DECIDIR EL ESPACIO QUE HAY ENTRE FILAS Y ENTRE COLUMNAS USAMOS ROW-GAP y COLUMN-GAP */
+    column-gap: 2rem;
+    row-gap: 1rem;
+
+
+
+}
+
+
+/* ! Truco para centrar elemento en una caja */
+/* 
+    displa: flex; 
+    justify-content: center;
+    align-items: center;
+*/
+
+
+
+/* PROPIEDADES PARA LOS HIJOS */
+
+/* LAS PODEMOS ORDENAR CON ORDER */
+
+/* !   CON ALIGN-SELF LE DECIMOS COMO SE ALINEA 1 SOLO ELEMENTO EN CROSS AXIS */
+
+
+
+
+.hijo {
+    border: 2px solid white;
+}
+
+.hijo1 {
+    background: crimson;
+    padding: 0.3rem;
+    order: 3;
+    align-self: flex-end;
+}
+
+.hijo2 {
+    background: gold;
+    padding: 0.3rem;
+    order: 1;
+}
+.hijo3 {
+    background: blue;
+    padding: 0.3rem;
+    order: 0;
+
+}
+
+/* ! CON MARGENES  LE DECIMOS COMO SE ALINEA 1 SOLO ELEMENTO EN MAIN AXIS */
+
+.menu {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+
+
+.logo {
+    border: 1px solid crimson;
+}
+
+.item1 {
+    margin-inline-start: 1rem;
+    border: 1px solid crimson;
+}
+
+.item2 {
+    margin-left: auto;
+    border: 1px solid crimson;
+}
+/* ? EXTRAS */
+
+/* FLEX-GROW permite crecer la caja POSICIONES flex-grow: $ ; */
+/* FLEX-SHRINK permite DISMINUIR la caja POSICIONES flex-shrink: $ ; */
