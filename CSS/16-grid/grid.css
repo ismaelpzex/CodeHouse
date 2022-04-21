@@ -1,0 +1,160 @@
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+
+/* APLICAMOS GRID AL PADRE */
+/* !TENEMOS QUE PENSAR QUE GRID FUNCIONA COMO REJILLAS, FILAS Y COLUMNAS */
+
+.caja-padre {
+    display: grid; /* APLICAMOS EL GRID */
+    
+    /* REPARTIMOS EL CONTENIDO EN COLUMNAS con grid-template-columns
+    las columas van en funcion de los valores que pongamos. 200px 200px son 2 columnas */
+
+    grid-template-columns: 200px 200px;
+
+    /* NUEVA MEDIDA QUE NOS CREA GRID "fr" FRACCIÓN ES DINÁMICO */
+
+    grid-template-columns:  1fr 1fr 1fr;
+
+    /* SE SIMPLIFICA CON LA FUNCION REPEAT para no repetir tantos fr */
+
+    grid-template-columns: repeat(3, 1fr);
+
+    /* REPARTIMOS EL CONTENIDO EN FILAS con grid-template.rows */
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+
+    /* si se crean filas automaticas para añadir contenido, controlamos el comportamiento con grid-auto-rows */
+
+    grid-auto-rows: 100px; /* le decimos que las filas automaticas las ponga a 100px */
+
+
+   /* ESPACIADO ENTRE ELEMENTOS, usando row-gap / column-gap / gap */
+   
+    column-gap: 50px;
+    row-gap: 50px;
+    gap: 10px;
+
+
+    /* !ALINEACIONES */
+
+    /* * jusfity-items ALINEAR EN ORIZONTAL EL ITEM DENTRO DE SU CELDA */
+
+    justify-items: center;
+
+    /** align-items: ALINEAR LOS ITEMS EN VERTICAL DENTRO DE SU CELDA */
+
+    align-items: center;
+
+    /* place-items: es el shorthand de jusfity y align items, se suele utilizar solo para centrar */
+
+    place-items: center;
+
+    /* !ALINEACIONES DE TODO EL CONTENIDO */
+
+    /* justifi-content, HORIZONTAL alinea TODO EL CONTENIDO EN FUNCION DE LA CAJA PADRE */
+    /* TIENE QUE SOBRAR ESPACIO DE LA CAJA PADRE PARA PODER ALINEAR EL CONTENDIO */
+    /* ? PARA QUE FUNCIONE NO PUEDES TENER MEDIDAS CON "fr" */
+
+    justify-content: center;
+    
+        /* align-content, VERTICAL alinea TODO EL CONTENIDO EN FUNCION DE LA CAJA PADRE */
+    /* TIENE QUE SOBRAR ESPACIO DE LA CAJA PADRE PARA PODER ALINEAR EL CONTENDIO */
+    /* ? PARA QUE FUNCIONE NO PUEDES TENER MEDIDAS CON "fr" */
+    align-content: flex-end;
+   
+    margin-block: 1rem;
+    border: 3px solid black;
+    background: lightcoral;
+    height: 500px;
+}
+
+
+/* ! ATRIBUTOS PARA CADA HIJO */
+
+
+.caja {
+    padding: 10px;
+    border: 2px solid white;
+    font-size: 1,3rem;
+}
+
+.caja1 {
+
+    /* PONEMOS COLUMNA DE INICIO Y COLUMNA FINAL PARA PONERLO EN OTRA POSICION */
+    /* HACEMOS LO MISMO CON LAS FILAS */
+    /* EL RESULTADO NOS PONDRÁ LA CAJA 1 EN LA 3 POSICIÓN, PORQUE ASÍ SE LO INDICAMOS */
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: pink;
+}
+
+.caja2 {
+    background: yellow;
+}
+
+.caja3 {
+    background: blue;
+}
+
+.caja4 {
+    background: lightgreen;
+}
+.caja5 {
+
+    /* VAMOS A HACER GRANDE LA CAJA SEGÚN LA OCUPACIÓN */
+
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    /* SE MUESTRA PEQUEÑO POR UNA PROPIEDAD DE MÁS ARRIBA */
+
+    background: crimson;
+}
+
+
+/* !GRID AREAS */
+
+.caja-padre2 {
+    display: grid;
+    border: 2px solid black;
+    /* LE INDICAMOS COMO QUEREMOS LAS COLUMNAS */
+    grid-template-columns: 1fr 300px 1fr;
+
+    /* SE PUEDE ESTABLECER NOMBRE DE LAS AREAS */
+
+    grid-template-areas: "header" "contenido" "pie";
+} 
+
+.caja6 {
+
+    background: pink;
+}
+
+.caja7 {
+    background: yellow;
+}
+
+.caja8 {
+    background: blue;
+}
+
+.caja9 {
+    background: lightgreen;
+}
+.caja10 {
+
+    /* INDICAMOS DONDE QUEREMOS QUE VAYA LA CAJA, UTILIZANDO GRID-AREA y el NOMBRE DEL AREA QUE HEMOS INDICADO */
+    grid-area: pie;
+    background: crimson;
+}
