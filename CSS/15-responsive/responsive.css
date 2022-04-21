@@ -1,0 +1,45 @@
+h1 {
+    background-color: crimson;
+}
+
+/* EL RESPONSIVE SE HACE CON MEDIA */
+
+/* @media (a partir de estos px) { me haces esto } se parece a un condicional */
+
+
+/* con el min-width, le indicamos que cuando la pantalla sea superior a 500px haga esto. */
+@media (min-width: 500px) {
+    h1 {
+        background-color: black;
+        color: white
+    }
+}
+
+/* con el min-width, le indicamos que cuando la pantalla sea inferior a 600px haga esto. */
+@media (max-width: 400px) {
+    h1 {
+        background-color: blue;
+        color: white
+    }
+}
+
+/* combinamos el max con el min con 'and' */
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    h1 {
+        background-color: aquamarine;
+        color: black;
+    }
+        
+    
+}
+
+/* Para impresión, le decimos que haga otra cosa diferente */
+
+@media print{
+    h1 {
+        background-color: white;
+        color: black;
+    }
+}
+
