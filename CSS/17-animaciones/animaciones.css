@@ -1,0 +1,143 @@
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.caja-padre {
+    margin-block: 1rem;
+    border: 5px solid black;
+    background: pink;
+    height: 500px;
+}
+
+.caja2 {
+    border: 1px solid white;
+    background-color: hotpink;
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    animation: rotacion 2s ease-in-out;
+}
+
+.caja1 {
+    border: 1px solid white;
+    background-color: hotpink;
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    transition: background 0.5s ease;
+    /* llamamos a la animación */
+    /* animation: nombreAnimacion tiempoDuracion delay tipoAceleracion */
+    animation: letraGrande 2s 1s ease; /* !shorthand */
+
+    animation-name: letraGrande;           /* Nombre animación */
+    animation-duration: 2s;               /* Duración animacion */
+    animation-delay: 1s;                 /* delay */
+    animation-timing-function: ease;     /* aceleración */
+
+    /* juntamos dos anumaciones con una coma */
+
+    animation: haciaDerecha 1s ease-in-out, letraGrande 1s ease-in-out;
+
+    /* ! propiedades extras */
+    /* Cuantas veces queremos que haga la animación */
+    animation-iteration-count: infinite; /* infinitas */
+    animation-iteration-count: 2; /* Numero determinado de veces */
+
+
+    /* Dirección de la animación */
+    animation-direction: reverse; /* al revés */
+    animation-direction: alternate; /* de principio a fin y de fin a principio */
+    animation-direction: alternate-reverse; /* de fina a principio y principio a fin */
+    animation-direction: normal; /* por defecto */
+   
+    /* con forwars se queda en la posicion final */
+    animation-fill-mode: forwards;
+
+}
+
+.caja1:hover {
+    background: red;
+}
+
+/* cuando hacemos la transicion, creamos la animacion */
+
+@keyframes letraGrande {
+    0% {
+        font-size: 2rem;
+    }
+
+    50% {
+        font-size: 3rem;
+    }
+
+    100% {
+        font-size: 4rem;
+    }
+}
+
+@keyframes haciaDerecha {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rotacion {
+    0% {
+        transform: translate(0,0);
+    }
+
+    25% {
+        transform: translate(300px,0px);
+    }
+
+    50% {
+        transform: translate(300px,300px);
+    }
+
+    75% {
+        transform: translate(0px, 300px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+/* CHULETA ANIMACION CIRCULO */
+
+.contenedor-circulo{
+    width: 250px;
+    height: 250px;
+    margin: 0 auto; 
+    text-align: center;
+    background: red;
+    border-radius: 50%;
+}
+.circulo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-top: 100px;
+    background:black;
+    border-radius:50%;
+    animation: girar 1s infinite linear;
+}
+@keyframes girar {
+    0% { transform: rotate(0deg)  translate(-100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(-100px) rotate(-360deg); }
+}
