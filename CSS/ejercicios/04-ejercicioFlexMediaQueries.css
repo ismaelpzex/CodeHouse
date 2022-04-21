@@ -1,0 +1,15 @@
+/* =================== HEAD ================== */
+
+.img-nav {
+    width: 100px;
+    
+
+}
+
+.nav-bar {
+    border: 4px solid black;
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    padding-inline: 10%;
+}
