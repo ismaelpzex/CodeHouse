@@ -5,13 +5,13 @@ body {
 /* =================== HEADER ================== */
 .header {
     padding-inline: 10%;
-    background-color: rgb(26, 113, 249);
+    background-color: hsl(217, 95%, 54%);
     font-weight: 400;
+    animation: movimientoHeader 2s ease;
 }
 
 .nav {
     display: flex;
-
 }
 
 .img-header {
@@ -46,7 +46,7 @@ div.search {
 }
 
 .search-boton{
-    background-color: rgb(220, 213, 0);
+    background-color: hsl(58, 100%, 43%);
     color: black;
     padding: 0.5rem;
 }
@@ -115,8 +115,9 @@ div.search {
 .test1 {
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: crimson;
+    background-color: hsl(348, 83%, 47%);
     padding-top: 5%;
+    animation: movimientoHorizontal1 2s ease;
 } 
 
 .test1 > h2 {
@@ -150,24 +151,27 @@ div.search {
 
 .test2 {
     grid-column-start: 1;
-    background-color: aqua;
+    background-color: hsl(180, 100%, 50%);
     text-align: center;
+    animation: movimientoHorizontal1 2s ease;
 }
 
 
 .test3 {
     grid-column-start: 2;
-    background-color: aqua;
+    background-color: hsl(180, 100%, 50%);
     text-align: center;
     padding: 10px;
+    animation: movimientoHeader 2s ease;
 }
 
 
 .test4 {
     grid-column-start: 3;
-    background-color: aqua;
+    background-color: hsl(180, 100%, 50%);
     text-align: center;
     padding: 10px;
+    animation: movimientoHorizontal2 2s ease;
 }
 
 .icon {
@@ -179,11 +183,12 @@ div.search {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 3;
-    background-color: rgb(43, 43, 43);
+    background-color: hsl(0, 0%, 17%);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: movimientoHorizontal1 2s ease;
 }
 @media (max-width: 450px) {
     .test5 {
@@ -195,7 +200,7 @@ div.search {
     padding: 4%;
     font-size: 1.2rem;
     font-weight: 500;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid hsl(0, 0%, 0%);
 }
 
 .article5 {
@@ -203,9 +208,10 @@ div.search {
 }
 
 .aside {
-    background-color: rgb(220, 213, 0);
+    background-color: hsl(58, 100%, 43%);
     text-align: center;
     padding: 2%;
+    animation: movimientoHorizontal2 2s ease;
 }
 
 
@@ -215,17 +221,56 @@ div.search {
 /* ==============FOOTER============== */
 
 .footer {
-    background-color: gray;
+    background-color: hsl(0, 0%, 50%);
     padding: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    animation: movimientoFooter 2s ease;
 }
 
 @media (max-width: 450px) {
     .footer {
         display: grid;
         margin-top: 5%;
+    }
+}
+
+/* =============ANIMACIONES========== */
+
+@keyframes movimientoHorizontal1 {
+    0% {
+        transform: translate(-50px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes movimientoHorizontal2 {
+    0% {
+        transform: translate(50px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes movimientoFooter {
+    0% {
+        transform: translate(0, 100px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes movimientoHeader {
+    0% {
+        transform: translate(0, -100px);
+    }
+    100% {
+        transform: translate(0,0);
     }
 }
