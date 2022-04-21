@@ -5,7 +5,7 @@ body {
 /* =================== HEADER ================== */
 .header {
     padding-inline: 10%;
-    background-color: blue;
+    background-color: rgb(26, 113, 249);
     font-weight: 400;
 }
 
@@ -60,7 +60,7 @@ div.search {
     .nav {
         display: grid;
         grid-template-columns:1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     div.search {
@@ -98,7 +98,7 @@ div.search {
 
 @media (max-width: 450px) {
     .main {
-        display: grid;
+        /* display: grid; */
         width: 100%;
       
     }
