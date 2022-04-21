@@ -1,0 +1,28 @@
+
+
+/* FLOAT SOLO SE UTILIZA PARA QUE UN TEXTO SE PONGA AL REDEDOR DE UNA IMAGEN. */
+
+
+img {
+    width: 100px;
+}
+
+.padre {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+/* CON FLOAT HACEMOS QUE EL TEXTO SE PONGA AL REDEDOR DE LA IMAGEN. */
+/* ! SIEMPRE SE LIMPIA EL FLOTADO, PARA QUE NO SE ROMPA EL FLUJO. se hace con clear:both
+! se hace con ::after  */
+.padre > img {
+    float: right;
+}
+
+.padre::after {
+    content: ''; /* PARA QUE FUNCIONE EL AFTER ES OBLIGATORIO LO HACIAMOS PARA AÑADIR CONTENIDO DE TEXTO DESDE CSS ;)*/
+    display: block; /* HAY QUE AÑADIR EL DISPLAY QUE TIENE LA CAJA */
+    clear: both; /* SE AÑADE LA PROPIEDAD */
+}
