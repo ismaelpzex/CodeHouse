@@ -1,15 +1,165 @@
-/* =================== HEAD ================== */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
-.img-nav {
-    width: 100px;
-    
+/* =================== HEADER ================== */
+.header {
+    padding-inline: 10%;
+    background-color: blue;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
 
 }
 
-.nav-bar {
-    border: 4px solid black;
+.img-header {
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    padding-block: 10px;
+}
+
+.nav-items{
     display: flex;
-    flex-direction: row;
-    background-color: blue;
-    padding-inline: 10%;
+    list-style: none;
+    padding: 0px;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+.nav-item__link {
+    color: white;
+    padding-inline: 10px;
+    text-decoration: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+div.search {
+    margin-left: auto;
+    align-self: center;
+}
+
+.search-boton{
+    background-color: rgb(220, 213, 0);
+    color: black;
+    padding: 0.5rem;
+}
+
+.input-search {
+    padding: 0.5rem;
+}
+
+/* =============MAIN================ */
+
+.main {
+    padding-block: 2%;
+    margin-inline: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 69% 29%;
+    column-gap: 2%;
+}
+
+.article {
+    display: grid;
+    grid-template-rows: 1fr 1fr 20%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+}
+
+.test1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: crimson;
+    padding-top: 5%;
+} 
+
+.test1 > h2 {
+    text-align: center;
+}
+
+.test1 > .img-test1::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.img-test1 {
+    width: 150px;
+    float: left ;
+    margin-inline-start: 2%;
+    box-sizing: content-box;
+}
+
+.test2 {
+    grid-column-start: 1;
+    background-color: aqua;
+    text-align: center;
+}
+
+.test3 {
+    grid-column-start: 2;
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+}
+
+.test4 {
+    grid-column-start: 3;
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+}
+
+.icon {
+    width: 50px;
+}
+
+
+.test5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles-aside {
+    padding: 4%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+}
+
+.article5 {
+    border: none;
+}
+
+.aside {
+    background-color: rgb(220, 213, 0);
+    text-align: center;
+    padding: 2%;
+}
+
+.rrss {
+    padding-top: 10%;
+}
+/* ==============FOOTER============== */
+
+.footer {
+    background-color: gray;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
