@@ -1,0 +1,8 @@
+/* Variables sass */
+/* Se crean en cualquier parte del documento */
+/* $variable: valor; */
+h1 {
+  color: hsl(348deg, 83%, 47%);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,9 @@
+/* Variables sass */
+/* Se crean en cualquier parte del documento */
+/* $variable: valor; */
+
+$crimson: hsla(348, 83%, 47%, 1);
+
+h1 {
+    color: $crimson;
+}
