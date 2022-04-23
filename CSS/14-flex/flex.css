@@ -1,139 +1,103 @@
-.container {
+* {
+    margin: 0;
+}
 
+.container {
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .padre {
-    border: 2px solid black;
-    background-color: pink;
     height: 300px;
-    /* SIEMPRE SE LE DA LA PROPIEDAD FLEX AL PADRE */
-    /* AL DARLE DISPLAY FLEX POR DEFECTO SIEMPRE PONE TODOS LOS ELEMENTOS EN FILA */
-    display: flex;
-    /* PODEMOS DECIR QUE DIRECCION QUEREMOS QUE TENGA */
-    /* LO PONEMOS EN FILA CON ROW */
-/* !    flex-direction: row; */
-    /* PONEMOS EN ORDEN INVERSO CON ROW REVERSE */
-/* !    flex-direction: row-reverse; */
-    /* LO PONEMOS EN COLUMNA CON COLUM */
- /* !   flex-direction: column; */
-    /* PONEMOS EN ORDEN INVERSO CON COLUMN REVERSE */
-/* !    flex-direction: column-reverse; */
-    /* ? ALINEAMOS ELEMENTOS SEGUN EL MAIN AXIS -> */
-    /* ALINEA AL PRINCIPIO */
-    justify-content: flex-start;
-    /* ALINEA AL FIN */
-    justify-content: flex-end;
-    /* ALINEA AL CENTRO */
-    justify-content: center;
-    /* ESPACIO EN MEDIO */
-    justify-content: space-between;
-    /* EL MISMO ESPACIO EN LOS BORDES */
-    justify-content: space-around;
-    /* ALINEA CON EL MISMO ESPACIO ENTRE SI */
-    justify-content: space-evenly;
-
-    /* ALINEAMOS ELEMENTO SEGUN EL CROSS-AXIS */
-
-    align-items: flex-start;
-    align-items: flex-end;
-    align-items: center;
-    /* baseline alinea la base del texto independientemente de la tipografia */
-    align-items: baseline;
-    align-items: stretch; /* POR DEFECTO (lo estira) */
+    border: 2px solid black;
+    background: pink;
+    display: flex;                          /*? Flex se le da al padre, para poder manejar a los hijos que tenga dentro */ /* Pone todos los hijos en fila, y pasan a tener el ancho de su contenido */
 
 
-/* SI QUEREMOS QUE CUANDO NO QUEPAN LAS CAJAS LA BAJE A LA SIGUIENTE LINEA UTILIZAMOS */
-
+                /* ! PROPIEDADES QUE SE LE ASIGNAN AL PADRE */
+                                            
     
-    flex-wrap: wrap;
-    flex-wrap: nowrap;
+                /*! flex-direction - para indicarle la direción a los hijos */
 
-/* PARA DECIDIR COMO SE ALINEAN LAS FILAS CUANDO EXISTE UN WRAP USAMOS ALIGN-CONTENT */
-
-    align-content: flex-start;
-    align-content: flex-end;
-    align-content: space-between;
-    align-content: space-around;
-    align-content: space-evenly;
-    align-content: center;
-
-/* PARA DECIDIR EL ESPACIO QUE HAY ENTRE FILAS Y ENTRE COLUMNAS USAMOS ROW-GAP y COLUMN-GAP */
-    column-gap: 2rem;
-    row-gap: 1rem;
+    /* flex-direction: column; */               /*? Para que la dirección sea en columnas */
+    /* flex-direction:column-reverse; */        /*? Para que la dirección sea en columnas al revés */
+    /* flex-direction: row */                   /*? Para que la dirección sea en filas */
+    /* flex-direction: row-reverse;  */         /*? Para que la dirección sea en fila al revés */
 
 
+                /*! justify-content - para alienar elementos en el main-axis (👈--👉) */
 
+    /* justify-content: flex-end;  */           /*? Para alinear al final */
+    /* justify-content: center;  */             /*? Para centrar */
+    /* justify-content: space-between; */       /*? El primero y el último al principio y al final, el resto repartidos */
+    /* justify-content: space-around; */        /*? El mismo espaciado en los dos lados de cada hijo - no se usa mucho */
+    /* justify-content: space-evenly; */        /*? Mismo espacio al principio y al final de cada hijo */
+
+
+                /*! align-items - para alienar elementos en el cross-axis (👆--👇) */
+
+    /* align-items: flex-start; */              /*? Para alinear al principio */
+    /* align-items: flex-end;  */               /*? Para alienar al final */
+    /* align-items: center;  */                 /*? Para centrar */
+    /* align-items: baseline;  */               /*? Para alinear según la línea de texto */
+    /* align-items: stretch;  */                /*? Por defecto, si los hijos no tienen altura fija, los estira */
+
+
+                /*! flex-wrap - Para cuando no quepan las cajas, que bajen */
+
+    flex-wrap: wrap;                            /*? Para que bajen, cuando no quepan */
+    /* flex-wrap: wrap-reverse;  */             /*? Para que hagan wrap al revés */
+
+
+                /*! align-content - Para decidir como se alinean las filas cuando existe un wrap */
+
+    align-content: flex-start;                  /*? Para alinear las filas juntas, sin espacio */
+    /* align-content: flex-end; */              /*? Para alinear las filas juntas, sin espacio al final */
+    /* align-content: space-between; */         /*? La primera y la última fila al principio y al final, el resto repartidas */
+    /* align-content: space-around; */          /*? El mismo espaciado en los dos lados de cada hijo - no se usa mucho */
+    /* align-content: space-evenly; */          /*? Mismo espacio al principio y al final de cada fila */
+    /* align-content: center;  */               /*? Para centrar */
+
+
+                /*!  Para decidir el espacio entre filas y columnas, usamos row-gap, colum-gap y gap */
+
+    /* column-gap: 2rem; */                     /*? Para separar columnas */
+    /* row-gap: 1rem; */                        /*? Para separar filas */
+    gap: 3rem;                                  /*? Para separar columnas y filas */
 }
 
 
-/* ! Truco para centrar elemento en una caja */
-/* 
-    displa: flex; 
-    justify-content: center;
-    align-items: center;
-*/
 
-
-
-/* PROPIEDADES PARA LOS HIJOS */
-
-/* LAS PODEMOS ORDENAR CON ORDER */
-
-/* !   CON ALIGN-SELF LE DECIMOS COMO SE ALINEA 1 SOLO ELEMENTO EN CROSS AXIS */
-
-
+                /*! PROPIEDADES A LOS HIJOS */
 
 
 .hijo {
     border: 2px solid white;
-}
-
-.hijo1 {
-    background: crimson;
     padding: 0.3rem;
-    order: 3;
-    align-self: flex-end;
-}
-
-.hijo2 {
-    background: gold;
-    padding: 0.3rem;
+    height: 50px;
     order: 1;
 }
+.hijo1 {
+    background: crimson;
+}
+.hijo2 {
+    background: gold;
+    order: 0;                               /*? Para cambiar el orden de los hijos, usamos "order" todos parten de order 0, */
+    /* flex-grow: 1;  */                    /*? Para que un hijo crezca, usamos flex-grow: 1; Por defecto es 0*/
+                                            /*? Si a un hijo le damos 4 y a otro 2, el primero crecerá el doble del segundo*/
+    /* flex-shrink: 0;  */                  /*? Para que un hijo NO se haga pequeño usamos flex-shrink 0, por defecto es 1 (SI SE HACE PEQUEÑO)*/
+}
 .hijo3 {
-    background: blue;
-    padding: 0.3rem;
-    order: 0;
-
+    background: lightseagreen;
 }
-
-/* ! CON MARGENES  LE DECIMOS COMO SE ALINEA 1 SOLO ELEMENTO EN MAIN AXIS */
-
-.menu {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
+.hijo7 {
+    background: salmon;
+     flex: 3;                               /*? Con "flex" indicamos el tamaño que queremos que ocupe una caja, en este caso, hijo7 ocupa 3 de 5 totales e hijo8 2 de 5 */
 }
-
-
-
-.logo {
-    border: 1px solid crimson;
+.hijo8 {
+    background: purple;
+    /* flex: 2; */
+    align-self: flex-end;                   /*? Para desplazar un sólo elemento hacia abajo en cross-axis, en este caso - no funcionan porque está en wrap */
+    margin-left: auto;                      /*? Para desplazar un solo elemento en el main-axis */
 }
-
-.item1 {
-    margin-inline-start: 1rem;
-    border: 1px solid crimson;
-}
-
-.item2 {
-    margin-left: auto;
-    border: 1px solid crimson;
-}
-/* ? EXTRAS */
-
-/* FLEX-GROW permite crecer la caja POSICIONES flex-grow: $ ; */
-/* FLEX-SHRINK permite DISMINUIR la caja POSICIONES flex-shrink: $ ; */
