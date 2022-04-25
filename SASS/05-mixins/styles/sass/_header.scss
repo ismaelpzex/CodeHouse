@@ -95,9 +95,9 @@ $phone: 767px;
             align-items: center
         }
 
-        @include mixins.media (900px) { // LLAMAMOS A LA FUNCION
-            justify-content: center; // CON ESTAS FILAS
-            align-items: center     // PASAMOS EL CONTENIDO
+        @include mixins.media (900px) { // !LLAMAMOS A LA FUNCION
+            justify-content: center; //? CON ESTAS FILAS
+            align-items: center     //? PASAMOS EL CONTENIDO
         }
 
         @media (max-width: $phone) {
