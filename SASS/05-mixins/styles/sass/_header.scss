@@ -1,0 +1,118 @@
+@use 'mixins';
+
+$colorNav: hsl(240, 100%, 50%);
+$colorMainItems: hsl(0, 0%, 100%);
+$heightSearch: 2.5rem;
+$tablet: 900px;
+$phone: 767px;
+
+/* =========== navbar ========== */
+
+.main-menu {
+    display: grid;
+    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-areas:
+        "logo enlaces search"
+    ;
+    background-color: $colorNav;
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "enlaces search"
+        ;
+    }
+
+    @media (max-width: $phone) {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "enlaces"
+            "search"
+        ;
+    }
+
+    .logo {
+        margin-left: auto;
+        padding: 2%;
+        width: 80px;
+        height: 80px;
+        box-sizing: border-box;
+        grid-area: "logo";
+
+        @media (max-width:$tablet) {
+
+            display: none;
+
+        }
+    }
+
+    .main-menu__items {
+        grid-area: "enlaces";
+        display: flex; //para poner los elementos en linea
+        align-items: center;
+        gap: 10%; // para separarlos entre sí
+        justify-content: flex-start;
+
+        @media (max-width: $phone) {
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            margin-bottom: 0px;
+
+        }
+
+        a.main-menu__link {
+            text-decoration: none;
+            list-style: none;
+            color: $colorMainItems;
+            font-size: 1.5rem;
+
+            &:hover {
+                color: rgb(203, 220, 20);
+                transition: all 0.5s ease-in-out;
+
+                @media (max-width: $phone) {
+                    transition: none;
+                }
+            }
+
+        }
+
+
+
+    }
+
+    .main-menu__search {
+        display: flex;
+        align-items: center;
+        gap: 5%;
+        @include mixins.border ; //! LO INCLUIMOS PONIENDO EL SPACE NAME MAS LA VARIABLE QUE HEMOS CREADO
+        @include mixins.borderParameters(3px, red) ; //! LLAMAMOS A LA FUNCION, INDICANDOLE DOS PARAMETROS
+
+        @media (max-width: $tablet) {
+            justify-content: center;
+            align-items: center
+        }
+
+        @include mixins.media (900px) { // LLAMAMOS A LA FUNCION
+            justify-content: center; // CON ESTAS FILAS
+            align-items: center     // PASAMOS EL CONTENIDO
+        }
+
+        @media (max-width: $phone) {
+            gap: 1%
+        }
+
+        .input-search {
+            height: $heightSearch;
+        }
+
+        .botton-search {
+            height: $heightSearch;
+            width: 5rem;
+        }
+
+    }
+
+}

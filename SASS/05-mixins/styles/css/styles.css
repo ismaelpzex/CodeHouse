@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ahroa vamos a crear la variable y le vamos a decir que nos pasan el ancho
+y el color por parámetros. */
+/* =========== navbar ========== */
+.main-menu {
+  display: grid;
+  grid-template-columns: 2fr 5fr 3fr;
+  grid-template-areas: "logo enlaces search";
+  background-color: hsl(240deg, 100%, 50%);
+}
+@media (max-width: 900px) {
+  .main-menu {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "enlaces search";
+  }
+}
+@media (max-width: 767px) {
+  .main-menu {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "enlaces" "search";
+  }
+}
+.main-menu .logo {
+  margin-left: auto;
+  padding: 2%;
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  grid-area: "logo";
+}
+@media (max-width: 900px) {
+  .main-menu .logo {
+    display: none;
+  }
+}
+.main-menu .main-menu__items {
+  grid-area: "enlaces";
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  justify-content: flex-start;
+}
+@media (max-width: 767px) {
+  .main-menu .main-menu__items {
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+}
+.main-menu .main-menu__items a.main-menu__link {
+  text-decoration: none;
+  list-style: none;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.5rem;
+}
+.main-menu .main-menu__items a.main-menu__link:hover {
+  color: rgb(203, 220, 20);
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 767px) {
+  .main-menu .main-menu__items a.main-menu__link:hover {
+    transition: none;
+  }
+}
+.main-menu .main-menu__search {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  border: 3px solid black;
+  border: 3px solid red;
+}
+@media (max-width: 900px) {
+  .main-menu .main-menu__search {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 900px) {
+  .main-menu .main-menu__search {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .main-menu .main-menu__search {
+    gap: 1%;
+  }
+}
+.main-menu .main-menu__search .input-search {
+  height: 2.5rem;
+}
+.main-menu .main-menu__search .botton-search {
+  height: 2.5rem;
+  width: 5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

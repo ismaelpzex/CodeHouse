@@ -1,0 +1,35 @@
+// Los mixins son parecidos a los snippets
+@mixin border {
+
+    border: 3px solid black;
+    
+}
+
+//lo llamamos en _header.scss con @include
+
+// Una vez creado lo usamos en el archivo con use
+
+// ! LO COMPLICAMOS UN POCO
+
+/* ahroa vamos a crear la variable y le vamos a decir que nos pasan el ancho
+y el color por parámetros. */
+
+@mixin borderParameters($ancho, $color) { 
+
+    border: $ancho solid $color;
+    
+}
+
+//lo llamamos en _header.scss
+
+// ! LO COMPLICAMOS UN POCO MÁS
+
+@mixin media ($medida) {
+
+    @media (max-width: $medida) {
+
+        @content; // indicamos que le vamos a introducir un contenido
+
+    }
+    
+}

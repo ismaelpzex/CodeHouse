@@ -1,3 +1,34 @@
 // Usamos @import para importar un archivo partial, en este caso el _header.css
-
+  //ESTA ES LA VIEJA FORMA DE HACERLO 
 @import 'header';
+
+
+/* Si utilizamos USE nos crea un "name space", solventamos problemas si hay varias variables con el mismo nombre */
+
+/* Ejemplo:
+    @use 'archivo1'
+    @use 'archivo2'
+
+    body {
+        backgroun: archivo1.$principal
+        font-family: archivo2.$pincipal
+
+*/
+
+/*  AL TENER 2 VARIABLES QUE SE LLAMAN IGUAL CREAN CONFLICTO, PERO SI UTILIZAMOS EL USE Y EL NAME SPACE, SOLVENTAMOS EL PROBLEMA
+PORQUE LE DECIMOS DESDE QUE ARCHIVO LLAMAMOS A LA VARIABLE
+*/
+
+// ! SI QUEREMOS PERSONALIZAR EL "NAME SPACE"
+
+//? UTILIZAMOS UN ALIAS 
+
+/* Ejemplo:
+    @use 'archivo1 as colores'
+    @use 'archivo2 as textos'
+
+    body {
+        backgroun: colores.$principal
+        font-family: textos.$pincipal
+
+*/
