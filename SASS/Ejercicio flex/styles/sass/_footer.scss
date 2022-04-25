@@ -1,0 +1,5 @@
+@use 'mixin' as mix;
+
+.footer {
+    @include mix.footer;
+}

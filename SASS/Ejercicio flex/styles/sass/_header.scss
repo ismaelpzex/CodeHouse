@@ -1,0 +1,35 @@
+@use 'variables'as var;
+@use 'mixin'as mix;
+
+.header {
+    @include mix.header;
+
+    .main-menu {
+        @include mix.main-menu;
+
+        .logo {
+            @include mix.logo;
+        }
+
+        .main-menu__links {
+            @include mix.main-menu__links;
+
+            .menu-link {
+                @include mix.menu-link;
+            }
+
+        }
+
+        .search {
+            @include mix.search;
+
+            .item-search {
+                @include mix.item-search;
+            }
+
+            .btn-search {
+                @include mix.btn-search
+            }
+        }
+    }
+}

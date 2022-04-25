@@ -1,0 +1,272 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.header {
+  background: hsl(216deg, 98%, 52%);
+  padding-inline: 10%;
+  animation: movimientoHeader 2s ease;
+}
+@keyframes movimientoHeader {
+  0% {
+    transform: translate(0, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.header .main-menu {
+  display: flex;
+}
+@media (max-width: 871px) {
+  .header .main-menu {
+    flex-direction: column;
+  }
+}
+.header .main-menu .logo {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  margin-inline-end: 2%;
+  margin-block: 1%;
+}
+@media (max-width: 871px) {
+  .header .main-menu .logo {
+    display: none;
+  }
+}
+.header .main-menu .main-menu__links {
+  margin-right: auto;
+  font-size: 1.4rem;
+  align-self: center;
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 871px) {
+  .header .main-menu .main-menu__links {
+    margin: auto;
+  }
+}
+.header .main-menu .main-menu__links .menu-link {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+}
+.header .main-menu .search {
+  align-self: center;
+}
+.header .main-menu .search .item-search {
+  height: 2rem;
+}
+.header .main-menu .search .btn-search {
+  height: 2rem;
+  background-color: hsl(51deg, 100%, 50%);
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+.container .section {
+  flex: 8;
+}
+.container .section .red-box {
+  background-color: hsl(348deg, 83%, 47%);
+  margin-block-end: 1rem;
+  font-size: 1.5rem;
+  animation: movimientoHorizontal1 2s ease;
+}
+@keyframes movimientoHorizontal1 {
+  0% {
+    transform: translate(-50px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.container .section .red-box .red-box__img {
+  position: float;
+  float: left;
+  margin: 2%;
+  box-sizing: border-box;
+}
+.container .section .red-box .title {
+  text-align: center;
+}
+.container .section .red-box::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.container .section .blue-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-block-end: 1rem;
+}
+@media (max-width: 871px) {
+  .container .section .blue-box {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .container .section .blue-box {
+    flex-direction: column;
+  }
+}
+.container .section .blue-box .blue-box__content {
+  flex: 1;
+  background-color: hsl(189deg, 76%, 56%);
+  padding: 1rem;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  animation: movimientoHeader 2s ease;
+}
+.container .section .blue-box .blue-box__content .icons {
+  width: 3rem;
+  margin: 1rem;
+}
+.container .section .blue-box .blue-box__content .title-blue {
+  text-align: center;
+  text-transform: uppercase;
+  margin-block: 1.5rem;
+}
+.container .section .gray-box {
+  background-color: hsl(0deg, 0%, 30%);
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+  padding: 2rem;
+  animation: movimientoHorizontal1 2s ease;
+}
+.container .aside {
+  flex: 2;
+  text-align: center;
+  background-color: hsl(51deg, 100%, 50%);
+  animation: movimientoHorizontal2 2s ease;
+}
+@media (max-width: 768px) {
+  .container .aside {
+    padding-block-end: 5%;
+  }
+}
+@keyframes movimientoHorizontal2 {
+  0% {
+    transform: translate(50px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.container .aside .title-aside {
+  font-size: 1.5rem;
+  padding-block-start: 2rem;
+}
+.container .aside .aside-links {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  padding-block: 1rem;
+}
+.container .aside .aside-links .aside-link {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 0%);
+  border-bottom: 1px solid hsl(0deg, 0%, 0%);
+  padding: 0.5rem;
+  margin-inline: 4%;
+}
+.container .aside .rrss {
+  font-size: 2rem;
+}
+
+.footer {
+  margin-block-start: 1rem;
+  background-color: hsl(0deg, 0%, 30%);
+  text-align: center;
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+/*# sourceMappingURL=style.css.map */

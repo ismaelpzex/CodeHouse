@@ -1,0 +1,76 @@
+@use 'mixin' as mix;
+
+.container {
+    @include mix.container; 
+        
+        
+
+    .section {
+        @include mix.section;
+        
+        .red-box {
+            @include mix.red-box;
+
+            .red-box__img {
+                @include mix.img-box;
+                
+            }
+
+            .title {
+                @include mix.title;
+            }
+        
+
+            }
+        .red-box::after {
+            @include mix.red-box-after;
+
+        }
+
+        .blue-box {
+            @include mix.blue;
+
+            .blue-box__content {
+                @include mix.content-blue;
+                
+                .icons {
+                    @include mix.blue-icons;
+                    
+                }
+                .title-blue {
+                    @include mix.title-blue;
+                }
+                
+            }
+        }
+
+        .gray-box {
+            @include mix.box-gray;
+
+        }
+    
+    }
+
+    .aside {
+        @include mix.aside;
+
+        .title-aside {
+            @include mix.title-aside;
+        }
+       
+        .aside-links {
+            @include mix.aside-links;
+        
+            .aside-link {
+                @include mix.aside-link;
+            }
+        }
+    
+        .rrss {
+            @include mix.rrss;
+        }
+    
+    }
+
+}
+
