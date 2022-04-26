@@ -13,12 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: var.$font-size;
-
-    @media (max-width: 950px) {
-        border: 4px solid red;
-        flex-direction: row-reverse;  
-    }
-
+    
     .cards {
         display: flex;
         border-radius: 1rem;
@@ -29,10 +24,8 @@ body {
             padding: 2.5rem;
             background-color: var.$blue-dark;
             box-sizing: border-box;
-
             @media (max-width: 950px) {
-                border: 4px solid red;
-                flex-direction: column;  
+                padding: 0;
             }
 
             .info-title {
@@ -71,19 +64,15 @@ body {
             }
         }
     }
-}
-
-
-
-.card-image {
-    flex: 1;
-    background: linear-gradient(var.$gradient-image, var.$gradient-image), url(../../assets/img/image-header-desktop.jpg);
-    block-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    @media (max-width: 950px) {
-        border: 4px solid red;
-        flex-direction: column;  
+    
+    
+    
+    .card-image {
+        flex: 1;
+        background: linear-gradient(var.$gradient-image, var.$gradient-image), url(../../assets/img/image-header-desktop.jpg);
+        block-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        
     }
 }
