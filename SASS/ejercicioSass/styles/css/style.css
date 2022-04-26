@@ -110,11 +110,6 @@ body {
   background-color: hsl(244deg, 38%, 16%);
   box-sizing: border-box;
 }
-@media (max-width: 950px) {
-  .container .cards .card-info {
-    padding: 0;
-  }
-}
 .container .cards .card-info .info-title {
   color: hsl(0deg, 0%, 100%);
   margin-block-end: 3rem;

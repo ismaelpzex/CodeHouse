@@ -24,9 +24,6 @@ body {
             padding: 2.5rem;
             background-color: var.$blue-dark;
             box-sizing: border-box;
-            @media (max-width: 950px) {
-                padding: 0;
-            }
 
             .info-title {
                 color: var.$white;
@@ -51,7 +48,6 @@ body {
                 margin-inline-end: 3rem;
                 text-transform: uppercase;
 
-
                 .info-title__desc {
                     color: var.$white;
                     font-size: 1.8rem;
@@ -64,8 +60,6 @@ body {
             }
         }
     }
-    
-    
     
     .card-image {
         flex: 1;
