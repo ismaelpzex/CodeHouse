@@ -34,7 +34,6 @@
     }
 }
 @mixin main-menu__links {
-
     margin-right: auto;
     font-size: 1.4rem;
     align-self: center;
@@ -84,12 +83,10 @@
     margin-block-end: 1rem;
     font-size: 1.5rem;
     animation: movimientoHorizontal1 2s ease;
-
     @keyframes movimientoHorizontal1 {
         0% {
             transform: translate(-50px, 0);
         }
-
         100% {
             transform: translate(0, 0);
         }
@@ -117,15 +114,12 @@
     flex-direction: row;
     gap: 1rem;
     margin-block-end: 1rem;
-
     @media (max-width:871px) {
         flex-wrap: wrap;
     }
-
     @media (max-width:768px) {
         flex-direction: column;
     }
-
 }
 @mixin content-blue {
     flex: 1;
@@ -160,14 +154,11 @@
     @media (max-width:768px) {
         padding-block-end: 5%;
     }
-
     animation: movimientoHorizontal2 2s ease;
-
     @keyframes movimientoHorizontal2 {
         0% {
             transform: translate(50px, 0);
         }
-
         100% {
             transform: translate(0, 0);
         }
