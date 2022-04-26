@@ -1,27 +1,5 @@
 @use 'variables'as var;
 
-@mixin for-size($size) {
-    @if $size==phone-only {
-        @media (max-width: 599px) {
-            @content;
-        }
-    }
-
-    @else if $size==movile {
-        @media (min-width: 600px) {
-            @content;
-        }
-    }
-
-    @else if $size==tabletX {
-        @media (max-width: 900px) {
-            @content;
-        }
-    }
-
-    @else if $size==tablet {}
-}
-
 @mixin header {
     background: var.$background-header;
     padding-inline: 10%; //pongo padding del 10% a cada lado
@@ -37,16 +15,13 @@
         }
     }
 }
-
 @mixin main-menu {
     display: flex; //pongo display flex a la caja del main menu
 
     @media (max-width:871px) {
         flex-direction: column;
     }
-
 }
-
 @mixin logo {
     width: var.$img-logo;
     height: var.$img-logo;
@@ -58,7 +33,6 @@
         display: none;
     }
 }
-
 @mixin main-menu__links {
 
     margin-right: auto;
@@ -71,26 +45,21 @@
         margin: auto;
     }
 }
-
 @mixin menu-link {
     color: var.$color-link;
     text-decoration: none;
 }
-
 @mixin search {
     align-self: center;
 }
-
 @mixin item-search {
     height: var.$search-height;
 
 }
-
 @mixin btn-search {
     height: var.$search-height;
     background-color: var.$background-btn;
 }
-
 @mixin container {
     width: 80%;
     margin-inline: auto;
@@ -106,13 +75,10 @@
         width: 95%;
     }
 }
-
 @mixin section {
     flex: 8;
 
 }
-
-
 @mixin red-box {
     background-color: var.$bg-red-box;
     margin-block-end: 1rem;
@@ -130,12 +96,10 @@
     }
 
 }
-
 @mixin title {
     text-align: center;
 
 }
-
 @mixin img-box {
     position: float;
     float: left;
@@ -143,13 +107,11 @@
     box-sizing: border-box;
 
 }
-
 @mixin red-box-after {
     clear: both;
     content: "";
     display: block;
 }
-
 @mixin blue {
     display: flex;
     flex-direction: row;
@@ -165,7 +127,6 @@
     }
 
 }
-
 @mixin content-blue {
     flex: 1;
     background-color: var.$color-blue;
@@ -174,33 +135,23 @@
     text-align: center;
     font-size: 1.2rem;
     animation: movimientoHeader 2s ease;
-
-
 }
-
 @mixin blue-icons {
     width: var.$blue-icons;
     margin: 1rem;
-
 }
-
 @mixin title-blue {
     text-align: center;
     text-transform: uppercase;
     margin-block: 1.5rem;
-
 }
-
 @mixin box-gray {
     background-color: var.$bg-box-gray;
     color: var.$pure-white;
     text-align: center;
     padding: 2rem;
     animation: movimientoHorizontal1 2s ease;
-
 }
-
-
 @mixin aside {
     flex: 2;
     text-align: center;
@@ -222,20 +173,16 @@
         }
     }
 }
-
 @mixin title-aside {
     font-size: 1.5rem;
     padding-block-start: 2rem;
-
 }
-
 @mixin aside-links {
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
     padding-block: 1rem;
 }
-
 @mixin aside-link {
     text-decoration: none;
     color: var.$pure-black;
@@ -243,18 +190,13 @@
     padding: 0.5rem;
     margin-inline: 4%;
 }
-
 @mixin rrss {
     font-size: 2rem;
-
 }
-
 @mixin footer {
     margin-block-start: 1rem;
     background-color: var.$pure-gray;
     text-align: center;
     font-size: 1.5rem;
     color: var.$pure-white;
-
-
 }
