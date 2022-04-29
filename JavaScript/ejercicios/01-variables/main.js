@@ -3,8 +3,7 @@
 const horas = 24
 const minutos = horas * 60
 const segundos = minutos * 60
-var segundosDia = horas * minutos * segundos
-console.log(segundosDia)
+console.log(segundos)
 
 //================ 2 ====================
 
