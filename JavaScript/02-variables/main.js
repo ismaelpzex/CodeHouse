@@ -13,9 +13,3 @@ const altura = 1.82
 
 // Podemos crear una variable sin asignarle un valor.
 let nombreNovia
-
-
-
-const nombreNovia2 = 'lorena'
-
-nombreNovia2 = 'hola'
