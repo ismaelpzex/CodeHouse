@@ -10,13 +10,13 @@ console.log(segundosDia)
 
 let euros = 7
 let dolares = 2
-euros*=dolares
+euros *= dolares
 console.log(euros)
 
 //================ 3 ====================
 
 const IVA = 1.21
 let precio = 135
-precio*=IVA
+precio *= IVA
 const mensaje = `El precio del articulo es ${precio} €`
 console.log(mensaje)
