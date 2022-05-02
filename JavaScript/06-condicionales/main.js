@@ -15,9 +15,9 @@ const num1 = 7
 const num2 = 3
 const nombre = 'Ismael'
 
-// if => SI SE CUMPLE ESTO, HAZ ESTO
+//! if => SI SE CUMPLE ESTO, HAZ ESTO
 
-if ( num1 < 5) {
+if (num1 < 5) {
     console.log(`el numero ${num1} es menor que 5`)
 }
 console.log(`el numero ${num1} NO es menor que 5`)
@@ -48,3 +48,46 @@ if (num1 === 7 || nombre !== 'paco') {
 // SI LA VARIABLE ESTÁ CREADA FUERA DEL CONDICIONAL PODEMOS UTILIZARLA DENTRO
 // SI LA VARIABLE ESTÁ CREADA FENTRO DEL CONDICIONAL NO EXISTE FUERA
 // SI LA VARIABLE ESTÁ CREADA DENTRO DEL CONDICIONAL CON VAR => var variable = X SE CREA DE FORMA GLOBAL Y SE PUEDE UTILIZAR FUERA
+
+//? JS interpreta algunos valores como true y otros como false por defecto.
+
+if (1) { // como intenta transformar el numero a booleano, el 1 se considera true, entraria en el condicional.
+    console.log('true')
+}
+
+//! else... -> SI NO SE CUMPLE NADA DE LO ANTERIOR, HAZ ESTO.
+
+if (2 === 2) {
+    console.log(`los numeros son iguales.`)
+} else {
+    console.log(`los numeros NO son iguales.`)
+}
+
+
+//! else if... -> EN CAMBIO, SI SE CUMPLE ESTO, HAZ ESTO.
+//Cuando se cumple una condición, las otras se las salta.
+
+if (nombre === 'Ismael') {
+    console.log(`Hola ${nombre}`)
+} else if (nombre === 'Carlos') {
+    console.log(`Hola ${nombre}`)
+}
+
+//! switch -> SE USA SOBRE TODO CUANDO TENEMOS OPCIONES CONCRETAS
+
+const color = 'rojo'
+
+switch (color) {
+    case 'rojo' : { console.log(`el color es ${color}`)
+    break
+}
+    case 'verde': { console.log(`el color es ${color}`)
+    break
+}
+    case 'amarillo': { console.log(`el color es ${color}`)
+    break
+}
+    default: {
+        console.log(`${color} no es un color molongo.`)
+    }
+}
