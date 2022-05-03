@@ -54,3 +54,44 @@ const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for (let numero of numeros) {
     console.log(numero)
 }
+
+
+//!BUCLE FOR IN
+//? Es igual que el for of, siempre empieza en la primera posicion
+//? siempre va de uno en uno
+//? siempre llega hata el finla
+//! la diferencia es que la variable que pongamos en el for in, SIEMPRE VA A CONVERTIRSE EN EL INDICE EN LA VUELTA EN LA QUE ESTES
+
+const compra = ['peras', 'manzanas', 'limones', 'tomates', 'sandias']
+
+for (let item in compra) {
+    console.log(item)
+}
+
+
+//! BUCLE WHILE
+//? Mientras se cumpla esto, haz esto
+// se suele usar cuando no sabemos exactamente cuantas veces vamos a tener que repetir un codigo
+
+
+let i = 0
+while (i < 10) {
+    console.log('soy un bucle while')
+    i++
+}
+
+// Ejemplo de un while en el que no sabemos cuantas vueltas vamos a dar
+
+let password
+while (password !== "1234") {
+    password = prompt('escribe la contraseña')
+}
+
+
+//! BUCLE DO WHILE
+//? Haz esto primero y luego si se cumple lo repites
+
+let passwd
+do {
+    passwd = prompt('introduce la contraseña')
+}while (passwd !== '1234')
