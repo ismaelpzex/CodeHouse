@@ -55,7 +55,7 @@ let dibujos = "*"
 
 while (indice < estrellas) {
     console.log(dibujos)
-    dibujos = dibujos + "*"
+    dibujos = dibujos + dibujos
     indice++
 }
 
