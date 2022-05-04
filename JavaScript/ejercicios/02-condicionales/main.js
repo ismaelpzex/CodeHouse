@@ -56,23 +56,23 @@ let edad = prompt(`Introduce una edad`)
 
 if (isNaN(edad) || edad === null || edad.trim() === "" || edad < 0 || edad > 100) {
     console.log(`la edad no es correcta`)
-} else 
+} else
     edad = Number(edad)
-    if (edad < 6 || edad > 65) {
-        console.log(`Con ${edad} años, entras gratis`)
-    } else if (edad >= 6 && edad <= 13) {
-        console.log(`Con ${edad} años, 4€ la entrada`)
-    } else if (edad >= 13 && edad <= 65) {
-        console.log(`Con ${edad} años, 7€ la entrada`)
+if (edad < 6 || edad > 65) {
+    console.log(`Con ${edad} años, entras gratis`)
+} else if (edad >= 6 && edad <= 13) {
+    console.log(`Con ${edad} años, 4€ la entrada`)
+} else if (edad >= 13 && edad <= 65) {
+    console.log(`Con ${edad} años, 7€ la entrada`)
 }
 
 // ============== 4 =====================
 
-/* let dia = "lunes"
+let dia = prompt('Introduce un día de la semana')
 
 
 
-if (dia !== null) {
+if (dia !== null || dia.trim() !== "" || isNaN(dia)) {
     switch (dia) {
         case 'lunes': console.log(`hoy es ${dia} hay de todo`)
             break
@@ -89,20 +89,21 @@ if (dia !== null) {
         case 'domingo': console.log(`hoy es ${dia} no hay arroz`)
             break
         default: {
-            console.log(`${dia} no está contemplado como dia de la seman`)
+            console.log(`${dia} no está contemplado como dia de la semana`)
         }
     }
 } else {
     console.log(`Hasta luego HAMIJITO`)
 }
- */
+
 
 
 // ============== 5 =====================
 
-/* let mes = 7
+let mes = prompt('Introduce un numero de mes')
 
-if (mes >= 1 && mes <= 12 && String(mes).trim() !== "" && mes !== isNaN) {
+if (mes >= 1 && mes <= 12 && String(mes).trim() !== "") {
+    mes = Number(mes)
     switch (mes) {
         case 1: console.log(`el mes ${mes} es Enero y tiene 31 Dias`)
             break
@@ -132,15 +133,19 @@ if (mes >= 1 && mes <= 12 && String(mes).trim() !== "" && mes !== isNaN) {
 } else {
     console.log(`el numero ${mes} de mes no es correcto`)
 }
- */
+
 // ============== 6 =====================
 
-/* let horas = Number(22)
-let minutos = Number(22)
-let segundos = Number(22)
+let horas = prompt('inserta una hora')
+let minutos = prompt('inserta unos minutos')
+let segundos = prompt('inserta unos segundos')
 
 
 if (horas <= 23 && horas >= 0 && String(horas).trim() !== "" && minutos <= 59 && minutos >= 0 && String(minutos).trim() !== "" && segundos <= 59 && segundos && String(segundos).trim() !== "") {
+
+    horas = Number(horas)
+    minutos = Number(minutos)
+    segundos = Number(segundos)
 
     if (segundos === 59 && minutos === 59) {
         segundos = 0
@@ -162,4 +167,4 @@ if (horas <= 23 && horas >= 0 && String(horas).trim() !== "" && minutos <= 59 &&
 
 } else {
     console.log(`introduce una hora correcta`)
-} */
+} 

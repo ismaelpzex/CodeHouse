@@ -1,4 +1,4 @@
-/*  //================== 1 ================
+  //================== 1 ================
 
 let multiplicado = 1
 
@@ -20,7 +20,6 @@ while (numeroUser !== numero) {
     if (numeroUser === null || numeroUser === undefined || numeroUser.trim() === "") {
         numeroUser = alert('introduce un numero entre el 50 y 100 PERO AHORA BIEN')
     } else {
-        console.log(numeroUser)
         numeroUser = Number(numeroUser)
         if (numeroUser > numero) {
             alert('el numero es menor, vuelve a intentarlo')
@@ -34,7 +33,7 @@ alert('acertaste!!')
 
 //================== 3 ================
 
-/* let userNumber = prompt('Introduce un numero entre el 2 y el 10')
+let userNumber = prompt('Introduce un numero entre el 2 y el 10')
 userNumber = Number(userNumber)
 
 while (userNumber < 2 || userNumber > 10) {
@@ -92,7 +91,7 @@ console.log(`positivos = ${positivos}, negativos = ${negativos}, ceros = ${ceros
 //================== 7 ================
 
 
- let random = Math.floor((Math.random() * 100) + 1)
+let random = Math.floor((Math.random() * 100) + 1)
 let intentos = 0
 let numerito   
 
@@ -114,4 +113,4 @@ while (intentos <= 5 && numerito != random) {
 }
 if (numerito == random) {
     alert(`tu poya ahi lo has hecho en el ${intentos} intento`)
-}  */
+} 
