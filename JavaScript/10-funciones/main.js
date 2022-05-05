@@ -60,7 +60,8 @@ buenosdias('Ismael')
 //? RESOLVER PROBLEMA DENTRO DE LA FUNCION
 
 function buenasTardes(nombre) {
-    if (!nombre) {
+    // if (nombre !== undefined) <- permitiría poner 0, null...
+    if (!nombre) { // <- mientras (todo lo que devuelva false)
         console.log('buenas tardes amijo')
     } else {
         console.log(`buenas tardes ${nombre} `)
@@ -76,4 +77,30 @@ function suma(a, b) {
     console.log(a + b)
 }
 
-suma(5,5)
+suma(5, 5)
+
+//! FUNCIONES ANONIMAS
+// LA FUNCION NO LLEVA NOMOBRE
+// LA METEMOS UNA VARIABLE
+// EVITAMOS QUE MODIFIQUEN LA FUNCION
+
+const restar = function (x, y) {
+    console.log(`Resta: ${x - y}`)
+}
+restar(5, 3)
+
+//? A PARTIR DE ES6 SE CREARON LAS ARRO FUCTION (funciones flecha)
+// se sustituye function (x, y) {}
+// por (x, y) => {}
+
+const multiplicar = (x, y) => {
+    console.log(`multiplicación: ${x * y}`)
+}
+multiplicar(90, 90)
+
+// si solo HAY un parametro, podemos quitar los paréntesis
+
+const saludito = nombre => {
+    console.log(`hola holita ${nombre}`)
+}
+saludito('Ismael')
