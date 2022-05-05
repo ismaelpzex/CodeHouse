@@ -89,7 +89,7 @@ const restar = function (x, y) {
 }
 restar(5, 3)
 
-//? A PARTIR DE ES6 SE CREARON LAS ARRO FUCTION (funciones flecha)
+//? A PARTIR DE ES6 SE CREARON LAS ARROW FUCTIONS (funciones flecha)
 // se sustituye function (x, y) {}
 // por (x, y) => {}
 
