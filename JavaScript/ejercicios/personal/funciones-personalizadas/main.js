@@ -52,4 +52,4 @@ superSuma(randon(), randon())
 
 console.log('polla')
 
-true ? console.log(true) : console.log(fasle)
+array.includes(5) ? console.log(true) : console.log(false)
