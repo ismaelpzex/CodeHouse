@@ -35,8 +35,6 @@ console.log(frutas);
 console.log(numeros.includes(2)) // lo incluye y me devuelve true
 console.log(numeros.includes(1990)) // no lo incluye y me devuelve false
 
-
-
 //indexOf -> devuelve el indice de la posición donde esté el valor parametrizado
 console.log(numeros.indexOf(13))
 console.log(numeros.indexOf(14)) // No existe, me devuelve -1
