@@ -31,6 +31,12 @@ console.log(frutas);
 
 //! ---------------------------------------------------
 
+//includes -> devuelve true o false si está o no dentro del array
+console.log(numeros.includes(2)) // lo incluye y me devuelve true
+console.log(numeros.includes(1990)) // no lo incluye y me devuelve false
+
+
+
 //indexOf -> devuelve el indice de la posición donde esté el valor parametrizado
 console.log(numeros.indexOf(13))
 console.log(numeros.indexOf(14)) // No existe, me devuelve -1
@@ -47,7 +53,7 @@ console.log(fraseArray)
 const frase2 = fraseArray.join(' ')
 console.log(frase2);
 
-//! QUITAR O SUSTITUIR ELEMENTOS DE UN ARRA
+//! QUITAR O SUSTITUIR ELEMENTOS DE UN ARRAY
 
 //slice() -> retorna un pedazo del array y no lo muta
 console.log(frutas.slice(2,5)) // <- retorna desde la posición 2 o la posicion 5 del array
@@ -59,6 +65,7 @@ console.log(unaFruta)
 console.log(frutas)
 frutas.splice(2,3) //indicamos donde empieza y a partir de ahí, cuantos quieres elminar
 console.log(frutas)
+
 //? como particularidad, el splice te permite SUSTITUIR en el LUGAR DE LOS ELIMINADOS los elementos que quieras
 
 console.log(frutas)
