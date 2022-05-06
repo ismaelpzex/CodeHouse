@@ -99,16 +99,21 @@ const multiplicar = (x, y) => {
 multiplicar(90, 90)
 
 // si solo HAY un parametro, podemos quitar los paréntesis
+// si solo HAY una linea de ejecucuion, podemos quitar las llaves
 
-const saludito = nombre => {
-    console.log(`hola holita ${nombre}`)
-}
+const saludito = nombre => console.log(`hola holita ${nombre}`)
+
 saludito('Ismael')
+
 
 
 //! RETURN
 
 const suma2 = (a, b) => {
-    const resultado = a+b
+    const resultado = a + b
     return resultado
 }
+
+suma2(1,1)
+
+// después de un return, no se ejecuta ninguna linea de código
