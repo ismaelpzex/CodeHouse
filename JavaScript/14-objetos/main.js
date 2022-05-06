@@ -42,3 +42,26 @@ console.log(platano)
 for (keys in platano) {
     console.log(keys + ':' + platano[keys])
 }
+
+//? ALGO MUY TIPICO QUE NOS ENCONTRAMOS EN BDD Y EN APIS ES TENER UN ARRAY CON MUCHOS OBJETOS
+const frutasAPI = [
+    {
+        id: 1,
+        fruta: 'platano'
+    },
+    {
+        id: 2,
+        fruta: 'limon'
+    },
+    {
+        id: 3,
+        fruta: 'manzana'
+    },
+    {
+        id: 4,
+        fruta: 'pera'
+    }
+]
+console.log(frutasAPI[0])
+console.log(frutasAPI[0].id)
+console.log(frutasAPI[0].fruta)
