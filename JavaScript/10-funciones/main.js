@@ -104,3 +104,11 @@ const saludito = nombre => {
     console.log(`hola holita ${nombre}`)
 }
 saludito('Ismael')
+
+
+//! RETURN
+
+const suma2 = (a, b) => {
+    const resultado = a+b
+    return resultado
+}
