@@ -44,7 +44,7 @@ console.log(myReverse(frutas)) */
 
 /* const array = [1, 5, 80, -80, 15, 100]
 const myMax = (array) => {
-    let mayor = 0
+    let mayor = array[0]
     for (i of array) {
         if (i > mayor) {
             mayor = i
@@ -58,13 +58,13 @@ console.log(myMax(array)) */
 //=================== 5 ================
 
 
-/* const myCapitalize = (string) => {
+const myCapitalize = (string) => {
     let newString
     newString = string.slice(0, 1).toUpperCase() + string.slice(1)
     return newString
 }
 
-console.log(myCapitalize('banana')) */
+console.log(myCapitalize('banana'))
 
 //=================== 6 ================
 
@@ -81,7 +81,7 @@ console.log(myCompare(5, 6)) */
 console.log(compare(6, 6)) */
 
 //=================== 8 ================
-let quit = false
+/* let quit = false
 let action
 let num1, num2
 while (quit === false) {
@@ -104,20 +104,13 @@ while (quit === false) {
         multiplicacion()
     }
     if (action === 'd') {
-        debugger
         division()
     }
     if (action === 'p') {
         porcentaje()
     }
     if (action === 'e') {
-        let num1 = Number(prompt('introduce un numero'))
-        let num2 = Number(prompt('introduce la potencia'))
-        const potencia = (a, b) => {
-            resultado = Math.pow(a, b)
-            return resultado
-        }
-        alert(`${a} elevado ${b} = ${potencia(a, b)}`)
+        potencia()
     }
     if (action === 'x') quit = true
     if (action === null) quit = true // <- habilitar/deshabilitar cancelar (DESHABILITADO)
@@ -172,3 +165,13 @@ function porcentaje() {
     }
     alert(`${b} porciento de ${a} = ${porcentaje(a, b)}`)
 }
+
+
+function potencia() {
+    capturaDatos()
+    const potencia = (a, b) => {
+        resultado = Math.pow(a, b)
+        return resultado
+    }
+    alert(`${a} elevado a ${a} = ${Math.pow(a, b)}`)
+} */
