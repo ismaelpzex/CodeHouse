@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/459/459695.png">
-    <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="./dist/styles/css/style.css">
+    <script defer src="./src/main.js"></script>
     <title></title>
 </head>
 
@@ -16,27 +16,27 @@
 
     </header>
     <main class="container">
-        <section>
-            <article>
-                <h1 class="title">Lista de tareas - 2.0</h1>
-                <form class="entry-task" action="">
-                    <div>
-                        <input id="input-task" class="input-task" type="text" placeholder="Nueva tarea...">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="checkbox" id="check">
-                        <label for="">¿Completada?</label>
-                    </div>
-                    <button id="button" class="btn">Añadir</button>
-            </article>
-            <article class="tasks">
-                <section>
-                    <h2 id="title-tasks" class="title-tasks">Mis tareas:</h2>
-                    <div id="task" class="task">
-                    </div>
-                </section>
-            </article>
-            </form>
+        <h1 class="text-warning my-4 text-center">Lista de tareas 2.0</h1>
+        <form class="d-flex flex-column align-items-center gap-3" id="main-form">
+            <input class="form-control w-50" type="text" id="newTask" placeholder="Nueva tarea..." name="taskInput">
+            <small id="error" class="text-info error">* Por favor, introduce una tarea</small>
+             <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="status" name="completed input">
+                <label class="form-check-label text-warning" for="completed" id="completed">¿Completado?</label>
+            </div>
+            <button class="btn btn-danger" name="addBtn">Añadir</button>
+        </form>
+        <section class="tasks-section mt-5 border border-2 border-danger rounded p-3 w-100 mx-auto text-warning" id="task-section">
+            <h2 id="taskList" class="text-white text-center">Mis tareas:</h2>
+        </section>
+        <section id="howToUse" class="my-5 mx-3">
+            <h5 class="text-primary">Instrucciones de uso:</h5>
+            <p class="text-primary">1-. Introducir la tarea</p>
+            <p class="text-primary">2-. Marcar si está completado</p>
+            <p class="text-primary">3-. Clickar el botón añadir</p>
+            <p class="text-primary">4-. Para eliminar la tarea clicar en la papelera</p>
+            <p class="text-primary">ATENCION: la tarea que se muestra en pantalla es un ejemplo.</p>
+
         </section>
     </main>
     <footer>

@@ -1,0 +1,20 @@
+$primary: #2a9d8f;
+$secondary: #264653;
+$warning: #e9c46a;
+$danger: #e76f51;
+$info: #dc3545;
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
+}
+
+
+.delete-task {
+    color: red;
+}
+
+.tasks-section{
+    box-shadow: 0px 0px 20px red;
+}
