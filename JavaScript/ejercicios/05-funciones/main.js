@@ -58,13 +58,13 @@ console.log(myMax(array)) */
 //=================== 5 ================
 
 
-const myCapitalize = (string) => {
+/* const myCapitalize = (string) => {
     let newString
     newString = string.slice(0, 1).toUpperCase() + string.slice(1)
     return newString
 }
 
-console.log(myCapitalize('banana'))
+console.log(myCapitalize('banana')) */
 
 //=================== 6 ================
 
