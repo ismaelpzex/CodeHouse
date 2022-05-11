@@ -1,6 +1,6 @@
 //Antes de importar hay que exportar (EN EL OTRO ARCHIVO)
 
-import {sumar} from './operations.js'
+import {sumar} from './operations.js' 
 
 
 let operacion = prompt(`Dime la operación

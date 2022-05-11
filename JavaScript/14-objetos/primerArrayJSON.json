@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "name": "Ismael",
+    "age": 31,
+    "isMarried": false,
+    "children": [
+        {
+            "id": 2,
+            "name": "jacinta",
+            "age": 25
+        }
+    ]
+}
+
