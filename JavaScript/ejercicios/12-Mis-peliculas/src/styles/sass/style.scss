@@ -1,0 +1,50 @@
+@use 'fonts';
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+$font-family-sans-serif: 'Comfortaa';
+$primary: #390099;
+$secondary: #2ec4b6;
+$success:   #8ac926;
+$danger: #ff3366;
+$adventures:    #ccd5ae;
+$action:        #ef233c;
+$fiction:       #ffb703;
+$comedy:        #2a9d8f;
+$documental:    #caf0f8;
+$drama:         #ffb4a2;
+$fantasy:       #06d6a0;
+$musical:       #fb5607;
+$suspense:      #6a040f;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "danger":     $danger,
+  "adventures": $adventures,
+  "action":     $action,
+  "fiction":    $fiction,
+  "comedy":     $comedy,
+  "documental": $documental,
+  "drama":      $drama,
+  "fantasy":    $fantasy,
+  "musical":    $musical,
+  "suspense":   $suspense
+) !default;
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.movie-list {
+    box-shadow: 0px 0px 40px 0px #390099;
+}
+
+.errorMovie {
+    box-shadow: 0px 0px 10px 2px red;
+}

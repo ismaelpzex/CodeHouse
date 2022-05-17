@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/459/459695.png">
+    <link rel="stylesheet" href="./src/styles/css/style.css">
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./src/main.js" type="module"></script>
+    <title>Lista de Peliculas</title>
+</head>
+<body class="bg-black">
+    <header class="text-center text-bg-primary p-3">
+        <h1>Peliculas</h1>
+    </header>
+    <main class="container mt-5 p-3 p-md-0">
+        <form id="add-movie-form" class="row g-md-3 gy-4">
+            <div class="col-12 col-md-4">
+                <input class="form-control" type="text" placeholder="Pelicula..." id="inputMovie">
+                <span id="errorMovie" class="text-danger d-none">* Introduce una película</span>
+            </div>
+            <div class="col-12 col-md-4">
+                <select class="form-select" name="gender" id="genre">
+                    <option value="">Género...</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Aventuras">Aventuras</option>
+                    <option value="Ficción">Ficción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Documental">documental</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasía">Fantasía</option>
+                    <option value="Musical">Musical</option>
+                    <option value="Suspense">Suspense</option>
+                    <option value="Terror">Terror</option>
+                </select>
+                <span id="errorGenre" class="text-danger d-none">* Introduce un género</span>
+            </div>
+            <div class="form-check ps-0 col-md-2 col-12 d-flex flex-column align-items-center">
+                <label class="form-check-label text-white" for="check-seen">¿Vista?</label>
+                <input class="form-check-input ms-0" type="checkbox" id="seen" name="seen">
+            </div>
+            <div class="col-md-2 col-12">
+                <button class="btn btn-success w-100" name="add-movie-btn">Añadir</button>
+            </div>
+        </form>
+        <section id="movie-list" class="movie-list border border-2 mt-5 border-primary p-3 rounded d-flex flex-column gap-3">
+            <!-- <article id="movie" class="d-flex align-items-center">
+                <h2 class="text-secondary fs-6 m-0 me-auto">El señor de los Anillos
+                <span class=" badge bg-primary ms-2">Aventuras</span>
+                </h2>
+                <i class="bi bi-pencil icon fs-4 text-secondary me-3"></i>
+                <i class="bi bi-eye-slash icon fs-4 text-secondary me-3"></i>
+                <i class="bi bi-trash icon fs-4 text-danger"></i>
+            </article>
+            <article id="movie" class="d-flex align-items-center">
+                <h2 class="text-secondary fs-6 m-0 me-auto">Stars Wars
+                <span class=" badge bg-primary ms-2">Ficción</span>
+                </h2>
+                <i id="update" class="bi bi-pencil icon fs-4 text-secondary me-3"></i>
+                <i id="status" class="bi bi-eye icon fs-4 text-secondary me-3"></i>
+                <i id="delete" class="bi bi-trash icon fs-4 text-danger"></i>
+            </article> -->
+        </section>
+
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

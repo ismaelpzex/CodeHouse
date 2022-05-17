@@ -1,0 +1,16 @@
+{
+  "name": "12-mis-peliculas",
+  "version": "1.0.0",
+  "description": "Mis películas",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ismael de la Poza",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1",
+    "bootstrap-icons": "^1.8.2",
+    "nanoid": "^3.3.4"
+  }
+}
