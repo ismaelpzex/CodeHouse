@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/459/459695.png">
+    <link rel="stylesheet" href="./src/styles/css/style.css">
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./src/js/main.js" type="module"></script>
+    <title>ToDo Final</title>
+</head>
+
+<body class="bg-background">
+    <header class="bg-header p-2">
+        <h1 class="text-center text-headerText">ToDo IPE</h1>
+    </header>
+    <main class="container mt-4">
+        <form id="form" class="row gap-2 flex-row gap-md-1 justify-content-center mt-md-5">
+            <div class="col-8 m-auto m-md-0 col-md-5">
+                <input id="inputTask" class="form-control" type="text" placeholder="Introduce tarea...">
+                <span id="errorInput" class="error d-none">* Por favor, introduzca tarea</span>
+            </div>
+            <div class="col-8 m-auto m-md-0 col-md-4">
+                <select class="form-select" name="status" id="status">
+                    <option value="">Status</option>
+                    <option value="En curso">En curso</option>
+                    <option value="Por hacer">Por hacer</option>
+                    <option value="Completada">Completada</option>
+                </select>
+                <span id="errorSelect" class="error d-none">* Por favor, seleccione status</span>
+            </div>
+                <div class="col-4 m-auto m-md-0 my-2 my-md-0 col-md-2">
+                    <button class="btn bg-button w-100">Añadir</button>
+                </div>
+        </form>
+        <section id="tasksList" class="border border-2 border-header rounded mt-3 mt-md-5 d-flex flex-column">
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

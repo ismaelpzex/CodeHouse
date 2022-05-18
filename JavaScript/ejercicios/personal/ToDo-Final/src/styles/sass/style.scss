@@ -1,0 +1,50 @@
+@use 'fonts';
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+$font-family-sans-serif: 'Ubuntu';
+$background:     #000000;
+$header:        #fe5f55;
+$headerText:    #fffffc;
+$button:        #0ead69;
+$textTask:      #ffff3f;
+$wip:           #fe7f2d;
+$todo:          #d00000;
+$doit:          #8ac926;
+$delete:        #d90429;
+$status:        #ffbe0b;
+$update:        #06d6a0;
+$footerModal:   #403d39;
+
+$theme-colors: (
+    'background':   $background,
+    'header':       $header,
+    'headerText':   $headerText,
+    'button':       $button,
+    'textTask':     $textTask,
+    'wip':          $wip,
+    'doit':         $doit,
+    'todo':         $todo,
+    'status':       $status,
+    'update':       $update,
+    'footerModal':  $footerModal,
+) !default;
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.delete {
+    color: $delete;
+    cursor: pointer;
+}
+
+.status {
+    color: $status;
+    cursor: pointer;
+}
+
+.update {
+    color: $update;
+    cursor: pointer
+}
+
+.error {
+    color: $delete;
+}
