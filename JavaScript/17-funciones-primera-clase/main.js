@@ -27,7 +27,7 @@ const despedir = (nombre) => {
 
 despedir('Ismael')
 // llamamos a la función hastaNueve, para que repita 9 veces la función despedir()
-hastaNueve(() => despedir('ismael'))
+hastaNueve(( ) => despedir('ismael'))
 
 /* ======================================================== */
 
@@ -53,7 +53,7 @@ hastaCinco( (i) => {console.log(i)})
 
 const recorredorDeArrays = (array, funcion) => {
     for (let i = 0; i < array.length; i++) {
-        funcion(array[i], i)
+        funcion(array[i], i) // a la función le regalo el elemento del array y el index
     }
 }
 
