@@ -120,6 +120,8 @@ function editTask(task) {
     const modal = document.createElement('div')
     modal.classList = 'modal fade'
     modal.setAttribute('tabindex', '-1')
+    modal.setAttribute('data-bs-backdrop', 'static')
+    modal.setAttribute('data-bs-keyboard', 'false')
     modal.innerHTML = `<div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-header">
