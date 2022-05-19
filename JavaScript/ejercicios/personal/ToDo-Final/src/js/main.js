@@ -152,6 +152,7 @@ function editTask(task) {
         updateTask(task.id, inputModal.value, status.value)
         btsModal.hide()
     })
+    btnEdit.addEventListener('hidden.bs.modal', () => modal.remove())
 }
 
 function updateTask (id, title, status) {
