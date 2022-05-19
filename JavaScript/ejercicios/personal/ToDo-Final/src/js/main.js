@@ -1,22 +1,6 @@
 import { nanoid } from '../../node_modules/nanoid/nanoid.js';
 
-let allTasks = [
-    {
-        id: nanoid(),
-        task: 'Estudiar Javascript',
-        status: 'En curso'
-    },
-    {
-        id: nanoid(),
-        task: 'JS de la tarea',
-        status: 'Por hacer'
-    },
-    {
-        id: nanoid(),
-        task: 'HTML de la tarea',
-        status: 'Completada'
-    },
-]
+let allTasks = JSON.parse(localStorage.getItem('allTasks')) || []
 
 const form = document.querySelector('#form')
 
@@ -25,7 +9,9 @@ form.addEventListener('submit', (event) => {
     if (validation() === false) return
     const task = newTask()
     allTasks = [...allTasks, task]
+    localStorage.setItem('allTasks', JSON.stringify(allTasks))
     displayTasks(allTasks)
+    form.reset()
 })
 
 function validation() {
@@ -108,6 +94,7 @@ function deleteTask(task) {
             return true
         }
     })
+    localStorage.setItem('allTasks', JSON.stringify(allTasks))
     displayTasks(allTasks)
 }
 
@@ -125,6 +112,7 @@ function changeStatus(task) {
             return value
         }
     })
+    localStorage.setItem('allTasks', JSON.stringify(allTasks))
     displayTasks(allTasks)
 }
 
@@ -153,7 +141,6 @@ function editTask(task) {
       </div>
     </div>
   </div>`
-    console.log(task.task)
     const btsModal = new bootstrap.Modal(modal)
     btsModal.show()
     const inputModal = modal.querySelector('#inputTask')
@@ -174,6 +161,7 @@ function updateTask (id, title, status) {
         }
         return task
     })
+    localStorage.setItem('allTasks', JSON.stringify(allTasks))
     displayTasks(allTasks)
 }
 
