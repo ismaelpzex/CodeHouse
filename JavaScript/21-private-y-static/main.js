@@ -24,6 +24,7 @@ bandit.brand = 'suzuki' // le cambiamos el valor a la propiedad brand
 // ESA PROPIEDAD SOLO SE PUEDE UTILIZAR DENTRO DEL CLASS, //SI UN METODO DE DENTRO DE LA CLASE NECESITA ACCEDER A LA PROPIEDAD, PUEDE HACERLO
 
 //! PROPIEDADES Y METODOS ESTATICOS
+//? NO SE USARÁ MUCHO PERO HAY QUE CONOCERLO
 
 class Mates {
     static fibbonacci = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -43,3 +44,5 @@ class Mates {
 const mates1 = new Mates()
 console.log(mates1.PI) // ERROR, LLEVA EL STATIC DELANTE
 console.log(Mates.PI)
+
+//! RESUMEN, AL PONERLE EL STATIC, SE PUEDE UTILIZAR SIN NECESIDAD DE INSTANCIAR NADA
