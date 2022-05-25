@@ -77,3 +77,32 @@ frutas.some((valor, index) => {
 console.log(frutas.some((valor, index) => {
     if (typeof valor === 'string') {return true}
 }))
+
+//! .sort() -> Ordenar elementos
+
+console.log(numeros.sort())
+console.log(frutas.sort())
+
+// el sort a secas trae problemas debido a que ordena a través de los caracteres ascii, por ese motivo, A irá antes que a y el 14 irá antes que el 7. Para evitar eso utilizamos el callback
+
+numeros.sort((a, b) => {
+    if (a > b) return 1
+    else if (a < b) return -1
+})
+
+// MANERA PRO
+
+numeros.sort((a, b) =>  a - b)
+
+console.log(numeros)
+
+//AHORA CON STRING
+
+frutas.sort((a, b) => {
+    if (a > b) return 1
+    else if (a < b) return -1
+})
+
+frutas.sort((a, b) => a - b)
+
+console.log(frutas)
