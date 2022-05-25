@@ -27,7 +27,7 @@ const yo = {
 const persona = {
     name: 'Lorena',
     edad: 29,
-    saludo: function() {
+    saludo: function () {
         console.log(`Hola ${this.name} que tal?`)
     }
 }
@@ -64,7 +64,7 @@ console.log(vehiculo2.start()) // Ya si funciona la palabra this
 class Coche {
     marca = 'Seat'
     ruedas = 4
-    arrancar() {console.log('RUUUUUUN')}
+    arrancar() { console.log('RUUUUUUN') }
 }
 
 //! UTILIZAMOS LA CLASE
