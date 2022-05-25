@@ -90,7 +90,7 @@ numeros.sort((a, b) => {
     else if (a < b) return -1
 })
 
-// MANERA PRO
+//! MANERA PRO
 
 numeros.sort((a, b) =>  a - b)
 
@@ -103,6 +103,18 @@ frutas.sort((a, b) => {
     else if (a < b) return -1
 })
 
+//! MANERA PRO
+
 frutas.sort((a, b) => a - b)
 
 console.log(frutas)
+
+//! .reduce -> sirve para varias cosas, por ejemplo sumar cifras
+//? el primer valor de los parámetros, en este caso a, será el acumulador
+//? siempre hay que retornar un nuevo acumulador para que se sume con el siguiente número
+
+const suma = numeros.reduce((a, b) => {
+    return a + b
+})
+
+console.log(suma)
