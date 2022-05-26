@@ -65,3 +65,6 @@ const frutasAPI = [
 console.log(frutasAPI[0])
 console.log(frutasAPI[0].id)
 console.log(frutasAPI[0].fruta)
+
+// DESECTRUCTURACIÓN DE OBJETOS
+
