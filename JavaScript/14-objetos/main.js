@@ -68,3 +68,12 @@ console.log(frutasAPI[0].fruta)
 
 // DESECTRUCTURACIÓN DE OBJETOS
 
+const fruta = {
+    nombre: 'platano',
+    cantidad: 5,
+    ciudad: 'canarias'
+}
+
+const { emoticono, ciudad } = fruta
+
+//! no importa la posicion ni si coges solo uno o dos, lo importante es que se llame igual que la propiedad del objeto original
