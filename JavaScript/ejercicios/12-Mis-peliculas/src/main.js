@@ -1,28 +1,11 @@
 // miniBDD
 import { nanoid } from '../node_modules/nanoid/nanoid.js'
-
-let allMovies = [
-    {
-        id: nanoid(),
-        title: 'El señor de los Anillos',
-        genre: 'Aventuras',
-        isSeen: 'true'
-    },
-    {
-        id: nanoid(),
-        title: 'Stars Wars',
-        genre: 'Ficción',
-        isSeen: 'false'
-    },
-    {
-        id: nanoid(),
-        title: 'Star trek',
-        genre: 'Ficción',
-        isSeen: 'false'
-    }
-]
-
 const form = document.querySelector('form')
+
+let allMovies = JSON.parse(localStorage.getItem('allMovies')) || []
+
+
+
 
 const updateMovie = (id, title, genre) => {
     allMovies = allMovies.map((movie) => {
@@ -31,6 +14,7 @@ const updateMovie = (id, title, genre) => {
         }
         return movie
     })
+    localStorage.setItem('allMovies', JSON.stringify(allMovies))
     displayMovies(allMovies)
 }
 
@@ -104,6 +88,7 @@ const changeSeenMovie = (id) => {
             return movie
         }
     })
+    localStorage.setItem('allMovies', JSON.stringify(allMovies))
     displayMovies(allMovies)
 }
 
@@ -115,6 +100,7 @@ const removeMovie = (id) => {
             return true
         }
     })
+    localStorage.setItem('allMovies', JSON.stringify(allMovies))
     displayMovies(allMovies)
 }
 
@@ -222,7 +208,77 @@ form.addEventListener('submit', (event) => {
     if (validation() === false) return
     const movie = newMovie()
     allMovies = [...allMovies, movie]
+    localStorage.setItem('allMovies', JSON.stringify(allMovies))
     displayMovies(allMovies)
+    form.reset()
 })
 
 displayMovies(allMovies)
+
+//Filtros
+
+
+const formfilters = document.querySelector('#filters')
+const filterTitle = formfilters.filterTitle
+const filterGenre = formfilters.filterGenre
+const filterSeen = formfilters.seen
+const filterNotSeen = formfilters.notSeen
+
+
+
+filterTitle.addEventListener('keyup', () => { searchMovieTitle() })
+
+function searchMovieTitle() {
+    const filteredMovies = allMovies.filter((movie) => {
+        return movie.title.toLowerCase().includes(filterTitle.value.toLowerCase())
+    })
+    displayMovies(filteredMovies)
+}
+
+filterGenre.addEventListener('change', () => { filterByGenre() })
+
+function filterByGenre() {
+    const filteredMovies = allMovies.filter((movie) => {
+        if (filterGenre.value === 'Todas') {
+            return true
+        } else {
+            return movie.genre === filterGenre.value
+        }
+    })
+    displayMovies(filteredMovies)
+}
+
+filterSeen.addEventListener('click', () => { filterBySeen() })
+
+let filterBySeenIsActive = false
+function filterBySeen() {
+    filterBySeenIsActive = !filterBySeenIsActive
+    if (filterBySeenIsActive) {
+        const filteredMovies = allMovies.filter((movie) => {
+            return movie.isSeen
+        })
+        displayMovies(filteredMovies)
+    } else {
+        displayMovies(allMovies)
+    }
+}
+
+filterNotSeen.addEventListener('click', () => { filterByNotSeen() })
+
+let filterByNotSeenIsActive = false
+function filterByNotSeen() {
+    filterByNotSeenIsActive = !filterByNotSeenIsActive
+    if (filterByNotSeenIsActive) {
+        const filteredMovies = allMovies.filter((movie) => {
+            return !movie.isSeen
+        })
+        displayMovies(filteredMovies)
+    } else {
+        displayMovies(allMovies)
+    }
+}
+
+formfilters.addEventListener('submit', (event) => {
+    event.preventDefault()
+    form.reset()
+})

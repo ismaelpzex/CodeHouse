@@ -4,13 +4,15 @@
   "description": "Mis películas",
   "main": "./src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w ./src/styles/sass:./src/styles/css"
   },
   "author": "Ismael de la Poza",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
     "bootstrap-icons": "^1.8.2",
-    "nanoid": "^3.3.4"
+    "nanoid": "^3.3.4",
+    "sass": "^1.51.0"
   }
 }

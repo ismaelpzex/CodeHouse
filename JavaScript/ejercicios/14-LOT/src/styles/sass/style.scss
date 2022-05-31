@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+$primary: hsl(235, 21%, 11%);
+$secondary: hsl(233, 14%, 35%);
+$success: #06d6a0;
+$warning: #ffd166;
+$danger: #ef476f;
+$info: #dab6fc;
+$dark: #303030; 
+$light: hsl(236, 9%, 61%);
+$font-family-base: 'Josefin Sans', sans-serif;
+$headings-font-weight: 700;
+$background: linear-gradient(to left, hsla(65, 100%, 67%, 0.239) , hsla(0, 87%, 65%, 0.5));
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+.background {
+  height: 25%; 
+  z-index: -1; 
+  background: $background, url('../../assets/images/bg-desktop-dark.jpg') center top;  
+  background-size: cover;
+}
+
+.inputTask::placeholder {
+    color: white;
+}
+
+h1 {
+  letter-spacing: 4px;
+}
+.icon {
+  cursor: pointer;
+  position: relative;
+  top: 2px;    
+}
+
+
+.filter {
+  cursor: pointer;
+}
+
+
+
+/* - Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%) */

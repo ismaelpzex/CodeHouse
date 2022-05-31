@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <script defer src="./src/main.js" type="module"></script>
     <title>Lista de Peliculas</title>
 </head>
+
 <body class="bg-black">
     <header class="text-center text-bg-primary p-3">
         <h1>Peliculas</h1>
@@ -44,7 +46,41 @@
                 <button class="btn btn-success w-100" name="add-movie-btn">Añadir</button>
             </div>
         </form>
-        <section id="movie-list" class="movie-list border border-2 mt-5 border-primary p-3 rounded d-flex flex-column gap-3">
+        <form id="filters" class="mt-md-5 mt-3">
+            <div class="row">
+                <div class="input-group">
+                    <div class="col-md-4 col-12 me-md-1">
+                        <input id="filterTitle"
+                            class="form-control border border-2 border-primary rounded bg-white bg-opacity-75"
+                            type="text" placeholder="Buscar..." name="search">
+                    </div>
+                    <select name="filterGenre" id="filterGenre"
+                        class="form-select border border-2 border-primary rounded bg-white bg-opacity-75 me-md-1">
+                        <option value="Todas">Todas...</option>
+                        <option value="Acción">Acción</option>
+                        <option value="Aventuras">Aventuras</option>
+                        <option value="Ficción">Ficción</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Documental">documental</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Fantasía">Fantasía</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Suspense">Suspense</option>
+                        <option value="Terror">Terror</option>
+                    </select>
+                    <div class="col-2">
+                        <button id="seen" class="btn btn-success border border-2 border-primary rounded w-100"><i
+                                class="bi bi-eye"></i></button>
+                    </div>
+                    <div class="col-2">
+                        <button id="notSeen" class="btn btn-danger border border-2 border-primary rounded w-100 ms-md-1"><i
+                                class="bi bi-eye-slash"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <section id="movie-list"
+            class="movie-list border border-2 mt-3 border-primary p-3 rounded d-flex flex-column gap-3">
             <!-- <article id="movie" class="d-flex align-items-center">
                 <h2 class="text-secondary fs-6 m-0 me-auto">El señor de los Anillos
                 <span class=" badge bg-primary ms-2">Aventuras</span>
@@ -67,4 +103,5 @@
     <footer>
     </footer>
 </body>
+
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://ivan-luengo.com/wp-content/uploads/2020/03/cropped-favicon-ivan_luengo-32x32.png">
+  <link rel="stylesheet" href="./src/styles/sass/style.scss">
+  <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" type="module"></script>
+  <script defer src="./src/main.js" type="module"></script>
+  <title>LoT</title>
+</head>
+<body class="bg-primary">
+  <div class="background position-absolute w-100 top-0 start-0"></div>
+  <div class="col-7 mx-auto mt-5">
+    <h1 class="text-white fs-4 ">List of Tasks</h1>
+    <input class="inputTask form-control border border-secondary text-bg-secondary" placeholder="Nueva tarea..." type="text">
+    <ul class="tasksList list-unstyled mt-3 mb-1 ">
+
+    </ul>
+    <section class="filters text-bg-secondary px-3 py-2 rounded gap-2 shadow d-none d-md-flex justify-content-around">
+      <div class=""><span class="pending small text-light">0 tareas pendientes</span></div>
+      <div class="">
+          <div class="d-flex gap-3 justify-content-center p-1">
+              <span class="filter  filterAll small text-white">All</span>
+              <span class="filter filterActive small text-white ">Active</span>
+              <span class="filter filterCompleted small text-white ">Completed</span>
+          </div>
+      </div>
+      <div class=""><span class="filter filterClear small text-white ms-auto">Clear</span></div>
+    </section>
+    <section class=" filters text-bg-secondary filters text-bg-secondary px-3 py-2 d-flex d-md-none rounded gap-4">
+        <span class="filter filterAll small text-light ms-4">All</span>
+        <span class="filter filterActive small text-light">Active</span>
+        <span class="filter filterCompleted small text-light">Completed</span>
+    </section>
+    <section class=" filters text-bg-secondary filters text-bg-secondary px-3 py-2 d-flex d-md-none mt-1 rounded gap-4">
+        <span class="pending small text-light me-auto">0 tareas pendientes</span>
+        <span class="filter filterClear small text-light ms-auto">Clear</span>
+
+    </section>
+  </div>
+</body>
+</html>

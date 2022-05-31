@@ -14,7 +14,12 @@
 
 <body class="bg-background">
     <header class="bg-header p-2">
-        <h1 class="text-center text-headerText">ToDo IPE</h1>
+        <h1 class="text-center text-headerText">LOT IPE</h1>
+        <div class="row d-md-none">
+            <div class="d-flex col-8 justify-content-center mx-auto mb-3 mt-2">
+                <input class="form-control opacity-50 bg-white" type="text" placeholder="Buscar tarea... ">
+            </div>
+        </div>
     </header>
     <main class="container mt-4">
         <form id="form" class="row gap-2 flex-row gap-md-1 justify-content-center mt-md-5">
@@ -35,7 +40,38 @@
                     <button class="btn bg-button w-100">Añadir</button>
                 </div>
         </form>
-        <section id="tasksList" class="border border-2 border-header rounded mt-3 mt-md-5 d-flex flex-column">
+        <div class="row">
+            <div class="d-flex d-md-none justify-content-center gap-1 my-3">
+                <button class="btn col-4 bg-wip">En curso</button>
+                <button class="btn col-4 bg-todo">Por hacer</button>
+                <button class="btn col-4 bg-doit">Completas</button>
+            </div>
+        </div>
+
+        <form id="filters" class="d-none d-md-block row gap-2 flex-row gap-md-1 justify-content-center mt-md-4">
+            <div class="row d-flex justify-content-center m-auto">
+                <div class="input-group justify-content-center gap-2">
+                    <div class="col-7">
+
+                        <input id="filterTitle"
+                            class="form-control border border-2 border-primary rounded"
+                            type="text" placeholder="Buscar..." name="search">
+                    </div>
+                    <div class="col-4">
+                        <select name="filterGenre" id="filterGenre"
+                            class="form-select border border-2 border-primary rounded bg-white me-md-1">
+                            <option value="Todas">Todos los status...</option>
+                            <option value="Acción">En Curso</option>
+                            <option value="Aventuras">Por hacer</option>
+                            <option value="Ficción">Completada</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+
+        <section id="tasksList" class="border border-2 border-header rounded mt-3 mt-md-4 d-flex flex-column">
         </section>
     </main>
     <footer>
