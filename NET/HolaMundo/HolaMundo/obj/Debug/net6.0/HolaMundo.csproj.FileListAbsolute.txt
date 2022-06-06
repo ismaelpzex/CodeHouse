@@ -1,0 +1,15 @@
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/bin/Debug/net6.0/HolaMundo
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/bin/Debug/net6.0/HolaMundo.deps.json
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/bin/Debug/net6.0/HolaMundo.runtimeconfig.json
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/bin/Debug/net6.0/HolaMundo.dll
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/bin/Debug/net6.0/HolaMundo.pdb
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.csproj.AssemblyReference.cache
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.AssemblyInfoInputs.cache
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.AssemblyInfo.cs
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.csproj.CoreCompileInputs.cache
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.dll
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/refint/HolaMundo.dll
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.pdb
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/HolaMundo.genruntimeconfig.cache
+/Users/idelapoza/git/codehouse/NET/HolaMundo/HolaMundo/obj/Debug/net6.0/ref/HolaMundo.dll
