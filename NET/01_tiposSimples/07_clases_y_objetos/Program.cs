@@ -1,7 +1,10 @@
-﻿using viviendas.clases;
-using cocheras.clases;
+﻿using _07_clases_y_objetos.clases;
 
-Vivienda nuevaVivienda = new Vivienda(90, "Calle test, Jaén");
+Vivienda nuevaVivienda = new Vivienda
+{
+    Meters = 90,
+    Address = "Calle test, Jaén"
+};
 
 Console.WriteLine($"La dirección de la vivienda es: {nuevaVivienda.Address}");
 Console.WriteLine($"Los metros de la vivienda son: {nuevaVivienda.Meters}");
@@ -18,4 +21,17 @@ if (nuevaVivienda.isVpo())
 else
     Console.WriteLine("La vivienda no es VPO");
 
-cocheras
+
+
+Piso NuevoPiso = new Piso
+{
+    Meters = 110,
+    Address = "Fuente del Peral",
+    Pool = false,
+    Floor = 5
+};
+
+Console.WriteLine(NuevoPiso.HasOnwer());
+NuevoPiso.newOnwer("Ismael");
+Console.WriteLine(NuevoPiso.HasOnwer());
+

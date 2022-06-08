@@ -5,13 +5,7 @@
 		public int Meters { get; set; }
 		public string Address { get; set; }
 		public bool Pool { get; set; }
-		public string Onwer { get; set; }
-
-		public Vivienda(int meters, string address)
-		{
-			Meters = meters;
-			Address = address;
-		}
+		private string Onwer { get; set; }
 
 		public bool isVpo()
         {
@@ -23,9 +17,14 @@
 			Meters += meters;
         }
 
-		private bool HasOnwer()
+		public bool HasOnwer()
         {
 			return !string.IsNullOrEmpty(Onwer);
+        }
+
+		public void newOnwer(string newOnwer)
+        {
+			Onwer = newOnwer;
         }
 	}
 }
