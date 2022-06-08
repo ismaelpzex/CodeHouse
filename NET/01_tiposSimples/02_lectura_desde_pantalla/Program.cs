@@ -39,14 +39,19 @@
 
 //Console.Clear();
 //Console.WriteLine("introduce el primer numero");
-//int n1 = int.Parse(Console.ReadLine());
+//int n1;
+//if (!int.TryParse(Console.ReadLine(), out n1))
+//{
+//    Console.WriteLine("ERROR el primer numero");
+//    int.TryParse(Console.ReadLine(), out n1);
+//}
 //Console.WriteLine("introduce el segundo numero");
-//int n2 = int.Parse(Console.ReadLine());
+//int n2;
+//int.TryParse(Console.ReadLine(), out n2);
 //int resultSum = n1 + n2;
 //int resultSub = n1 - n2;
 //int resultMul = n1 * n2;
-//float resultDiv = n1 / n2;
-//Convert.ToDecimal(resultDiv);
+//float resultDiv = (float)n1 / (float)n2;
 //Console.WriteLine($"{ n1 } + { n2 } = {resultSum}");
 //Console.WriteLine($"{ n1 } - { n2 } = {resultSub}");
 //Console.WriteLine($"{ n1 } * { n2 } = {resultMul}");
@@ -54,45 +59,46 @@
 //Console.WriteLine("----- Presione cualquier tecla para continuar ------");
 //Console.ReadKey();
 
-Console.Clear();
-Console.WriteLine("calculadora 2");
-Console.WriteLine("introduce el primer numero");
-int valor1 = int.Parse(Console.ReadLine());
-Console.WriteLine("introduce el segundo numero");
-int valor2 = int.Parse(Console.ReadLine());
-Console.WriteLine("Introduce '+' para sumar, '-' para restar, '*' para multiplicar o '/' para dividir");
-string operador = Console.ReadLine();
-bool key = false;
-do
-{
+//Console.Clear();
+//Console.WriteLine("calculadora 2");
+//Console.WriteLine("introduce el primer numero");
+//int valor1 = int.Parse(Console.ReadLine());
+//Console.WriteLine("introduce el segundo numero");
+//int valor2 = int.Parse(Console.ReadLine());
+//Console.WriteLine("Introduce '+' para sumar, '-' para restar, '*' para multiplicar o '/' para dividir");
+//string operador = Console.ReadLine();
+//bool key = false;
+//do
+//{
 
-    if (operador == "+")
-    {
-        Console.WriteLine($"{valor1} + {valor2} = {valor1 + valor2}");
-        key = true;
+//    if (operador == "+")
+//    {
+//        Console.WriteLine($"{valor1} + {valor2} = {valor1 + valor2}");
+//        key = true;
 
-    }
-    else if (operador == "-")
-    {
-        Console.WriteLine($"{valor1} - {valor2} = {valor1 - valor2}");
-        key = true;
-    }
-    else if (operador == "*")
-    {
-        Console.WriteLine($"{valor1} * {valor2} = {valor1 * valor2}");
-        key = true;
-    }
-    else if (operador == "/")
-    {
-        Console.WriteLine($"{valor1} / {valor2} = {valor1 / valor2}");
-        key = true;
+//    }
+//    else if (operador == "-")
+//    {
+//        Console.WriteLine($"{valor1} - {valor2} = {valor1 - valor2}");
+//        key = true;
+//    }
+//    else if (operador == "*")
+//    {
+//        Console.WriteLine($"{valor1} * {valor2} = {valor1 * valor2}");
+//        key = true;
+//    }
+//    else if (operador == "/")
+//    {
+//        Console.WriteLine($"{valor1} / {valor2} = {valor1 / valor2}");
+//        key = true;
 
-    }
-    else
-    {
-        Console.WriteLine("ERROR -> Introduce '+' para sumar, '-' para restar, '*' para multiplicar o '/' para dividir");
-        operador = Console.ReadLine();
-    }
+//    }
+//    else
+//    {
+//        Console.WriteLine("ERROR -> Introduce '+' para sumar, '-' para restar, '*' para multiplicar o '/' para dividir");
+//        operador = Console.ReadLine();
+//    }
 
 
-} while (!key);
+//} while (!key);
+
