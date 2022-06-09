@@ -13,7 +13,7 @@ namespace _10_ejercicioExtra.classes
 
         public void Estudiar()
         {
-            Console.WriteLine($"soy {GetName()}\nEstoy estudiando porque soy Alumno\n\n");
+            Console.WriteLine($"soy {GetName()}\nEstoy estudiando porque soy de la clase Alumno\n\n");
         }
     }
 }
