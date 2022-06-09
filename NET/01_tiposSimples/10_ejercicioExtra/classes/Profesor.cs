@@ -6,10 +6,6 @@
         public Profesor(string name) : base(name)
         {
         }
-        public override string GetName()
-        {
-            return base.GetName();
-        }
 
         public void Explicar()
         {

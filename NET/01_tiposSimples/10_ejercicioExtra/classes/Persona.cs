@@ -9,7 +9,7 @@ namespace _10_ejercicioExtra.classes
 			Name = name;
 		}
 
-		public virtual string GetName()
+		public string GetName()
         {
 			return Name;
         }
