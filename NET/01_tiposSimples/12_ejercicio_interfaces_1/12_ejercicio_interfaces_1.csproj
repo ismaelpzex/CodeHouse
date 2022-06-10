@@ -3,17 +3,17 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>_11_interfaces</RootNamespace>
+    <RootNamespace>_12_ejercicio_interfaces_1</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Classes\" />
     <None Remove="Interfaces\" />
+    <None Remove="Classes\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Classes\" />
   </ItemGroup>
 </Project>
