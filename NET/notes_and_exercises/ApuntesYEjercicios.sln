@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_ejercicio_interfaces_4",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16_ejercicio_extra", "16_ejercicio_extra\16_ejercicio_extra.csproj", "{EA5999D8-580D-4D85-AE5D-C136DD5418BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_cadenas_texto", "17_cadenas_texto\17_cadenas_texto.csproj", "{DB9CD162-17E2-4275-A8FB-9BEBECB063B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{EA5999D8-580D-4D85-AE5D-C136DD5418BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA5999D8-580D-4D85-AE5D-C136DD5418BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA5999D8-580D-4D85-AE5D-C136DD5418BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB9CD162-17E2-4275-A8FB-9BEBECB063B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9CD162-17E2-4275-A8FB-9BEBECB063B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9CD162-17E2-4275-A8FB-9BEBECB063B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9CD162-17E2-4275-A8FB-9BEBECB063B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
