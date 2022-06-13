@@ -2,9 +2,9 @@
 {
 	public interface IPerson
 	{
-		public string Name { get; set; }
-		public string LastName { get; set; }
-		public int Age { get; set; }
+		string Name { get; set; }
+		string LastName { get; set; }
+		int Age { get; set; }
 	}
 }
 
