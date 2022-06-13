@@ -2,9 +2,8 @@
 using _22_ejercicio_listas_extra.Interfaces;
 
 // Creamos 2 personas
-
-IPerson ikerJimenez = new Person("Iker", "Jimenez", 42);
-IPerson jjBenitez = new Person("Juán José", "Benitez", 49);
+IPerson ikerJimenez = new Person("Iker", "Jimenez", 49);
+IPerson jjBenitez = new Person("Juán José", "Benitez", 75);
 List<IPerson> Autores = new List<IPerson>() { ikerJimenez, jjBenitez };
 
 // Creamos 5 libros de iker
@@ -76,7 +75,7 @@ List<IEditorial> editoriales = new List<IEditorial>()
 };
 
 // Añadir un libro con una persona nueva
-IPerson stephen = new Person("Estephen", "King", 74);
+IPerson stephen = new Person("Stephen", "King", 74);
 Autores.Add(stephen);
 
 IBook it = new Book("It", 1986, stephen);
@@ -90,7 +89,7 @@ List<IBook> test = new List<IBook>();
 
 foreach (IBook book in listaLibros)
 {
-    if (book.Author.Name == "Estephen")
+    if (book.Author.Name == "Stephen")
     {
         test.Add(book);
     }
@@ -142,7 +141,7 @@ void deleteBooksOfAutor(string name)
     //}
 }
 
-deleteBooksOfAutor("Estephen");
+deleteBooksOfAutor("Stephen");
 test.RemoveRange(0, test.Count());
 Console.WriteLine(test.Count());
 
