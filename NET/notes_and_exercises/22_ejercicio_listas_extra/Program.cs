@@ -183,4 +183,33 @@ void showEditorial()
 }
 
 
+// Hacer una query que filtre por nombre de autor que comienze con la letra "i"
 
+var autoresI = from a in Autores
+               where a.Name.StartsWith("I")
+               select a;
+
+List<IPerson> autorconi = autoresI.ToList();
+
+foreach (IPerson person in autorconi)
+{
+    Console.WriteLine(person.Name + " " + person.LastName);
+
+
+}
+
+var querylibros = (from b in listaLibros
+                  group b by b.PublicationDate into agrupacion
+                  select agrupacion).ToList();
+
+
+foreach (var item in querylibros)
+{
+    Console.WriteLine(item.Key);
+
+    foreach (IBook agrupacion in item)
+    {
+        Console.WriteLine(agrupacion.Name);
+    }
+}
+                 

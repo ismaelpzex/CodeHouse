@@ -89,3 +89,53 @@ foreach (Camion item in camiones)
     Console.WriteLine();
 }
 
+Console.WriteLine("----------- QUERY Coches -----------");
+
+var numpuertas = from puertas in coches
+                 where puertas.NumeroPuertas == 3
+                 select puertas;
+
+
+List<Coche> coches3puertas = numpuertas.ToList();
+
+
+foreach (Coche item in coches3puertas)
+{
+    Console.WriteLine($"Coche");
+    Console.WriteLine($"Marca: {item.Marca}");
+    Console.WriteLine($"Combustible: {item.Combustible}");
+    Console.WriteLine($"Puertas: {item.NumeroPuertas}");
+    Console.WriteLine();
+}
+
+Console.WriteLine("----------- QUERY CAMIONES + 10000 -----------");
+
+var pmacaminones = from pma in camiones
+          where pma.CargaMaxima >= 10000
+          select pma;
+
+List<Camion> CamionesMax = pmacaminones.ToList();
+
+foreach (Camion item in CamionesMax)
+{
+    Console.WriteLine($"Camion");
+    Console.WriteLine($"Marca: {item.Marca}");
+    Console.WriteLine($"Combustible: {item.Combustible}");
+    Console.WriteLine($"Puertas: {item.CargaMaxima}");
+    Console.WriteLine();
+}
+
+Console.WriteLine("----------- QUERY CAMIONES - 10000 -----------");
+
+var taracamiones = (from tara in camiones
+                    where tara.CargaMaxima <= 10000
+                    select tara).ToList();
+
+foreach (Camion item in taracamiones)
+{
+    Console.WriteLine($"Camion");
+    Console.WriteLine($"Marca: {item.Marca}");
+    Console.WriteLine($"Combustible: {item.Combustible}");
+    Console.WriteLine($"Puertas: {item.CargaMaxima}");
+    Console.WriteLine();
+}
