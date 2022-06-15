@@ -13,7 +13,7 @@ foreach (AlumnoExtendido item in alumnosClases)
 
 // EJERCICIO 3
 Console.WriteLine("\n\nPAGINACIÓN\n\n");
-AlumnoExtendidoPaginado paginados = metodosAlumnos.GetAlumnosJoinPaginados(1, 4);
+AlumnoExtendidoPaginado paginados = metodosAlumnos.GetAlumnosJoinPaginados('R', 1, 4);
 Console.WriteLine($"Página {paginados.Page} items {paginados.ItemsPage} de {paginados.Total}");
 foreach (AlumnoExtendido alumno in paginados.Alumnos)
 {

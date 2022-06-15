@@ -37,11 +37,12 @@ namespace EjercicioCompletoLinq.Clases
 			return query.ToList();
 		}
 
-		public AlumnoExtendidoPaginado GetAlumnosJoinPaginados(int page = 1, int itemsPage = 5)
+		public AlumnoExtendidoPaginado GetAlumnosJoinPaginados(char letra, int page = 1, int itemsPage = 5)
 		{
 			AlumnoExtendidoPaginado result = new AlumnoExtendidoPaginado();
 			var query = from a in ListaAlumnos
 						join c in ListaClases on a.Clase equals c.Numero
+						where a.Nombre.StartsWith(letra)
 						let notaMedia = a.Notas.Average()
 						select new AlumnoExtendido
 						{
@@ -58,12 +59,12 @@ namespace EjercicioCompletoLinq.Clases
 
 			return result;
 		}
-		public List<AlumnoExtendido> GetAlumnosJoinNotaCorte()
+		public List<AlumnoExtendido> GetAlumnosJoinNotaCorte(int nota = 5)
 		{
 			var query = from a in ListaAlumnos
 						join c in ListaClases on a.Clase equals c.Numero
 						let notaMedia = a.Notas.Average()
-						where notaMedia >= 5
+						where nota == null || notaMedia >= nota
 						select new AlumnoExtendido
 						{
 							NombreAlumno = a.Nombre,
