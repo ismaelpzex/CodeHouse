@@ -45,8 +45,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_ejercicio_listas_complej
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22_ejercicio_listas_extra", "22_ejercicio_listas_extra\22_ejercicio_listas_extra.csproj", "{3FC22BAD-D37E-425B-AF5B-00F743FC69E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23_LinQ", "23_LinQ\23_LinQ.csproj", "{7EABC91B-C63B-4329-BABF-9A3B71C1E7B0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_ejemplo_LinQ", "24_ejemplo_LinQ\24_ejemplo_LinQ.csproj", "{3036753F-0D3E-4D4B-B2B1-196324B52C85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25_EjercicioLinqLibros", "27_EjercicioLinqLibros\25_EjercicioLinqLibros.csproj", "{A741CDA4-0EE0-46E7-ADE2-B4AE22A26BE0}"
@@ -147,10 +145,6 @@ Global
 		{3FC22BAD-D37E-425B-AF5B-00F743FC69E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FC22BAD-D37E-425B-AF5B-00F743FC69E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FC22BAD-D37E-425B-AF5B-00F743FC69E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EABC91B-C63B-4329-BABF-9A3B71C1E7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EABC91B-C63B-4329-BABF-9A3B71C1E7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EABC91B-C63B-4329-BABF-9A3B71C1E7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EABC91B-C63B-4329-BABF-9A3B71C1E7B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3036753F-0D3E-4D4B-B2B1-196324B52C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3036753F-0D3E-4D4B-B2B1-196324B52C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3036753F-0D3E-4D4B-B2B1-196324B52C85}.Release|Any CPU.ActiveCfg = Release|Any CPU

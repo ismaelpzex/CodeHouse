@@ -1,6 +1,4 @@
-﻿using _26_EjercicioCompletoLinq.Clases;
-using _26_EjercicioCompletoLinq.Entidades;
-using _26_EjercicioCompletoLinq.Interfaces;
+﻿
   public class Profesor
     {
         public string Nombre { get; set; }

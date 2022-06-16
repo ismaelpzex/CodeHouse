@@ -1,10 +1,10 @@
 ﻿////metodo que haga una suma y la saque por pantalla
 
-//void MetodoSumar(int numero1, int numero2)
-//{
-//    int suma = numero1 + numero2;
-//    Console.WriteLine(suma);
-//}
+void MetodoSumar(int numero1, int numero2)
+{
+    int suma = numero1 + numero2;
+    Console.WriteLine(suma);
+}
 
 //MetodoSumar(1, 2);
 

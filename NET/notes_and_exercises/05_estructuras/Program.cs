@@ -1,9 +1,9 @@
 ﻿// tabla de multiplicar
 
-//int n;
-//Console.WriteLine("Introduce un Número");
+int n;
+Console.WriteLine("Introduce un Número");
 //bool key = int.TryParse(Console.ReadLine(), out n);
-//while(!key)
+//while (!key)
 //{
 //    Console.WriteLine("ERROR Introduce un Número");
 //    key = int.TryParse(Console.ReadLine(), out n);
@@ -15,9 +15,9 @@
 //    Console.WriteLine($"{n} * {i} = {n * i}");
 //}
 
-//
 
-// pintar a través de peticion por pantalla
+
+//pintar a través de peticion por pantalla
 
 //string vLetra;
 //Console.WriteLine("Introduce una Letra");
@@ -67,13 +67,13 @@
 //    bool bKey = int.TryParse(Console.ReadLine(), out b);
 //    while (!bKey)
 //    {
-//    Console.WriteLine("Introduce el divisor (solo se admiten números)");
-//    bKey = int.TryParse(Console.ReadLine(), out b);
+//        Console.WriteLine("Introduce el divisor (solo se admiten números)");
+//        bKey = int.TryParse(Console.ReadLine(), out b);
 //    }
 //    Console.WriteLine($"{a} / {b} = {a / b}");
 
 //}
-//catch(DivideByZeroException err)
+//catch (DivideByZeroException err)
 //{
 //    Console.ForegroundColor = ConsoleColor.Red;
 //    Console.WriteLine($"{err.Message} -> No se puede dividir entre 0");

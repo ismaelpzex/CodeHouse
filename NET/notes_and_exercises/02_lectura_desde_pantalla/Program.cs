@@ -1,9 +1,8 @@
 ﻿
-// Ejercicio 1
 
-//int vYearNow = int.Parse(DateTime.Now.ToString("yyyy")); //DateTime.Now.Year() <-
-//Console.WriteLine("----- Obtención de datos ------");
-//Console.WriteLine("Introduce tu nombre y apellidos");
+int vYearNow = int.Parse(DateTime.Now.ToString("yyyy")); //DateTime.Now.Year() <-
+Console.WriteLine("----- Obtención de datos ------");
+Console.WriteLine("Introduce tu nombre y apellidos");
 //string vName = Console.ReadLine();
 //Console.WriteLine("introduce tu edad");
 //int vYears = int.Parse(Console.ReadLine());
@@ -35,7 +34,7 @@
 
 
 
-// OTRO EJERCICIO, HACER UNA PEQUEÑA CALCULADORA, debe pedir como entrada dos numeros y dar el resultado por pantalla
+//OTRO EJERCICIO, HACER UNA PEQUEÑA CALCULADORA, debe pedir como entrada dos numeros y dar el resultado por pantalla
 
 //Console.Clear();
 //Console.WriteLine("introduce el primer numero");
