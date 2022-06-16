@@ -7,7 +7,6 @@ namespace EjercicioLinqVentas.Entidades
 		public string TipoProducto { get; set; }
 		public int Cantidad { get; set; }
 		public double Importe { get; set; }
-		public DateTime FechaVenta { get; set; }
 
 	}
 }
