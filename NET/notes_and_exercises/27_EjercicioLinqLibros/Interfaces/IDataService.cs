@@ -10,8 +10,8 @@ namespace _24_EjercicioLinqLibros.Interfaces
         public List<Book> GetBooks50Year();
         public Book GetOldBook();
         public List<Author> GetAuthors(string? bookTitleFilter = null);
-        public List<AuthorResponse> GethAuthorsAndBooksPublished();
-        public AuthorResponse getAuthorBestPublised();
+        //public List<AuthorResponse> GethAuthorsAndBooksPublished();
+        //public AuthorResponse getAuthorBestPublised();
         public List<BookResponse> GetBooksJoinAuthor();
         public List<BookResponse> GetBooksLeftJoinAuthor();
         public BookResponsePaginated GetBooksLeftJoinAuthorPaginated(int page, int itemsPerPage);

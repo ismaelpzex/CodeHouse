@@ -5,20 +5,21 @@ namespace _24_EjercicioLinqLibros.Clases
 {
     public class DataService : IDataService
     {
-        private List<Book> BookList { get; set; }
-        private List<Author> AuthorList { get; set; }
-
+        private List<Book> _ContextBookList;
+        private List<Author> _ContextAuthorList;
+        private ApplicationDbContext _Context;
         public DataService()
         {
-            ILoadService loadService = new LoadService();
+            _Context = new ApplicationDbContext();
+            //ILoadService loadService = new LoadService();
 
-            BookList = loadService.LoadBooks();
-            AuthorList = loadService.LoadAuthors();
+            //_ContextBookList = loadService.LoadBooks();
+            //_ContextAuthorList = loadService.LoadAuthors();
         }
 
         public List<Book> GetTop3BooksMaxSales()
         {
-            var query = from b in BookList
+            var query = from b in _Context.Books
                         orderby b.Sales descending
                         select b;
 
@@ -27,7 +28,7 @@ namespace _24_EjercicioLinqLibros.Clases
 
         public List<Book> GetTop3MinSales()
         {
-            var query = from b in BookList
+            var query = from b in _Context.Books
                         orderby b.Sales ascending
                         select b;
 
@@ -36,7 +37,7 @@ namespace _24_EjercicioLinqLibros.Clases
 
         public List<Book> GetBooks50Year()
         {
-            var query = from b in BookList
+            var query = from b in _Context.Books
                         where b.PublicationDate >= (DateTime.Now.Year - 50)
                         select b;
 
@@ -45,7 +46,7 @@ namespace _24_EjercicioLinqLibros.Clases
 
         public Book GetOldBook()
         {
-            var query = from b in BookList
+            var query = from b in _Context.Books
                         orderby b.PublicationDate ascending
                         select b;
 
@@ -54,54 +55,54 @@ namespace _24_EjercicioLinqLibros.Clases
 
         public List<Author> GetAuthors(string? bookTitleFilter = null)
         {
-            var query = from a in AuthorList
-                        join b in BookList on a.AuthorId equals b.AuthorId
+            var query = from a in _Context.Authors
+                        join b in _Context.Books on a.AuthorId equals b.AuthorId
                         where string.IsNullOrEmpty(bookTitleFilter) || b.Title.StartsWith(bookTitleFilter)
                         select a;
 
             return query.Distinct().ToList(); // si hay algún autor repetido, con el Distinct solo lo sacará una vez
         }
 
-        public List<AuthorResponse> GethAuthorsAndBooksPublished()
-        {
-            var query = from b in BookList
-                        group b by b.AuthorId into idGroup
-                        join a in AuthorList on idGroup.Key equals a.AuthorId
-                        select new AuthorResponse
-                        {
-                            AuthorName = a.Name,
-                            BookPublished = idGroup.Count(),
-                        };
+        //public List<AuthorResponse> GethAuthorsAndBooksPublished()
+        //{
+        //    var query = from b in _Context.Books
+        //                group b by b.AuthorId into idGroup
+        //                join a in _Context.Authors on idGroup.Key equals a.AuthorId
+        //                select new AuthorResponse
+        //                {
+        //                    AuthorName = a.Name,
+        //                    BookPublished = idGroup.Count(),
+        //                };
 
-            //var query = from a in AuthorList
-            //            select new AuthorResponse
-            //            {
-            //                AuthorName = a.Name,
-            //                BookPublished = (from b in BookList
-            //                                 where b.AuthorId == a.AuthorId
-            //                                 select b).Count()
+        //    //var query = from a in AuthorList
+        //    //            select new AuthorResponse
+        //    //            {
+        //    //                AuthorName = a.Name,
+        //    //                BookPublished = (from b in BookList
+        //    //                                 where b.AuthorId == a.AuthorId
+        //    //                                 select b).Count()
 
-            //BookPublished = BookList.Where(b => b.AuthorId == a.AuthorId).Count()
+        //    //BookPublished = BookList.Where(b => b.AuthorId == a.AuthorId).Count()
 
-        //};
+        ////};
 
-            return query.ToList();
-        }
+        //    return query.ToList();
+        //}
 
-        public AuthorResponse getAuthorBestPublised()
-        {
-            List<AuthorResponse> authors = GethAuthorsAndBooksPublished();
-            var query = from a in authors
-                        orderby a.BookPublished descending
-                        select a;
+        //public AuthorResponse getAuthorBestPublised()
+        //{
+        //    List<AuthorResponse> authors = GethAuthorsAndBooksPublished();
+        //    var query = from a in authors
+        //                orderby a.BookPublished descending
+        //                select a;
 
-            return query.First();
-        }
+        //    return query.First();
+        //}
 
         public List<BookResponse> GetBooksJoinAuthor()
         {
-            var query = from b in BookList
-                        join a in AuthorList on b.AuthorId equals a.AuthorId
+            var query = from b in _Context.Books
+                        join a in _Context.Authors on b.AuthorId equals a.AuthorId
                         select new BookResponse
                         {
                             AuthorName = a.Name,
@@ -112,8 +113,8 @@ namespace _24_EjercicioLinqLibros.Clases
 
         public List<BookResponse> GetBooksLeftJoinAuthor()
         {
-            var query = from b in BookList
-                        join a in AuthorList on b.AuthorId equals a.AuthorId into authorBooks
+            var query = from b in _Context.Books
+                        join a in _Context.Authors on b.AuthorId equals a.AuthorId into authorBooks
                         from c in authorBooks.DefaultIfEmpty()
                         select new BookResponse
                         {
@@ -128,8 +129,8 @@ namespace _24_EjercicioLinqLibros.Clases
         {
             BookResponsePaginated result = new BookResponsePaginated();
 
-            var query = from b in BookList
-                        join a in AuthorList on b.AuthorId equals a.AuthorId into authorBooks
+            var query = from b in _Context.Books
+                        join a in _Context.Authors on b.AuthorId equals a.AuthorId into authorBooks
                         from c in authorBooks.DefaultIfEmpty()
                         select new BookResponse
                         {

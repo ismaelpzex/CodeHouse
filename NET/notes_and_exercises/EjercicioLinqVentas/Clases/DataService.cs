@@ -116,5 +116,15 @@ namespace EjercicioLinqVentas.Clases
 
             return result;
         }
+
+        public void AñadirProducto()
+        {
+            Producto nuevoProducto = new Producto();
+            nuevoProducto.Descripcion = "producto insertado";
+            nuevoProducto.PrecioUnitario = 5.76;
+            nuevoProducto.TipoProductoId = 1;
+            _Context.Productos.Add(nuevoProducto);
+            _Context.SaveChanges();
+        }
     }
 }  

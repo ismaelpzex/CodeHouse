@@ -17,20 +17,20 @@ ImprimirVentas(ListBookTop3MinSales);
 
 
 // Ejercicio 3 (Mostrar en consola el autor con más libros publicados.)
-Console.WriteLine("\nEjercicio 3 (Mostrar en consola el autor con más libros publicados.)");
-AuthorResponse AuthorBestPublished = dataService.getAuthorBestPublised();
-Console.WriteLine($"{AuthorBestPublished.AuthorName} es el autor com más libros publicados con un total de {AuthorBestPublished.BookPublished} libros");
+//Console.WriteLine("\nEjercicio 3 (Mostrar en consola el autor con más libros publicados.)");
+//AuthorResponse AuthorBestPublished = dataService.getAuthorBestPublised();
+//Console.WriteLine($"{AuthorBestPublished.AuthorName} es el autor com más libros publicados con un total de {AuthorBestPublished.BookPublished} libros");
 
 // Ejercicio 4 (Mostrar en consola el autor y la cantidad de libros publicados.)
-Console.WriteLine("\nEjercicio 4 (Mostrar en consola el autor y la cantidad de libros publicados.)");
-List<AuthorResponse> AuthorsAndBooks = dataService.GethAuthorsAndBooksPublished();
+//Console.WriteLine("\nEjercicio 4 (Mostrar en consola el autor y la cantidad de libros publicados.)");
+//List<AuthorResponse> AuthorsAndBooks = dataService.GethAuthorsAndBooksPublished();
 
-foreach (AuthorResponse authorAndBook in AuthorsAndBooks)
-{
-    Console.WriteLine($"{authorAndBook.AuthorName} ha publicado {authorAndBook.BookPublished} libros");
+//foreach (AuthorResponse authorAndBook in AuthorsAndBooks)
+//{
+//    Console.WriteLine($"{authorAndBook.AuthorName} ha publicado {authorAndBook.BookPublished} libros");
 
 
-}
+//}
 // Ejercicio 5 (Mostrar en consola los libros publicados hace menos de 50 años.)
 Console.WriteLine("\nEjercicio 5 (Mostrar en consola los libros publicados hace menos de 50 años.)");
 List<Book> listBooks50Years = dataService.GetBooks50Year();
