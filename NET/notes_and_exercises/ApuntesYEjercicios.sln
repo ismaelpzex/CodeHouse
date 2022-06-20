@@ -57,7 +57,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27_EjercicioLinqVentas", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_EjercicioAccesoDatos", "28_EjercicioAccesoDatos\28_EjercicioAccesoDatos.csproj", "{5A23E4D0-329D-49A4-A2DA-2AF4637E3001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "666_EjercicioLinqCompleto_BBDD", "EjercicioLinqCompleto BDD\666_EjercicioLinqCompleto_BBDD.csproj", "{CC2C94EA-3032-4BF9-9D43-6E8A6D86F452}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioLinqCompletoBBDD", "EjercicioLinqCompletoBBDD\EjercicioLinqCompletoBBDD.csproj", "{88C861B7-58BC-410A-B861-D8E816503A5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,10 +173,10 @@ Global
 		{5A23E4D0-329D-49A4-A2DA-2AF4637E3001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A23E4D0-329D-49A4-A2DA-2AF4637E3001}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A23E4D0-329D-49A4-A2DA-2AF4637E3001}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC2C94EA-3032-4BF9-9D43-6E8A6D86F452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC2C94EA-3032-4BF9-9D43-6E8A6D86F452}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC2C94EA-3032-4BF9-9D43-6E8A6D86F452}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC2C94EA-3032-4BF9-9D43-6E8A6D86F452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C861B7-58BC-410A-B861-D8E816503A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C861B7-58BC-410A-B861-D8E816503A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C861B7-58BC-410A-B861-D8E816503A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C861B7-58BC-410A-B861-D8E816503A5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

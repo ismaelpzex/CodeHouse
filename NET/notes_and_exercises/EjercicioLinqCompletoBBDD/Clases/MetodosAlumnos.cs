@@ -1,28 +1,34 @@
-﻿using test.Entidades;
-using test.Interfaces;
+﻿using EjercicioLinqCompletoBBDD.Entidades;
+using EjercicioLinqCompletoBBDD.Interfaces;
 
-namespace test.Clases
+namespace EjercicioLinqCompletoBBDD.Clases
 {
     public class MetodosAlumnos : IMetodosAlumnos
     {
-        private ApplicationDbContext _context;
+        private List<Alumno> ListaAlumnos { get; set; }
+        private List<Clase> ListaClases { get; set; }
+        private List<Poblacion> ListaPoblaciones { get; set; }
 
         public MetodosAlumnos()
         {
-            _context = new ApplicationDbContext();
+            ILoadDataService dataService = new LoadDataService();
+
+            ListaAlumnos = dataService.GetAlumnos();
+            ListaClases = dataService.GetClases();
+            ListaPoblaciones = dataService.GetPoblaciones();
         }
 
         public AlumnoExtendidoPaginado GetAlumnosJoin(DateTime? fechaDesde = null, DateTime? fechaHasta = null, double? notaMedia = 0.0, string? filtroNombre = null, int pagina = 1, int elementosPorPagina = 1)
         {
             AlumnoExtendidoPaginado resultado = new AlumnoExtendidoPaginado();
 
-            var query = from a in _context.Alumnos
+            var query = from a in ListaAlumnos
 
                         let notaMediaLinq = a.Notas.Average()
 
-                        join c in _context.Clases on a.Clase equals c.Numero
+                        join c in ListaClases on a.Clase equals c.Numero
 
-                        join p in _context.Poblaciones on a.PoblacionId equals p.Id
+                        join p in ListaPoblaciones on a.PoblacionId equals p.Id
 
                         where
                         

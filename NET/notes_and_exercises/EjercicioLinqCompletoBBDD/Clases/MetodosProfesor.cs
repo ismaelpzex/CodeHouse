@@ -1,26 +1,32 @@
-﻿using test.Entidades;
-using test.Interfaces;
+﻿using EjercicioLinqCompletoBBDD.Entidades;
+using EjercicioLinqCompletoBBDD.Interfaces;
 
-namespace test.Clases
+namespace EjercicioLinqCompletoBBDD.Clases
 {
     public class MetodosProfesor : IMetodosProfesor
     {
-        private ApplicationDbContext _context;
+        private List<Profesor> ListaProfesores { get; set; }
+        private List<Clase> ListaClases { get; set; }
+        private List<Poblacion> ListaPoblaciones { get; set; }
 
         public MetodosProfesor()
         {
-            _context = new ApplicationDbContext();
+            ILoadDataService dataService = new LoadDataService();
+
+            ListaProfesores = dataService.GetProfesores();
+            ListaClases = dataService.GetClases();
+            ListaPoblaciones = dataService.GetPoblaciones();
         }
 
         public ProfesorExtendidoPaginado GetProfesores(string? filtroPoblacion = null, int pagina = 1, int elementosPorPagina = 1)
         {
             ProfesorExtendidoPaginado resultado = new ProfesorExtendidoPaginado();
 
-            var query = from p in _context.Profesores
+            var query = from p in ListaProfesores
 
-                        join c in _context.Clases on p.Clase equals c.Numero
+                        join c in ListaClases on p.Clase equals c.Numero
 
-                        join pb in _context.Poblaciones on p.PoblacionId equals pb.Id
+                        join pb in ListaPoblaciones on p.PoblacionId equals pb.Id
 
                         where (string.IsNullOrEmpty(filtroPoblacion) || pb.Nombre == filtroPoblacion)
 

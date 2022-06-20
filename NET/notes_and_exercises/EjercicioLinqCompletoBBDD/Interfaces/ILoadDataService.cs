@@ -1,6 +1,6 @@
-﻿using test.Entidades;
+﻿using EjercicioLinqCompletoBBDD.Entidades;
 
-namespace test.Interfaces
+namespace EjercicioLinqCompletoBBDD.Interfaces
 {
     public interface ILoadDataService
     {

@@ -1,4 +1,4 @@
-﻿namespace test.Entidades
+﻿namespace EjercicioLinqCompletoBBDD.Entidades
 {
     public class ProfesorExtendido
     {

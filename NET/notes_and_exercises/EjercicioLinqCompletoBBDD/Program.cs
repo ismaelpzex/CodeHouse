@@ -1,6 +1,6 @@
-﻿using test.Clases;
-using test.Entidades;
-using test.Interfaces;
+﻿using EjercicioLinqCompletoBBDD.Clases;
+using EjercicioLinqCompletoBBDD.Entidades;
+using EjercicioLinqCompletoBBDD.Interfaces;
 
 IMetodosAlumnos metodosAlumno = new MetodosAlumnos();
 
