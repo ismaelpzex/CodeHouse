@@ -38,13 +38,13 @@ foreach (AlumnoExtendido alumno in resultadoPorFecha.Resultados)
     Console.WriteLine($"El alumno {alumno.NombreAlumno} nació el {alumno.FechaDeNacimientoAlumno.ToShortDateString()}");
 }
 
-Console.WriteLine("----------Profesores filtrados por poblacion y paginados-----------");
+//Console.WriteLine("----------Profesores filtrados por poblacion y paginados-----------");
 
-IMetodosProfesor metodosProfesor = new MetodosProfesor();
+//IMetodosProfesor metodosProfesor = new MetodosProfesor();
 
-ProfesorExtendidoPaginado resultadoProfesores = metodosProfesor.GetProfesores(filtroPoblacion: "Madrid", pagina:1, elementosPorPagina: 1);
+//ProfesorExtendidoPaginado resultadoProfesores = metodosProfesor.GetProfesores(filtroPoblacion: "Madrid", pagina:1, elementosPorPagina: 1);
 
-foreach(ProfesorExtendido profesor in resultadoProfesores.Resultados)
-{
-    Console.WriteLine($"{profesor.NombreProfesor} es profesor de {profesor.NombreClase} y es de {profesor.NombrePoblacion}");
-}
+//foreach(ProfesorExtendido profesor in resultadoProfesores.Resultados)
+//{
+//    Console.WriteLine($"{profesor.NombreProfesor} es profesor de {profesor.NombreClase} y es de {profesor.NombrePoblacion}");
+//}
