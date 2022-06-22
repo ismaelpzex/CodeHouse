@@ -1,4 +1,5 @@
 ﻿using PrimeraApi.Application.Contracts.Services;
+using PrimeraApi.Application.Mappers;
 using PrimeraApi.BusinessModels.Models;
 using PrimeraApi.DataAccess.Contracts;
 using PrimeraApi.DataAccess.Contracts.Models;
@@ -25,13 +26,7 @@ namespace PrimeraApi.Application.Services
 
 			if (product != null)
 			{
-				ProductResponse result = new ProductResponse
-				{
-					Code = product.ProductCode,
-					Description = product.ProductDescription,
-					Price = product.Msrp,
-					Stock = product.QuantityInStock
-				};
+				ProductResponse result = ProductMapper.MapToProductResponseFromProductDTO(product);
 
 				return result;
 			}
@@ -59,34 +54,12 @@ namespace PrimeraApi.Application.Services
 
 			if (existingProduct == null)
 			{
-				ProductDTO producToInsert = new ProductDTO
-				{
-					BuyPrice = request.BuyPrice,
-					Msrp = request.Price,
-					ProductCode = request.Code,
-					ProductName = request.Name,
-					ProductDescription = request.Description,
-					ProductLine = request.Line,
-					ProductScale = request.Scale,
-					ProductVendor = request.Vendor,
-					QuantityInStock = request.Stock
-				};
+				ProductDTO producToInsert = ProductMapper.MapToProductDTOFROMCreateProductRequest(request);
 				ProductDTO productInserted = _ProductRepository.AddProduct(producToInsert);
 
 				_uOw.Commit();
 
-				ProductResponse result = new ProductResponse
-				{
-					BuyPrice = producToInsert.BuyPrice,
-					Price = producToInsert.Msrp,
-					Code = producToInsert.ProductCode,
-					Name = producToInsert.ProductName,
-					Description = producToInsert.ProductDescription,
-					Line = producToInsert.ProductLine,
-					Scale = producToInsert.ProductScale,
-					Vendor = producToInsert.ProductVendor,
-					Stock = producToInsert.QuantityInStock
-				};
+				ProductResponse result = ProductMapper.MapToProductResponseFromProductDTO(productInserted);
 				return result;
 			}
 			else return null; 
@@ -114,18 +87,7 @@ namespace PrimeraApi.Application.Services
 
 				_uOw.Commit();
 
-				ProductResponse result = new ProductResponse
-				{
-					BuyPrice = productUpdated.BuyPrice,
-					Price = productUpdated.Msrp,
-					Code = productUpdated.ProductCode,
-					Name = productUpdated.ProductName,
-					Description = productUpdated.ProductDescription,
-					Line = productUpdated.ProductLine,
-					Scale = productUpdated.ProductScale,
-					Vendor = productUpdated.ProductVendor,
-					Stock = productUpdated.QuantityInStock
-				};
+				ProductResponse result = ProductMapper.MapToProductResponseFromProductDTO(productUpdated);
 				return result;
 			}
 			else return null;

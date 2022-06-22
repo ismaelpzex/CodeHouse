@@ -1,6 +1,7 @@
 ﻿using PrimeraApi.DataAccess.Contracts.Models;
 using PrimeraApi.DataAccess.Contracts.Repositories;
 using PrimeraApi.DataAccess.Entities;
+using PrimeraApi.DataAccess.Mappers;
 
 namespace PrimeraApi.DataAccess.Repositories
 {
@@ -17,37 +18,30 @@ namespace PrimeraApi.DataAccess.Repositories
         {
 			var query = from p in _context.Products
 						where p.ProductCode == productCode
-						select new ProductDTO
-						{
-							BuyPrice = p.BuyPrice,
-							Msrp = p.Msrp,
-							ProductCode = p.ProductCode,
-							ProductName = p.ProductName,
-							ProductDescription = p.ProductDescription,
-							ProductLine = p.ProductLine,
-							ProductScale = p.ProductScale,
-							ProductVendor = p.ProductVendor,
-							QuantityInStock = p.QuantityInStock,
-						};
+						select p;
 
-			return query.FirstOrDefault();
+			ProductDTO? result = ProductMapper.MapProductDTOfromProduct(query.FirstOrDefault());
+
+			return result;
         }
 
 		public void DeleteProduct(ProductDTO product)
         {
-			Product productToDelete = new Product
-			{
-				BuyPrice = product.BuyPrice,
-				Msrp = product.Msrp,
-				ProductCode = product.ProductCode,
-				ProductName = product.ProductName,
-				ProductDescription = product.ProductDescription,
-				ProductLine = product.ProductLine,
-				ProductScale = product.ProductScale,
-				ProductVendor = product.ProductVendor,
-				QuantityInStock = product.QuantityInStock,
-			};
-			_context.Products.Remove(productToDelete);
+            Product productToDelete = new Product
+            {
+                BuyPrice = product.BuyPrice,
+                Msrp = product.Msrp,
+                ProductCode = product.ProductCode,
+                ProductName = product.ProductName,
+                ProductDescription = product.ProductDescription,
+                ProductLine = product.ProductLine,
+                ProductScale = product.ProductScale,
+                ProductVendor = product.ProductVendor,
+                QuantityInStock = product.QuantityInStock,
+            };
+
+            //Product productToDelete = ProductMapper.MapProductFromProductDTO(product);
+            _context.Products.Remove(productToDelete);
 		}
 
 		public ProductDTO AddProduct(ProductDTO product)
