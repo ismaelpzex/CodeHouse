@@ -2,7 +2,7 @@
 using PrimeraApi.DataAccess.Entities;
 namespace PrimeraApi.DataAccess.Mappers
 {
-    public class OrderMapper
+    public static class OrderMapper
     {
         public static OrderDTO MapOrderDTOfromOrder(Order request)
         {
