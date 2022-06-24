@@ -18,10 +18,14 @@ namespace PrimeraApi.CrossCutting.Configuration
 			services.AddTransient<IUnitOfWork, UnitOfWork>();
 			services.AddTransient<IProductService, ProductService>();
 			services.AddTransient<IProductRepository, ProductRepository>();
-			services.AddTransient<IProducLineServices, ProductLineServices>();
 			services.AddTransient<IProductLineRepository, ProductLineRepository>();
+			services.AddTransient<IProducLineServices, ProductLineServices>();
 			services.AddTransient<IOfficeRepository, OfficeRepository>();
 			services.AddTransient<IOfficeService, OfficeService>();
+			services.AddTransient<IOrdersRepository, OrdersRepository>();
+			services.AddTransient<IOrderService, OrderService>();
+			services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
+			services.AddTransient<IOrderDetailService, OrderDetailService>();
 
 			return services;
 		}

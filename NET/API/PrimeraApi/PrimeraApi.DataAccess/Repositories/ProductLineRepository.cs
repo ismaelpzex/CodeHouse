@@ -2,6 +2,7 @@
 using PrimeraApi.DataAccess.Contracts.Models;
 using PrimeraApi.DataAccess.Contracts.Repositories;
 using PrimeraApi.DataAccess.Entities;
+using PrimeraApi.DataAccess.Mappers;
 
 namespace PrimeraApi.DataAccess.Repositories
 {
@@ -13,6 +14,23 @@ namespace PrimeraApi.DataAccess.Repositories
         {
 			_context = context;
         }
+
+
+		public PaginatedDTO<ProductLineDTO> GetProductsLinePaginated(string desc = "", int? page = 1, int? itemsPerPage = 5)
+        {
+			PaginatedDTO<ProductLineDTO> result = new PaginatedDTO<ProductLineDTO>();
+
+			var query = from pl in _context.Productlines
+						where (string.IsNullOrEmpty(desc) || (!string.IsNullOrEmpty(pl.TextDescription) && pl.TextDescription.Contains(desc)))
+						select ProductLineMapper.MapProductLineDTOfromProdcutLine(pl);
+
+			result.Total = query.Count();
+			result.Page = page.Value;
+			result.ItemsPerPage = itemsPerPage.Value;
+			result.Result = query.Skip((page.Value - 1) * itemsPerPage.Value).Take(itemsPerPage.Value).ToList();
+
+			return result;
+		}
 
 		public ProductLineDTO? GetProducLineByCode(string code)
         {

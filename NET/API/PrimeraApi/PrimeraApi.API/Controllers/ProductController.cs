@@ -1,20 +1,37 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PrimeraApi.Application.Contracts.Services;
 using PrimeraApi.BusinessModels.Models;
+using PrimeraApi.BusinessModels.Models.Product;
 
 namespace PrimeraApi.API.Controllers
 {
 	// genera api/products
 	[Route("api/[controller]")]
 	[ApiController]
-	public class ProductControllers : Controller
+	public class ProductController : Controller
 	{
 		private IProductService _productService;
 
-		public ProductControllers(IProductService productService)
+		public ProductController(IProductService productService)
         {
 			_productService = productService;
         }
+
+
+
+
+		// api/products/paginated
+		[HttpPost]
+		[Route("paginated")]
+		[ProducesResponseType(typeof(PaginatedResponse<ProductResponse>), StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
+		public IActionResult GetProductsPaginated(ProductSearchRequest request)
+        {
+			var products = _productService.GetProductsPaginated(request);
+			return Ok(products);
+        }
+
+
 		// genera api/products/{code}
 		[HttpGet]
 		[Route("{code}")]
@@ -28,6 +45,8 @@ namespace PrimeraApi.API.Controllers
 			if (product != null) return Ok(product);
 			else return NoContent();
 		}
+
+
 		// genera api/products/{code} // AUNQUE TENGAMOS 2 ENDPOINT CON LA MISMA RUTA, SON DIFERENTES VERBOS
 		[HttpDelete]
 		[Route("{code}")]

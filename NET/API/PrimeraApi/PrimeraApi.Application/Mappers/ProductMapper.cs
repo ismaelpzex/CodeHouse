@@ -38,6 +38,16 @@ namespace PrimeraApi.Application.Mappers
 				Stock = product.QuantityInStock
 			};
 		}
+
+		public static List<ProductResponse> MapToProductResponseListToProductDTOList(List<ProductDTO> products)
+        {
+			//var query = from p in products
+			//			select MapToProductResponseFromProductDTO(p);
+
+			//return query.ToList();
+
+			return products.Select(p => MapToProductResponseFromProductDTO(p)).ToList();
+        }
 	}
 }
 

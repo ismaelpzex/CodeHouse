@@ -14,99 +14,60 @@ namespace PrimeraApi.DataAccess.Repositories
 			_context = context;
         }
 
-		public ProductDTO? GetProductByCode(string productCode)
-        {
-			var query = from p in _context.Products
-						where p.ProductCode == productCode
-						select p;
 
-			ProductDTO? result = ProductMapper.MapProductDTOfromProduct(query.FirstOrDefault());
+		public PaginatedDTO<ProductDTO> GetProductsPaginated(string descripcion = "", int? page = 1, int? itemsPerPage = 5)
+        {
+			PaginatedDTO<ProductDTO> result = new PaginatedDTO<ProductDTO>();
+
+			var query = from p in _context.Products
+						where (string.IsNullOrEmpty(descripcion) || p.ProductDescription.Contains(descripcion))
+						select ProductMapper.MapProductDTOfromProduct(p);
+
+			result.Total = query.Count();
+			result.Page = page.Value;
+			result.ItemsPerPage = itemsPerPage.Value;
+			result.Result = query.Skip((page.Value - 1) * itemsPerPage.Value).Take(itemsPerPage.Value).ToList();
 
 			return result;
         }
 
+		public ProductDTO? GetProductByCode(string productCode)
+        {
+			var query = from p in _context.Products
+						where p.ProductCode == productCode
+						select ProductMapper.MapProductDTOfromProduct(p);
+
+			return query.FirstOrDefault();
+        }
+
 		public void DeleteProduct(ProductDTO product)
         {
-            Product productToDelete = new Product
-            {
-                BuyPrice = product.BuyPrice,
-                Msrp = product.Msrp,
-                ProductCode = product.ProductCode,
-                ProductName = product.ProductName,
-                ProductDescription = product.ProductDescription,
-                ProductLine = product.ProductLine,
-                ProductScale = product.ProductScale,
-                ProductVendor = product.ProductVendor,
-                QuantityInStock = product.QuantityInStock,
-            };
 
-            //Product productToDelete = ProductMapper.MapProductFromProductDTO(product);
+            Product productToDelete = ProductMapper.MapProductFromProductDTO(product);
             _context.Products.Remove(productToDelete);
 		}
 
 		public ProductDTO AddProduct(ProductDTO product)
         {
-			Product newProduct = new Product
-			{
-				BuyPrice = product.BuyPrice,
-				Msrp = product.Msrp,
-				ProductCode = product.ProductCode,
-				ProductName = product.ProductName,
-				ProductDescription = product.ProductDescription,
-				ProductLine = product.ProductLine,
-				ProductScale = product.ProductScale,
-				ProductVendor = product.ProductVendor,
-				QuantityInStock = product.QuantityInStock,
-			};
+
+			Product newProduct = ProductMapper.MapProductFromProductDTO(product);
 
 			var productInserted = _context.Products.Add(newProduct);
 
-			ProductDTO result = new ProductDTO
-			{
-				BuyPrice = productInserted.Entity.BuyPrice,
-				Msrp = productInserted.Entity.Msrp,
-				ProductCode = productInserted.Entity.ProductCode,
-				ProductName = productInserted.Entity.ProductName,
-				ProductDescription = productInserted.Entity.ProductDescription,
-				ProductLine = productInserted.Entity.ProductLine,
-				ProductScale = productInserted.Entity.ProductScale,
-				ProductVendor = productInserted.Entity.ProductVendor,
-				QuantityInStock = productInserted.Entity.QuantityInStock,
-			};
-
+			ProductDTO result = ProductMapper.MapProductDTOfromProduct(productInserted.Entity);
 			return result;
         }
 
 		public ProductDTO UpdateProduct(ProductDTO product)
         {
-			Product ProductToUpdate = new Product
-			{
-				BuyPrice = product.BuyPrice,
-				Msrp = product.Msrp,
-				ProductCode = product.ProductCode,
-				ProductName = product.ProductName,
-				ProductDescription = product.ProductDescription,
-				ProductLine = product.ProductLine,
-				ProductScale = product.ProductScale,
-				ProductVendor = product.ProductVendor,
-				QuantityInStock = product.QuantityInStock,
-			};
-			
+
+			Product ProductToUpdate = ProductMapper.MapProductFromProductDTO(product);
+
+
 			var productUpdated = _context.Products.Update(ProductToUpdate);
 
 
-			ProductDTO result = new ProductDTO
-			{
-				BuyPrice = productUpdated.Entity.BuyPrice,
-				Msrp = productUpdated.Entity.Msrp,
-				ProductCode = productUpdated.Entity.ProductCode,
-				ProductName = productUpdated.Entity.ProductName,
-				ProductDescription = productUpdated.Entity.ProductDescription,
-				ProductLine = productUpdated.Entity.ProductLine,
-				ProductScale = productUpdated.Entity.ProductScale,
-				ProductVendor = productUpdated.Entity.ProductVendor,
-				QuantityInStock = productUpdated.Entity.QuantityInStock,
-			};
+			ProductDTO result = ProductMapper.MapProductDTOfromProduct(productUpdated.Entity);
 
 			return result;
 

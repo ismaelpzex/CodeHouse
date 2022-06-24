@@ -19,7 +19,7 @@ namespace PrimeraApi.Application.Mappers
 			return result;
         }
 
-		public static ProductLineDTO MapToCreateProductRequestFromProductLineDTO(CreateProductLineRequest request)
+		public static ProductLineDTO MapToProductLineDTOFromCreateProductLineRequest(CreateProductLineRequest request)
         {
 			ProductLineDTO result = new ProductLineDTO
 			{
@@ -30,6 +30,11 @@ namespace PrimeraApi.Application.Mappers
 			};
 
 			return result;
+        }
+
+		public static List<ProductLineResponse> MapToProductLineResponseListFromProductLineDTOList(List<ProductLineDTO> productLines)
+        {
+			return productLines.Select(pl => MapToProductLineResponseFromProductLineDTO(pl)).ToList();
         }
 
 		

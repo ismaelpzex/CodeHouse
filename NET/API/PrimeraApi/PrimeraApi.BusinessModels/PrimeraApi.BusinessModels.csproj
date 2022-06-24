@@ -8,8 +8,18 @@
 
   <ItemGroup>
     <None Remove="Models\" />
+    <None Remove="Models\Product\" />
+    <None Remove="Models\ProductLine\" />
+    <None Remove="Models\Office\" />
+    <None Remove="Models\Order\" />
+    <None Remove="Models\OrderDetail\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Models\Product\" />
+    <Folder Include="Models\ProductLine\" />
+    <Folder Include="Models\Office\" />
+    <Folder Include="Models\Order\" />
+    <Folder Include="Models\OrderDetail\" />
   </ItemGroup>
 </Project>

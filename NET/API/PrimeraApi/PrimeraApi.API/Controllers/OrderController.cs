@@ -2,42 +2,43 @@
 using PrimeraApi.Application.Contracts.Services;
 using PrimeraApi.BusinessModels.Models;
 using PrimeraApi.BusinessModels.Models.Office;
+using PrimeraApi.BusinessModels.Models.Order;
 
 namespace PrimeraApi.API.Controllers
 {
-	[Route("api/[controller]")]
-	[ApiController]
-	public class OfficeController : Controller
-	{
-		private IOfficeService _OfficeService;
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OrderController : Controller
+    {
+        private IOrderService _OrderService;
 
-		public OfficeController(IOfficeService officeService)
-		{
-			_OfficeService = officeService;
-		}
+        public OrderController(IOrderService orderService)
+        {
+            _OrderService = orderService;
+        }
 
 		[HttpPost]
 		[Route("paginated")]
 		[ProducesResponseType(typeof(PaginatedResponse<ProductResponse>), StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		public IActionResult GetOfficePaginated(OfficeSearchRequest request)
+		public IActionResult GetOrderPaginated(OrderSearchRequest request)
 		{
-			var products = _OfficeService.GetOfficePaginated(request);
-			return Ok(products);
+			var orders = _OrderService.GetOrderPaginated(request);
+			return Ok(orders);
 		}
 
 
 		[HttpGet]
-		[ProducesResponseType(typeof(OfficeResponse), StatusCodes.Status200OK)]
+		[ProducesResponseType(typeof(OrderResponse), StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		public IActionResult GetOfficeByCode(string code)
-        {
-			OfficeResponse? office = _OfficeService.GetOfficeByCode(code);
+		public IActionResult GetOrderByCode(string code)
+		{
+			OrderResponse? order = _OrderService.GetOrderByCode(code);
 
-			if (office != null) return Ok(office);
+			if (order != null) return Ok(order);
 			else return NoContent();
-        }
+		}
 
 
 		[HttpDelete]
@@ -45,25 +46,25 @@ namespace PrimeraApi.API.Controllers
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		public IActionResult DeleteOffice(string code)
-        {
-			bool result = _OfficeService.DeleteOffice(code);
+		public IActionResult DeleteOrder(string code)
+		{
+			bool result = _OrderService.DeleteOrder(code);
 
 			if (result) return NoContent();
 			else return NotFound("Office dont exist");
-        }
+		}
 
 		[HttpPost]
 		[ProducesResponseType(typeof(OfficeResponse), StatusCodes.Status200OK)]
 		[ProducesResponseType(typeof(string), StatusCodes.Status409Conflict)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		public IActionResult AddOffice(CreateOfficeRequest request)
-        {
-			OfficeResponse? office = _OfficeService.AddOficce(request);
+		public IActionResult AddOrder(CreateOrderRequest request)
+		{
+			OrderResponse? order = _OrderService.AddOrder(request);
 
-			if (office != null) return Ok(office);
+			if (order != null) return Ok(order);
 			else return Conflict("La oficina ya existe");
-        }
+		}
 
 
 		[HttpPut]
@@ -71,13 +72,13 @@ namespace PrimeraApi.API.Controllers
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		public IActionResult UpdateOffice(string code, UpdateOfficeRequest request)
-        {
-			OfficeResponse? office = _OfficeService.UpdateOffice(code, request);
+		public IActionResult UpdateOrder(string code, UpdateOrderRequest request)
+		{
+			OrderResponse? order = _OrderService.UpdateOrder(code, request);
 
-			if (office != null) return Ok(office);
+			if (order != null) return Ok(order);
 			else return NotFound("La oficina no existe");
-        }
+		}
 	}
 }
 

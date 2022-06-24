@@ -6,11 +6,8 @@ namespace PrimeraApi.DataAccess.Mappers
 {
 	public class ProductMapper
 	{
-		public static ProductDTO? MapProductDTOfromProduct(Product? request)
+		public static ProductDTO MapProductDTOfromProduct(Product request)
         {
-
-			if (request != null)
-			{
 				ProductDTO result = new ProductDTO
 				{
 					BuyPrice = request.BuyPrice,
@@ -24,8 +21,6 @@ namespace PrimeraApi.DataAccess.Mappers
 					QuantityInStock = request.QuantityInStock,
 				};
 				return result;
-			}
-			else return null;
         }
 
 		public static Product MapProductFromProductDTO(ProductDTO request)

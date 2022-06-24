@@ -1,6 +1,7 @@
 ﻿using PrimeraApi.Application.Contracts.Services;
 using PrimeraApi.Application.Mappers;
 using PrimeraApi.BusinessModels.Models;
+using PrimeraApi.BusinessModels.Models.ProductLine;
 using PrimeraApi.DataAccess.Contracts;
 using PrimeraApi.DataAccess.Contracts.Models;
 using PrimeraApi.DataAccess.Contracts.Repositories;
@@ -15,6 +16,22 @@ namespace PrimeraApi.Application.Services
 		{
 			_productLineRespository = productLineRepository;
 			_UoW = UoW;
+		}
+
+
+
+		public PaginatedResponse<ProductLineResponse> GetProductLinePaginated(ProductLineSearchRequest request)
+        {
+			PaginatedResponse<ProductLineResponse> result = new PaginatedResponse<ProductLineResponse>();
+
+			PaginatedDTO<ProductLineDTO> search = _productLineRespository.GetProductsLinePaginated(request.Description, request.Page, request.ItemsPerPage);
+
+			result.Result = ProductLineMapper.MapToProductLineResponseListFromProductLineDTOList(search.Result);
+			result.Total = search.Total;
+			result.Page = search.Page;
+			result.ItemsPerPage = search.ItemsPerPage;
+
+			return result;
 		}
 
 		public ProductLineResponse? GetProductLineByCode(string code)
@@ -50,7 +67,7 @@ namespace PrimeraApi.Application.Services
 
 			if (existingProductLine == null)
 			{
-				var productLineToInsert = ProductLineMapper.MapToCreateProductRequestFromProductLineDTO(request);
+				var productLineToInsert = ProductLineMapper.MapToProductLineDTOFromCreateProductLineRequest(request);
 
 				ProductLineDTO productLineInserted = _productLineRespository.AddProductLine(productLineToInsert);
 				_UoW.Commit();

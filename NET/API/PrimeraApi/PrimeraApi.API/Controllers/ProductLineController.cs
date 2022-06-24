@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PrimeraApi.Application.Contracts.Services;
 using PrimeraApi.BusinessModels.Models;
+using PrimeraApi.BusinessModels.Models.ProductLine;
 
 namespace PrimeraApi.API.Controllers
 {
@@ -15,6 +16,19 @@ namespace PrimeraApi.API.Controllers
         {
 			_productLineServices = productLineServices;
         }
+
+
+		[HttpPost]
+		[Route("paginated")]
+		[ProducesResponseType(typeof(PaginatedResponse<ProductResponse>), StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
+		public IActionResult GetProducsLinePaginated(ProductLineSearchRequest request)
+        {
+			var productsLine = _productLineServices.GetProductLinePaginated(request);
+			return Ok(productsLine);
+        }
+
+
 		// api/productline/{code}
 		[HttpGet]
 		[Route("{code}")]
@@ -37,7 +51,7 @@ namespace PrimeraApi.API.Controllers
 		// /api/products/{code}
 		[HttpDelete]
 		[Route("{code}")]
-		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 		public IActionResult DeleteProductLine(string code)

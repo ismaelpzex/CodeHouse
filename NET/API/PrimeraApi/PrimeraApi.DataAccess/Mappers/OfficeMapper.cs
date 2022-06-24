@@ -1,15 +1,14 @@
 ﻿using System;
-using PrimeraApi.BusinessModels.Models;
-using PrimeraApi.BusinessModels.Models.Office;
 using PrimeraApi.DataAccess.Contracts.Models;
+using PrimeraApi.DataAccess.Entities;
 
-namespace PrimeraApi.Application.Mappers
+namespace PrimeraApi.DataAccess.Mappers
 {
-	public class OfficeMapper
+	public static class OfficeMapper
 	{
-		public static OfficeResponse MapOfficeResponseFromOfficeDTO(OfficeDTO request)
+		public static OfficeDTO MapOfficeDTOFromOffice(Office request)
         {
-			OfficeResponse result = new OfficeResponse
+			OfficeDTO result = new OfficeDTO
 			{
 				OfficeCode = request.OfficeCode,
 				AddressLine1 = request.AddressLine1,
@@ -23,32 +22,25 @@ namespace PrimeraApi.Application.Mappers
 			};
 
 			return result;
-        }
 
+		}
 
-		public static OfficeDTO MapToOfficeDTOFromCreateOfficeRequest(CreateOfficeRequest request)
+		public static Office MapOfficeFromOfficeDTO(OfficeDTO request)
         {
-			OfficeDTO result = new OfficeDTO
+			Office result = new Office
 			{
 				OfficeCode = request.OfficeCode,
 				AddressLine1 = request.AddressLine1,
 				AddressLine2 = request.AddressLine2,
 				City = request.City,
 				Country = request.Country,
-				Phone = request.Phone,
+				Phone = request.Country,
 				PostalCode = request.PostalCode,
 				State = request.State,
-				Territory = request.Territory
-
+				Territory = request.Territory,
 			};
 
 			return result;
-        }
-
-
-		public static List<OfficeResponse> MapToOfficeResponseListFromOfficeDTOList(List<OfficeDTO> offices)
-        {
-			return offices.Select(pl => MapOfficeResponseFromOfficeDTO(pl)).ToList();
         }
 	}
 }

@@ -9,10 +9,15 @@ IoC.Register(builder.Services, builder.Configuration);
 string mySqlConnectionStr = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<ApplicationDbContext>(
-item => item.UseMySql(
-mySqlConnectionStr,
-ServerVersion.AutoDetect(mySqlConnectionStr)
-));
+                item =>
+                {
+                    item.UseMySql(
+                 mySqlConnectionStr,
+                 ServerVersion.AutoDetect(mySqlConnectionStr)).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking).EnableSensitiveDataLogging();
+                }, ServiceLifetime.Scoped, ServiceLifetime.Scoped);
+//.EnableSensitiveDataLogging()
+
+;
 
 // Add services to the container.
 

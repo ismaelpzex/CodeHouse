@@ -1,6 +1,8 @@
-﻿using PrimeraApi.Application.Contracts.Services;
+﻿using System.ComponentModel.DataAnnotations;
+using PrimeraApi.Application.Contracts.Services;
 using PrimeraApi.Application.Mappers;
 using PrimeraApi.BusinessModels.Models;
+using PrimeraApi.BusinessModels.Models.Product;
 using PrimeraApi.DataAccess.Contracts;
 using PrimeraApi.DataAccess.Contracts.Models;
 using PrimeraApi.DataAccess.Contracts.Repositories;
@@ -20,7 +22,21 @@ namespace PrimeraApi.Application.Services
         }
 
 
-		public ProductResponse? GetProductByCode(string code)
+		public PaginatedResponse<ProductResponse> GetProductsPaginated(ProductSearchRequest request)
+        {
+			PaginatedResponse<ProductResponse> result = new PaginatedResponse<ProductResponse>();
+
+			PaginatedDTO<ProductDTO> search = _ProductRepository.GetProductsPaginated(request.Description, request.Page, request.ItemsPerPage);
+
+			result.Result = ProductMapper.MapToProductResponseListToProductDTOList(search.Result);
+			result.Total = search.Total;
+			result.Page = search.Page;
+			result.ItemsPerPage = search.ItemsPerPage;
+
+			return result;
+		}
+
+		public ProductResponse? GetProductByCode([Required]string code)
         {
 			ProductDTO? product = _ProductRepository.GetProductByCode(code);
 
@@ -35,7 +51,7 @@ namespace PrimeraApi.Application.Services
 
 		//TODO IPE: Completar la validacion de si tiene pedidos creados ese producto antes de borrar. En caso afirmativo, cancelar la operación. 
 
-		public bool DeleteProduct(string productCode)
+		public bool DeleteProduct([Required] string productCode)
         {
 			ProductDTO? product = _ProductRepository.GetProductByCode(productCode);
 
@@ -50,6 +66,7 @@ namespace PrimeraApi.Application.Services
 
 		public ProductResponse? AddProduct(CreateProductRequest request)
         {
+
 			ProductDTO? existingProduct = _ProductRepository.GetProductByCode(request.Code);
 
 			if (existingProduct == null)
@@ -66,7 +83,7 @@ namespace PrimeraApi.Application.Services
 
         }
 
-		public ProductResponse? UpdateProduct(string code, UpdateProductRequest request)
+		public ProductResponse? UpdateProduct([Required] string code, UpdateProductRequest request)
 		{
 			ProductDTO? existingProduct = _ProductRepository.GetProductByCode(code);
 
