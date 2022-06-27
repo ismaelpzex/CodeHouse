@@ -26,6 +26,8 @@ namespace PrimeraApi.CrossCutting.Configuration
 			services.AddTransient<IOrderService, OrderService>();
 			services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
 			services.AddTransient<IOrderDetailService, OrderDetailService>();
+			services.AddTransient<IUserRepository, UserRepository>();
+			services.AddTransient<IUserService, UserService>();
 
 			return services;
 		}

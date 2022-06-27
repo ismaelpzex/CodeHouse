@@ -25,6 +25,7 @@ namespace PrimeraApi.DataAccess
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
         public virtual DbSet<Productline> Productlines { get; set; } = null!;
+        public virtual DbSet<Users> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -370,6 +371,21 @@ namespace PrimeraApi.DataAccess
                 entity.Property(e => e.TextDescription)
                     .HasMaxLength(4000)
                     .HasColumnName("textDescription");
+            });
+
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.ToTable("users");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(255)
+                    .HasColumnName("password");
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(45)
+                    .HasColumnName("userName");
             });
 
             OnModelCreatingPartial(modelBuilder);

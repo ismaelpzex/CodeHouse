@@ -13,6 +13,7 @@
     <None Remove="Models\Office\" />
     <None Remove="Models\Order\" />
     <None Remove="Models\OrderDetail\" />
+    <None Remove="Models\User\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -21,5 +22,6 @@
     <Folder Include="Models\Office\" />
     <Folder Include="Models\Order\" />
     <Folder Include="Models\OrderDetail\" />
+    <Folder Include="Models\User\" />
   </ItemGroup>
 </Project>
