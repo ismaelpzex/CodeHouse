@@ -9,7 +9,7 @@ var helect = new Calculadora_1.Calculadora("Helect");
 var texasInstrument = new Calculadora_1.Calculadora("Texas Instrument");
 console.log("\nMetodo suma calculadora ".concat(casio.brand, "\n").concat(a, " + ").concat(b, " = ").concat(casio.add(a, b), "\n"));
 console.log("Metodo resta calculadora ".concat(hp.brand, "\n").concat(a, " - ").concat(b, " = ").concat(hp.subtrac(a, b), "\n"));
-console.log("Metodo division calculadora ".concat(helect.brand, "\n").concat(a, " / ").concat(b, " = ").concat(helect.divide(a, 0), "\n"));
+console.log("Metodo division calculadora ".concat(helect.brand, "\n").concat(a, " / ").concat(b, " = ").concat(helect.divide(a, b), "\n"));
 console.log("Metodo multiplicaci\u00F3n calculadora ".concat(texasInstrument.brand, "\n").concat(a, " * ").concat(b, " = ").concat(texasInstrument.multiply(a, b), "\n"));
 // crear una aplicacion que me permita generar una calculadora de varias marcas, cada calculadora tiene que implementar obligatoriamente 3 metodos, sumar restar y multiplocar a parte de una marca.
 //cuando generemos un objeto le pasaremos la marca de la calculadora y probaremos sus metodos.

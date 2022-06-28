@@ -14,7 +14,7 @@ var Calculadora = /** @class */ (function () {
     Calculadora.prototype.divide = function (a, b) {
         if (a === 0 || b === 0)
             return "No se puede dividir entre 0";
-        return a / b;
+        return (a / b).toFixed(2);
     };
     Calculadora.prototype.multiply = function (a, b) {
         return a * b;
