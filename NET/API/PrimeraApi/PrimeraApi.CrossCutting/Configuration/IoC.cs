@@ -1,8 +1,10 @@
 ﻿using System;
+using CrossCutting.Contracts.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PrimeraApi.Application.Contracts.Services;
 using PrimeraApi.Application.Services;
+using PrimeraApi.CrossCutting.Services;
 using PrimeraApi.DataAccess;
 using PrimeraApi.DataAccess.Contracts;
 using PrimeraApi.DataAccess.Contracts.Repositories;
@@ -28,6 +30,7 @@ namespace PrimeraApi.CrossCutting.Configuration
 			services.AddTransient<IOrderDetailService, OrderDetailService>();
 			services.AddTransient<IUserRepository, UserRepository>();
 			services.AddTransient<IUserService, UserService>();
+			services.AddTransient<ICacheService, CacheService>();
 
 			return services;
 		}

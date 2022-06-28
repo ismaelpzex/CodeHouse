@@ -7,7 +7,7 @@ using PrimeraApi.BusinessModels.Models.Product;
 namespace PrimeraApi.API.Controllers
 {
 	// genera api/products
-	
+	[Authorize]
 	[Route("api/[controller]")]
 	[ApiController]
 	public class ProductController : Controller
@@ -35,7 +35,6 @@ namespace PrimeraApi.API.Controllers
 
 
 		// genera api/products/{code}
-		[Authorize]
 		[HttpGet]
 		[Route("{code}")]
 		[ProducesResponseType(typeof(ProductResponse), StatusCodes.Status200OK)]
