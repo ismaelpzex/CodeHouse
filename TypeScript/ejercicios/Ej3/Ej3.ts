@@ -1,10 +1,12 @@
 import {Calculadora} from "./Classes/Calculadora";
-const a: number = 2;
-const b: number = 3;
-let casio: Calculadora = new Calculadora("Casio");
-let hp: Calculadora = new Calculadora("HP");
-let helect: Calculadora = new Calculadora("Helect");
-let texasInstrument: Calculadora = new Calculadora("Texas Instrument");
+
+let a: number = 2;
+let b: number = 3;
+
+const casio: Calculadora = new Calculadora("Casio");
+const hp: Calculadora = new Calculadora("HP");
+const helect: Calculadora = new Calculadora("Helect");
+const texasInstrument: Calculadora = new Calculadora("Texas Instrument");
 
 console.log(`\nMetodo suma calculadora ${casio.brand}\n${a} + ${b} = ${casio.add(a, b)}\n`);
 console.log(`Metodo resta calculadora ${hp.brand}\n${a} - ${b} = ${hp.subtrac(a, b)}\n`);
