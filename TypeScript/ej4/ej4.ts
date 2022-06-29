@@ -20,10 +20,9 @@ class Manipular implements IManipular {
     }
 
     countLetter(frase: string, letter: string): number {
-        const fraseTratada = frase.toLocaleLowerCase();
         let count: number = 0;
         for (let i: number = 0; i <= frase.length; i++){
-            if (fraseTratada[i] === letter.toLocaleLowerCase()) count++
+            if (frase[i].toLocaleLowerCase() === letter.toLocaleLowerCase()) count++
         }
         return count;
     }
@@ -35,7 +34,7 @@ class Manipular implements IManipular {
 }
 
 
-const manipular: Manipular = new Manipular();
+const manipular: IManipular = new Manipular();
 
 console.log(manipular.countTotal("  en un lugar de la mancha"));
 console.log(manipular.countLetter("en un lugar de la mancha", "a"));
