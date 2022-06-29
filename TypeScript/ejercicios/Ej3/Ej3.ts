@@ -1,4 +1,4 @@
-import {Calculadora} from "./Classes/Calculadora";
+import { Calculadora } from "./Classes/Calculadora";
 
 let a: number = 2;
 let b: number = 3;

@@ -1,23 +1,37 @@
 import ICalculadora from "../Interfaces/ICalculadora";
 
-export class Calculadora implements ICalculadora{
+export class Calculadora implements ICalculadora {
     brand: string;
 
-    constructor (brand: string) {
+    constructor(brand: string) {
         this.brand = brand;
     }
 
-    add(a: number, b: number): number {
-        return a + b;
+    add(...numbers: number[]) {
+        let resultado: number = 0;
+        for (let numero of numbers) {
+            resultado += numero;
+        }
+        return resultado;
     }
-    subtrac(a: number, b: number): number {
-        return a - b;
+    subtrac(...numeros: number[]): number {
+        let resultado: number = numeros[0];
+        numeros.forEach((numero, index) => {
+            if (index !== 0) resultado -= numero
+        });
+        return resultado;
     }
-    divide(a: number, b: number): number | string {
-        if (a === 0 || b === 0) return "No se puede dividir entre 0"
-        return (a/b).toFixed(2);
+    divide(...numeros: number[]): number | string {
+        let resultado: number = numeros[0];
+        numeros.forEach((numero, index) => {
+            if (numero === 0) return "No se puede dividir entre 0";
+            if (index !== 0) resultado /= numero;
+        });
+        return resultado.toFixed(2);
     }
-    multiply(a: number, b: number): number{
-        return a * b;
+    multiply(...numbers: number[]): number {
+        let resultado: number = 1;
+        resultado = numbers.reduce((acumulado, actual)=> acumulado * actual);
+        return resultado;
     }
 };
