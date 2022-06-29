@@ -1,0 +1,31 @@
+<div>
+    <input type="color" (input)="cambiarColor($event)">
+    <div class="caja" [style]="'background-color:' + color"></div>
+</div>
+
+<div>
+    <input type="text" placeholder="Introduce un texto" (input)="capturarTexto($event)">
+    <p>{{texto}}</p>
+</div>
+
+<!-- Selector de ciudad que permita escoger entre diferentes ciudades y saque un mensage de vivo en la ciudad seleccionada, si no marco ciudad o marco la opción de seleccionar ciudad el mensaje tiene que ser no vivo en ninguna ciudad -->
+<div class="">
+    <select name="select" (change)="capturarCiudad($event)">
+        <option value="" selected>Selecciona Cuidad</option>
+        <option value="jaen">Jaén</option>
+        <option value="malaga">Málaga</option>
+        <option value="madrid">Madrid</option>
+        <option value="sevilla">Sevilla</option>
+      </select>
+      <p>{{textoCiudad}}</p>
+</div>
+<hr>
+<div class="">
+    <select name="select" (change)="printarCiudades($event)">
+        <option value="" selected>Selecciona Comunidad</option>
+        <option value="andalucia">Andalucía</option>
+        <option value="madrid">Madrid</option>
+        <option value="galicia">Galicia</option>
+      </select>
+      <p>{{textoCiudad}}</p>
+<p>{{resultadoComunidades}}</p>

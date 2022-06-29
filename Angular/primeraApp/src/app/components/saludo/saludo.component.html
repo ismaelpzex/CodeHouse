@@ -1,0 +1,13 @@
+<p [class]="color + numeroAleatorio">Hola soy {{nombre}} y tengo {{edad}} años</p>
+
+<figure>
+    <img [src]="arrImagenes[0].url" [alt]="arrImagenes[0].name">
+    <figcaption>{{arrImagenes[0].name}}</figcaption>
+</figure>
+
+<figure>
+    <img [src]="arrImagenes[1].url" [alt]="arrImagenes[1].name">
+    <figcaption>{{arrImagenes[1].name}}</figcaption>
+</figure>
+
+<div [innerHTML]="sumar(12,3)"></div>
