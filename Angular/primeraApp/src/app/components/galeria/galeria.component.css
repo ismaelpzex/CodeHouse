@@ -1,0 +1,23 @@
+.galeria {
+    max-width: 50%;
+    margin: 10% auto;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+}
+
+button {
+    width: 50%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}

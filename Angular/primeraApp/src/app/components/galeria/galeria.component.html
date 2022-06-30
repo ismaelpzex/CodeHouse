@@ -1,0 +1,8 @@
+<div class="galeria">
+    <figure>
+        <img [src]="arrImagenes[imagenActual].url" [alt]="arrImagenes[imagenActual].title">
+        <figcaption>{{arrImagenes[imagenActual].title}}</figcaption>
+    </figure>
+    <button (click)="cambiarImagen($event)">PREV</button>
+    <button (click)="cambiarImagen($event)">NEXT</button>
+</div>
