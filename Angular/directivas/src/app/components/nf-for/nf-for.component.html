@@ -1,0 +1,23 @@
+<!-- <ul>
+    <li *ngFor="let numero of numeros">{{numero}}</li>
+</ul> -->
+
+
+<select (change)="filterDirector($event)">
+    <option value="" selected>Selecciona un director</option>
+    <option value="Tim Van Patten">Tim Van Patten</option>
+    <option value="Brian Kirk">Brian Kirk</option>
+    <option value="Daniel Minahan">Daniel Minahan</option>
+</select>
+
+<section class="row">
+    <article [ngClass]="{'negro': par, 'gris': impar}"
+        *ngFor="let episodio of arrFiltered; let i = index; let par = even, let impar = odd; let primero = first; let ultimo = last">
+        <img [src]="episodio.image" [alt]="episodio.title">
+        <h3>Serie: {{episodio.serie}}</h3>
+        <h4>Capítulo: {{episodio.title}}</h4>
+        <p>Director: {{episodio.director}}</p><br>
+        <p>Descripción: {{episodio.descripcion}}</p>
+
+    </article>
+</section>

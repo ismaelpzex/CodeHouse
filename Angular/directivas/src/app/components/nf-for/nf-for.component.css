@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row article {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 10px red;
+    border-radius: 10px;
+}
+
+.row article:hover {
+    box-shadow: 1px 1px 15px red;
+}
+
+.row article h3 {
+    color: red;
+    padding: 1rem;
+    text-align: center;
+}
+
+.row article h4 {
+    margin-block: 1rem;
+}
+
+.row img {
+    width: 100%;
+    border: 3px solid black;
+
+}
+
+.negro {
+    background-color: black;
+    color: white;
+    ;
+}
+
+.gris {
+    background-color: rgb(68, 68, 68);
+    color: white;
+}

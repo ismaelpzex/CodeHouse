@@ -1,0 +1,5 @@
+<div [style]="'background-color:' + color">
+  <app-cronometro [inicio]="1" [fin]="10" (finalizado)="cambiarColor($event)" [color]="'#0000FF'"></app-cronometro>
+  <app-cronometro [inicio]="10" [fin]="20" (finalizado)="cambiarColor($event)" [color]="'green'"></app-cronometro>
+  <app-cronometro [inicio]="3" [fin]="12" (finalizado)="cambiarColor($event)" [color]="'tomato'"></app-cronometro>
+</div>
