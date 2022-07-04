@@ -1,0 +1,39 @@
+<!-- <p *ngIf="visible">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid commodi incidunt nam dicta tenetur
+    dolorum, hic
+    reiciendis explicabo beatae magni distinctio libero. Itaque impedit perferendis iure dolorem quasi quis cumque!</p> -->
+
+<!-- Menú de tabs -->
+<div class="tabs">
+    <nav>
+        <ul class="menu">
+            <li [ngClass]="{'activo': seccionActual === 'sobremi' }" (click)="cargarSeccion('sobremi')">Sobre mi</li>
+            <li [ngClass]="{'activo': seccionActual === 'experiencia'}" (click)="cargarSeccion('experiencia')">
+                Experiencia</li>
+            <li [ngClass]="{'activo': seccionActual === 'estudios'}" (click)="cargarSeccion('estudios')">Estudios</li>
+        </ul>
+    </nav>
+    <section *ngIf="seccionActual === 'sobremi'">
+        <h3>Sobre mi</h3>
+        <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus veritatis laudantium sunt
+            tempora natus esse magnam eum tempore numquam aut eaque incidunt, vero voluptates, atque facilis quia
+            similique nisi.</p>
+        <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus veritatis laudantium sunt
+            tempora natus esse magnam eum tempore numquam aut eaque incidunt, vero voluptates, atque facilis quia
+            similique nisi.</p>
+    </section>
+    <section *ngIf="seccionActual === 'experiencia'">
+        <h3>Experiencia</h3>
+        <p>2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus veritatis laudantium sunt
+            tempora natus esse magnam eum tempore numquam aut eaque incidunt, vero voluptates, atque facilis quia
+            similique nisi.</p>
+    </section>
+    <section *ngIf="seccionActual === 'estudios'">
+        <h3>Estudios</h3>
+        <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus veritatis laudantium sunt
+            tempora natus esse magnam eum tempore numquam aut eaque incidunt, vero voluptates, atque facilis quia
+            similique nisi.</p>
+        <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus veritatis laudantium sunt
+            tempora natus esse magnam eum tempore numquam aut eaque incidunt, vero voluptates, atque facilis quia
+            similique nisi.</p>
+    </section>
+</div>
