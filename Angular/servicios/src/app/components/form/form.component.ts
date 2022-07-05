@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlumnosService } from 'src/app/services/alumnos.service';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  newAlumno: any;
+  constructor(private alumnosService: AlumnosService) {
+    this.newAlumno = {
+      name: "",
+      mail: "",
+      age: 0,
+      level: ""
+    }
+  }
 
   ngOnInit(): void {
   }
 
+  getDataForm() {
+    let response = this.alumnosService.insert(this.newAlumno)
+    alert(response.msg)
+  }
 }

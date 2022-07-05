@@ -1,1 +1,24 @@
-<p>lista-alumnos works!</p>
+<div class="container mt-4">
+    <select name="" id="" class="form-select" (change)="selectLevel($event)">
+        <option value="">Selecciona un curso</option>
+        <option value="1eso">1eso</option>
+        <option value="2eso">2eso</option>
+        <option value="3eso">3eso</option>
+        <option value="4eso">4eso</option>
+        <option value="1bachillerato">1bachillerato</option>
+        <option value="2bachillerato">2bachillerato</option>
+    </select>
+    <section class="row g-3 mt-3" *ngIf="alumnos.length !== 0; else bloqueElse">
+        <article class="col-12 col-md-6 col-lg-4" *ngFor="let alumno of alumnos">
+            <app-alumnos [miAlumno]="alumno"></app-alumnos>
+        </article>
+    </section>
+    <ng-template #bloqueElse>
+        <section class="row g-3 mt-3">
+            <article>
+                <h3>No hay alumnos en este curso</h3>
+                <hr>
+            </article>
+        </section>
+    </ng-template>
+</div>
