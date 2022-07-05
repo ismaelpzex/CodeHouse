@@ -1,0 +1,27 @@
+.urgente {
+    border: 1px solid #eeee;
+    border-radius: 15px;
+    background-color: #eee;
+    border-left: 7px solid hsl(9, 100%, 64%);
+}
+
+.diaria {
+    border: 1px solid #eeee;
+    border-radius: 15px;
+    background-color: #eee;
+    border-left: 7px solid hsl(206, 100%, 64%);
+}
+
+.mensual {
+    border: 1px solid #eeee;
+    border-radius: 15px;
+    background-color: #eee;
+    border-left: 7px solid hsl(150, 100%, 50%);
+}
+
+.notareas {
+    border: 1px solid #eeee;
+    border-radius: 15px;
+    background-color: rgba(226, 233, 255, 0.933);
+    border-left: 7px solid hsl(159, 100%, 87%);
+}

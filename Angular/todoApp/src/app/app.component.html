@@ -1,1 +1,21 @@
-<button class="btn btn-primary">hola</button>
+<div class="container mt-3">
+  <h1 class="">Gestión de tareas</h1>
+  <hr>
+  <section class="mt-3">
+    <div class="row g-3">
+      <div class="formulario col-12 col-md-6 mb-3">
+        <app-form (tareaEmitida)="guardarTarea($event)"></app-form>
+      </div>
+      <div class="filtro col-12 col-md-6 mb-3">
+        <app-filtros (tareaBuscadaTitulo)="buscarTareaTitulo($event)"
+          (tareaBuscadaPrioridad)="buscarTareaPrioridad($event)">
+        </app-filtros>
+      </div>
+    </div>
+  </section>
+  <section class="card p-3 shadow">
+    <app-lista-tareas [tareas]="misTareas" (tareaBorrada)="borrarTarea($event)"></app-lista-tareas>
+  </section>
+</div>
+
+<app-alerts [alert]="miAlerta"></app-alerts>

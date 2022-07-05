@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { ListaTareasComponent } from './components/lista-tareas/lista-tareas.component';
-import { FromComponent } from './components/from/from.component';
 import { FiltrosComponent } from './components/filtros/filtros.component';
 import { TareasComponent } from './components/tareas/tareas.component';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule } from '@angular/forms';
+import { AlertsComponent } from './components/alerts/alerts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaTareasComponent,
-    FromComponent,
     FiltrosComponent,
-    TareasComponent
+    TareasComponent,
+    FormComponent,
+    AlertsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

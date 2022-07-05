@@ -1,1 +1,12 @@
-<p>lista-tareas works!</p>
+<div *ngIf="tareas.length !== 0; else noTareas">
+    <article class="my-4 p-3"
+        [ngClass]="{'urgente': tarea.prioridad.includes('urgente'), 'diaria': tarea.prioridad.includes('diaria'), 'mensual': tarea.prioridad.includes('mensual') }"
+        *ngFor="let tarea of tareas">
+        <app-tareas [miTarea]="tarea" (tareaBorrada)="borrarTarea($event)"></app-tareas>
+    </article>
+</div>
+<ng-template #noTareas>
+    <article class="my-3 p-3 notareas">
+        <h3>No hay tareas en este momento</h3>
+    </article>
+</ng-template>

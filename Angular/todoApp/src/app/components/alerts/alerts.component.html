@@ -1,0 +1,7 @@
+<!-- sistema de alertas -->
+<div class="position-fixed bottom-0 end-0 p3">
+    <div [class]="'alert alert-dismissible fade alert-' + alert.type" [ngClass]="{'show': alert.status}" role="alert">
+        {{alert.text}}
+        <button type="button" class="btn-close" (click)="closeAlert()"></button>
+    </div>
+</div>

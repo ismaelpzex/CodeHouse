@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filtros',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltrosComponent implements OnInit {
 
-  constructor() { }
+  tareaFiltrada: any;
+  @Output() tareaBuscadaTitulo: EventEmitter<any>;
+  @Output() tareaBuscadaPrioridad: EventEmitter<any>;
+
+  constructor() {
+    this.tareaFiltrada = {
+      titulo: "",
+      prioridad: "",
+    }
+
+    this.tareaBuscadaTitulo = new EventEmitter();
+    this.tareaBuscadaPrioridad = new EventEmitter();
+  }
 
   ngOnInit(): void {
+  }
+
+  filtroTareasTitulo($event: any): void {
+    this.tareaBuscadaTitulo.emit(this.tareaFiltrada)
+  }
+  filtroTareasPrioridad($event: any): void {
+    this.tareaBuscadaPrioridad.emit(this.tareaFiltrada)
   }
 
 }

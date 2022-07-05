@@ -1,1 +1,15 @@
-<p>filtros works!</p>
+<div class="form">
+    <div>
+        <label for="titulo" class="form-label">Filtros</label>
+        <input type="text" id="titulo" class="form-control" placeholder="buscar..." [(ngModel)]="tareaFiltrada.titulo"
+            (input)="filtroTareasTitulo($event)">
+    </div>
+    <div class="mt-3">
+        <select class="form-select" [(ngModel)]="tareaFiltrada.prioridad" (change)="filtroTareasPrioridad($event)">
+            <option value="">Selecciona prioridad</option>
+            <option value="urgente">Urgente</option>
+            <option value="diaria">Diaria</option>
+            <option value="mensual">Mensual</option>
+        </select>
+    </div>
+</div>
