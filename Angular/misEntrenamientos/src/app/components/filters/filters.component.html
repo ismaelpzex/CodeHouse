@@ -1,0 +1,19 @@
+<section class="container-fluid bg-success">
+    <h2 class="text-center text-white mt-3 p-3">Filtros</h2>
+    <article class="d-block d-md-flex mt-3 gap-5 justify-content-center p-3">
+        <div class="col-md-3">
+            <input class="form-control" type="text" placeholder="Buscar ejercicio" (input)="filterByTitle($event)">
+        </div>
+        <div class="col-md-3">
+            <select name="" id="" class="form-control" (change)="filterByTime($event)">
+                <option value="">Selecciona tiempo</option>
+                <option value="short">0 - 30 min</option>
+                <option value="medium">30 - 60 min</option>
+                <option value="long">+ 60 min</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="date" placeholder="test.." (change)="filterByDate($event)">
+        </div>
+    </article>
+</section>

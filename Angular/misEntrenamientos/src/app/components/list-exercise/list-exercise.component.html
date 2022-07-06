@@ -1,0 +1,13 @@
+<section class="bg-info mt-4 p-3">
+    <article class="" *ngIf="exercises.length !== 0; else empty">
+        <div class="d-flex justify-content-between mt-1" *ngFor="let exercise of exercises">
+            <p class="align-self-center m-0">{{exercise.title}} <small>{{exercise.duration}}</small> Minutos
+                <small>{{exercise.date}}</small>
+            </p>
+            <button class=" btn btn-danger btn-sm" (click)="deleteExercise(exercise.id)">Borrar</button>
+        </div>
+    </article>
+    <ng-template #empty>
+        <p class="m-0">Lista de ejercicios vacía</p>
+    </ng-template>
+</section>
