@@ -11,10 +11,10 @@ export class TotalsComponent implements OnInit {
 
   kcals: number = 0;
   time: number = 0;
-  private exercises: Exercise[] = [];
+  /* private exercises: Exercise[] = []; */
 
   constructor(private exerciseService: ExercisesService) {
-    this.exercises = exerciseService.getAll();
+    /* this.exercises = exerciseService.getAll(); */
   }
 
   ngOnInit(): void {
