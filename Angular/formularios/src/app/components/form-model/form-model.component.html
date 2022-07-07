@@ -1,0 +1,70 @@
+<form novalidate class="p-3" [formGroup]="formModel" (ngSubmit)="getDataForm()">
+
+    <div class="my-2">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+        <p class="error" *ngIf="checkControl('nombre', 'required' )">El
+            campo es obligatorio</p>
+        <p class="error" *ngIf="checkControl('nombre', 'minlength' )">La
+            longitud mínima del campo son 3
+            carácteres</p>
+    </div>
+
+    <div class="my-2">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="edad" formControlName="edad">
+        <p class="error" *ngIf="checkControl('edad', 'agevalidator' )">
+            {{formModel.get('edad')?.errors?.['agevalidator']}}</p>
+    </div>
+
+    <div class="my-2">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email">
+        <p class="error" *ngIf="checkControl('email', 'required' )">El
+            campo es obligatorio</p>
+        <p class="error" *ngIf="checkControl('email', 'pattern' )">El email no es válido</p>
+    </div>
+
+    <div class="my-2">
+        <label for="dni" class="form-label">DNI</label>
+        <input type="text" class="form-control" id="dni" formControlName="dni">
+        <p class="error" *ngIf="checkControl('dni', 'dnivalidator' )">
+            {{formModel.get('dni')?.errors?.['dnivalidator']}}</p>
+    </div>
+
+    <div class="my-2">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+        <p class="error" *ngIf="checkControl('password', 'minlength' )">El password debe de tener como mínimo 5
+            caracteres</p>
+        <p class="error" *ngIf="checkControl('password', 'maxlength' )">El password debe de tener como maximo 8
+            caracteres</p>
+    </div>
+
+    <div class="my-2">
+        <label for="repitPass" class="form-label">Repite Password</label>
+        <input type="password" class="form-control" id="repitPass" formControlName="repitPass">
+        <p class="error" *ngIf="formModel.hasError('passwordvalidator') && formModel.get('repitPass')?.touched">
+            Las
+            contraseñas no coinciden</p>
+    </div>
+
+    <div class="my-4">
+        <select class="form-select" id="puesto" formControlName="puesto">
+            <option value="">Selecciona un trabajo</option>
+            <option value="frontend">Desarrolador Frontend</option>
+            <option value="backend">Desarrollador Backend</option>
+            <option value="fullStack">Desarrollador FullStack</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="checkbox" formControlName="rgpd"> He leido y acepto condicones
+        <p class="error"
+            *ngIf="formModel.get('rgpd')?.hasError('required') && formModel.touched || formModel.get('rgpd')?.hasError('required') && formModel.dirty">
+            Acepta
+            las condiciones para continuar</p>
+    </div>
+    <input type="submit" class="btn btn-danger mt-2" value="Enviar" [disabled]="!formModel.valid">
+    {{formModel.valid}}
+</form>
