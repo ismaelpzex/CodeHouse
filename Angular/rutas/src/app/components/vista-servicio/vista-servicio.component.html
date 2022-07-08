@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="shadow my-3 card p-3">
+        <h2>{{servicio.title}}</h2>
+        <hr>
+        <p [innerHtml]="servicio.text"></p>
+    </div>
+    <div>
+        <button class="btn btn-danger" [routerLink]="['/mis-servicios']">Volver a servicios</button>
+    </div>
+</div>

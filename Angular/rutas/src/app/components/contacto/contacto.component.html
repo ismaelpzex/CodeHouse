@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h1>Contacto</h1>
+    <form class="card p-3 shadow" #formContact="ngForm" (ngSubmit)="recogerDatos(formContact)">
+        <div>
+            <label for="nombre" class="form-label">Nombre</label>
+            <input class="form-control" type="text" id="nombre" name="nombre" ngModel>
+        </div>
+        <div>
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control" type="text" id="email" name="email" ngModel>
+        </div>
+        <input type="submit" value="Enviar" class="btn btn-danger mt-3">
+    </form>
+</div>

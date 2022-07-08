@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="col-12 col-md-6 g-3 d-flex justify-content-center " *ngFor="let servicio of servicios">
+            <div class="card shadow" style="width: 18rem;">
+                <img [src]="servicio.img" class="card-img-top" [alt]="servicio.title">
+                <div class="card-body">
+                    <h5 class="card-title">{{servicio.title}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a [routerLink]="['/servicios', servicio.url]" class="btn btn-primary">más info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
