@@ -1,0 +1,22 @@
+<section class="container mt-3">
+    <div class="card shadow p-3">
+        <div class="row">
+            <figure class="col-12 col-md-4">
+                <img class="img" [src]="empleado.photo" [alt]="empleado.name">
+            </figure>
+            <div class="col-12 col-md-8">
+                <h2>{{empleado.name}} {{empleado.surname}}</h2>
+                <hr>
+                <ul>
+                    <li>Email: {{empleado.email}}</li>
+                    <li>Dni: {{empleado.dni}}</li>
+                    <li>Departamento: {{departamento.title}}</li>
+                </ul>
+                <button class="btn btn-dark btn-sm text-success d-block ms-auto"
+                    [ngClass]="{'text-danger': !empleado.status, 'text-success': empleado.status}"
+                    (click)="ChangeStatus()">{{
+                    (empleado.status ? 'Activo' : 'Inactivo') }}</button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+<div class="card shadow" [ngClass]="{'border-danger': !miEmpleado.status, 'border-success': miEmpleado.status}">
+    <img [src]="miEmpleado.photo" class="card-img-top" [alt]="miEmpleado.name">
+    <div class="card-body">
+        <h5 class="card-title text-center">{{miEmpleado.name}} {{miEmpleado.surname}}</h5>
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-dark btn-sm text-success"
+                [ngClass]="{'text-danger': !miEmpleado.status, 'text-success': miEmpleado.status}"
+                (click)="ChangeStatus()">{{
+                (miEmpleado.status ? 'Activo' : 'Inactivo') }}</button>
+            <button class="btn btn-primary btn-sm" [routerLink]="['/empleado', miEmpleado.id]">Detalle</button>
+        </div>
+    </div>
+</div>

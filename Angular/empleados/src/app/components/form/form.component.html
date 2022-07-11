@@ -1,0 +1,32 @@
+<section class="container mt-3 shadow p-3 border">
+    <form #registrarEmpleado="ngForm" (ngSubmit)="getDataForm(registrarEmpleado)">
+        <div class="mt-3">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" ngModel class="form-control">
+        </div>
+        <div class="mt-3">
+            <label for="surname">Apellidos</label>
+            <input type="text" id="surname" name="surname" ngModel class="form-control">
+        </div>
+        <div class="mt-3">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" ngModel class="form-control">
+        </div>
+        <div class="mt-3">
+            <label for="dni">Dni</label>
+            <input type="text" id="dni" name="dni" ngModel class="form-control">
+        </div>
+        <div class="mt-3">
+            <label for="photo">Fotografía (url)</label>
+            <input type="text" id="photo" name="photo" ngModel class="form-control" placeholder="https://....">
+        </div>
+        <div class="mt-3">
+            <select class="form-select" name="department" id="department" name="department" ngModel>
+                <option value="">Selecciona un departamento</option>
+                <option *ngFor="let departamento of departamentos" [value]="departamento.id">{{departamento.title}}
+                </option>
+            </select>
+        </div>
+        <input type="submit" class="btn btn-primary my-3 ms-auto d-block">
+    </form>
+</section>
