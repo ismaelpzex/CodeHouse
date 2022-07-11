@@ -1,0 +1,25 @@
+<section class="container mt-3 p-3 card shadow">
+    <h2>{{producto.title}}</h2>
+    <div class="row">
+        <figure class="col-12 col-md-3 p-3 borde">
+            <img class="img-fluid" [src]="producto.photo" [alt]="producto.title">
+        </figure>
+        <div class="col-12 col-md-9 ps-3">
+            <ul class="list-group">
+                <li class="list-group-item">{{producto.price}}€</li>
+                <li class="list-group-item">Stock: {{(producto.stock) ? 'Disponible' : 'No disponible'}}</li>
+            </ul>
+            <hr>
+            <button class="btn btn-primary m-1"
+                [routerLink]="['/producto', producto.id, 'opiniones']">Opiniones</button>
+            <button class="btn btn-primary m-1"
+                [routerLink]="['/producto', producto.id, 'valores-nutricionales']">Valores Nutricionales</button>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <button class="btn btn-primary mt-3 ms-auto d-block" [routerLink]="['/productos']">Volver a productos</button>
+</div>

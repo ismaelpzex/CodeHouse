@@ -1,0 +1,9 @@
+<section class="container mt-3">
+    <h2>Lista productos</h2>
+    <hr>
+    <div class="row g-3">
+        <article class="col-12 col-md-6 col-lg-4" *ngFor="let producto of productos">
+            <app-producto-card [producto]="producto"></app-producto-card>
+        </article>
+    </div>
+</section>

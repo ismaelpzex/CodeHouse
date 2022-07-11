@@ -10,6 +10,11 @@ import { C404Component } from './components/c404/c404.component';
 import { ListaServiciosComponent } from './components/lista-servicios/lista-servicios.component';
 import { VistaServicioComponent } from './components/vista-servicio/vista-servicio.component';
 import { FormsModule } from '@angular/forms';
+import { ProductosComponent } from './components/productos/productos.component';
+import { ProductoCardComponent } from './components/producto-card/producto-card.component';
+import { VistaProductoComponent } from './components/vista-producto/vista-producto.component';
+import { OpinionesComponent } from './components/vista-producto/opiniones/opiniones.component';
+import { NutricionalComponent } from './components/vista-producto/nutricional/nutricional.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     C404Component,
     ListaServiciosComponent,
-    VistaServicioComponent
+    VistaServicioComponent,
+    ProductosComponent,
+    ProductoCardComponent,
+    VistaProductoComponent,
+    OpinionesComponent,
+    NutricionalComponent
   ],
   imports: [
     BrowserModule,
