@@ -1,0 +1,9 @@
+<div>
+    <h5 class="text-white fs-6 fw-bold">{{titulo.toUpperCase()}} | {{canal.toUpperCase()}}</h5>
+    <hr>
+</div>
+<div class="row g-4">
+    <article class="col-12 col-md-4 col-xl-3" *ngFor="let item of items">
+        <app-card [item]="item" [cat]="titulo"></app-card>
+    </article>
+</div>

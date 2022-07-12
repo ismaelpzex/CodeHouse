@@ -1,0 +1,19 @@
+<div class="card mb-3 shadow bg-transparent text-light p-2">
+    <div class="row">
+        <figure class="col-12 col-md-4">
+            <img [src]="personaje.imagen" [alt]="personaje.nombre_real" class="img-fluid rounded">
+        </figure>
+        <div class="col-12 col-md-8">
+            <div class="car-body">
+                <div class="d-flex justify-content-between">
+                    <h3 class="card-title">{{personaje.nombre_real}}</h3>
+                    <button class="boton border-0" [routerLink]="['/personajes']">Volver</button>
+                </div>
+                <hr>
+                <p class="card-text">Personaje: {{personaje.nombre_personaje}}</p>
+                <p class="card-text">Episodios: {{personaje.episodios}}</p>
+                <button class="boton border-0 m-0" [routerLink]="['/serie', personaje.serie]">{{serie.titulo}}</button>
+            </div>
+        </div>
+    </div>
+</div>

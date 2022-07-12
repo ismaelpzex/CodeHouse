@@ -1,0 +1,6 @@
+<ul *ngIf="temporadas.length >= 1; else sinTemporadas">
+    <li *ngFor="let temporada of temporadas">{{temporada}}</li>
+</ul>
+<ng-template #sinTemporadas>
+    <p>No tiene temporadas</p>
+</ng-template>
