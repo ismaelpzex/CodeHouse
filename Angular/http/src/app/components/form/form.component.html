@@ -1,0 +1,32 @@
+<section>
+    <h1 class="border-bottom border-2 border-primary">Insertar <span class="text-primary">Contacto</span></h1>
+    <form novalidate class="shadow border border-primary p-4 mt-5" [formGroup]="formContact" (ngSubmit)="getDataForm()">
+        <div>
+            <label for="first_name" class="form-label">Nombre</label>
+            <input [ngClass]="checkField('first_name')" class="form-control" type="text" id="first_name"
+                formControlName="first_name">
+            <p class="error" *ngIf="checkError('first_name', 'required')">*Campo obligatorio</p>
+            <p class="error" *ngIf="checkError('first_name', 'minlength')">*Nombre demasiado corto</p>
+        </div>
+        <div>
+            <label for="last_name" class="form-label">Apellidos</label>
+            <input class="form-control" type="text" id="last_name" formControlName="last_name">
+            <p class="error" *ngIf="checkError('last_name', 'required')">*Campo obligatorio</p>
+            <p class="error" *ngIf="checkError('last_name', 'minlength')">*Apellido demasiado corto</p>
+        </div>
+        <div>
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control" type="email" id="email" formControlName="email">
+            <p class="error" *ngIf="checkError('email', 'required')">*Campo obligatorio</p>
+            <p class="error" *ngIf="checkError('email', 'pattern')">*Email no válido</p>
+        </div>
+        <div>
+            <label for="avatar" class="form-label">Imagen</label>
+            <input class="form-control" type="url" id="avatar" formControlName="avatar">
+            <p class="error" *ngIf="checkError('avatar', 'required')">*Campo obligatorio</p>
+            <p class="error" *ngIf="checkError('avatar', 'pattern')">*Email no válido</p>
+        </div>
+        <input class="btn btn-primary mt-3 ms-auto d-block" [disabled]="!formContact.valid" type="submit"
+            value="Insertar">
+    </form>
+</section>
