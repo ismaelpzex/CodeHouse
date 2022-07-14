@@ -1,0 +1,17 @@
+<div class="card mb-3 shadow">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="myCharacter?.image" class="img-fluid rounded-start" [alt]="myCharacter?.name">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{myCharacter?.name}}</h5>
+                <p class="card-text"><small class="text-muted">Estado: {{myCharacter.status}}</small></p>
+                <button class="btn btn-primary" data-bs-toggle="modal"
+                    [attr.data-bs-target]="'#characterModal' + myCharacter.id">Ver
+                    detalle</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-popup [info]="myCharacter"></app-popup>

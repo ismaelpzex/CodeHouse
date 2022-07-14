@@ -1,0 +1,16 @@
+<section class="container mt-4">
+    <h2>Lista personajes</h2>
+    <hr>
+    <div class="row" *ngIf="characters.length >= 1; else noResult">
+        <article class="col-12 col-md-6" *ngFor="let character of characters">
+            <app-character-card [myCharacter]="character"></app-character-card>
+        </article>
+    </div>
+    <ng-template #noResult>
+        <p>No se han encontrado resultados para: {{name}}</p>
+    </ng-template>
+    <div class="d-flex justify-content-around mb-5" *ngIf="characters.length >= 1">
+        <button class="btn btn-primary" (click)="goToPage(prev)" [disabled]="prev === null">Prev</button>
+        <button class="btn btn-primary" (click)="goToPage(next)" [disabled]="next === null">Next</button>
+    </div>
+</section>

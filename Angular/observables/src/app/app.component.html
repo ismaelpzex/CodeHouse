@@ -1,0 +1,6 @@
+<header>
+  <app-search (characterSearch)="getSearch($event)"></app-search>
+</header>
+<main>
+  <app-character-list [name]="search"></app-character-list>
+</main>
