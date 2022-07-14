@@ -1,1 +1,12 @@
-<p>user-view works!</p>
+<div class="border border-primary shadow p-3 card">
+    <div class="row">
+        <figure class="col-12 col-md-4">
+            <img class="image shadow" [src]="user?.avatar" [alt]="user?.first_name">
+        </figure>
+        <div class="col-12 col-md-8">
+            <h3 class="card-title">{{user?.first_name}} {{user?.last_name}}</h3>
+            <p class="card-text">Email <a [href]="'mailto:' + user?.email">{{user?.email}}</a></p>
+            <button class="btn btn-primary" [routerLink]="['/agenda']">Volver</button>
+        </div>
+    </div>
+</div>

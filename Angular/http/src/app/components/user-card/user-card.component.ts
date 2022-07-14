@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/interfaces/user.interface';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-user-card',
@@ -9,12 +10,19 @@ import { User } from 'src/app/interfaces/user.interface';
 export class UserCardComponent implements OnInit {
 
   @Input() myUser: User | any;
-  constructor() { }
+  constructor(
+    private userService: UsersService,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  DeleteUser(id: number): void {
-    console.log(id);
+  async DeleteUser(id: number): Promise<void> {
+    try {
+      let response = await this.userService.delete(id);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

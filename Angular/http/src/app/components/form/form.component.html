@@ -1,5 +1,5 @@
 <section>
-    <h1 class="border-bottom border-2 border-primary">Insertar <span class="text-primary">Contacto</span></h1>
+    <h1 class="border-bottom border-2 border-primary">{{type}} <span class="text-primary">Contacto</span></h1>
     <form novalidate class="shadow border border-primary p-4 mt-5" [formGroup]="formContact" (ngSubmit)="getDataForm()">
         <div>
             <label for="first_name" class="form-label">Nombre</label>
@@ -27,6 +27,6 @@
             <p class="error" *ngIf="checkError('avatar', 'pattern')">*Email no válido</p>
         </div>
         <input class="btn btn-primary mt-3 ms-auto d-block" [disabled]="!formContact.valid" type="submit"
-            value="Insertar">
+            [value]="type">
     </form>
 </section>
