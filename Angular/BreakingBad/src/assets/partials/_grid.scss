@@ -1,0 +1,40 @@
+@use 'sass:math'; //este plugin de sass me permite hacer operaciones matematicas con diferentes unidades PX con EM, etc
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*='col-'] {
+    margin: $marginGrid;
+}
+
+@mixin column($posicion) {
+    $columnWidth: 100%/12 * $posicion;
+    width: calc(#{$columnWidth} - #{$marginGrid * 2});
+}
+
+/* movil */
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        @include column($i)
+    }
+}
+
+/* tablet */
+@media(min-width: $breakpointTablet) {
+    @for $i from 1 through 12 {
+        .col-t-#{$i} {
+            @include column($i)
+        }
+    }
+}
+
+/* desktop */
+@media(min-width: $breakpointDesktop) {
+    @for $i from 1 through 12 {
+        .col-d-#{$i} {
+            @include column($i)
+        }
+    }
+}
