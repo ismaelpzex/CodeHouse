@@ -1,0 +1,37 @@
+@use 'sass:math';
+@import 'variables';
+
+.login {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+        border: 1px solid #eee;
+        border-radius: $marginGrid * 1.5;
+        padding: 1.5rem;
+        width: 80%;
+        box-shadow: 1px 1px 20px #ccc;
+    }
+
+    input {
+        width: 100%;
+        padding: $marginGrid;
+        margin-block-end: $marginGrid;
+        margin-block-start: $marginGrid;
+    }
+
+    button {
+        padding: $marginGrid;
+        margin-inline-start: auto;
+        display: block;
+        margin-block-end: $marginGrid;
+        margin-block-start: $marginGrid;
+        background-color: $primaryColor;
+        color: white;
+        border: 0;
+        border-radius: 10px;
+    }
+
+}

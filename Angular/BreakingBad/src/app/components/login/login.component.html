@@ -1,1 +1,15 @@
-<p>login works!</p>
+<section class="container login">
+    <div class="form">
+        <form #loginForm="ngForm" (submit)="getDataForm(loginForm)">
+            <div>
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" ngModel>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" ngModel>
+            </div>
+            <button type="submit" value="Enviar">Login <i class="fa-solid fa-flask-vial"></i></button>
+        </form>
+    </div>
+</section>
