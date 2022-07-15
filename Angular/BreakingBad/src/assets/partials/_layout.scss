@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+* body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+}
+
+* img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: $breakPointDesktop;
+    margin: 0 auto;
+}
