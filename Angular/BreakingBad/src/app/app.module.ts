@@ -9,7 +9,8 @@ import { CharactersListComponent } from './components/characters-list/characters
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { CharacterViewComponent } from './components/character-view/character-view.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DashboeardComponent } from './components/dashboeard/dashboeard.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     CharactersListComponent,
     CharacterCardComponent,
-    CharacterViewComponent
+    CharacterViewComponent,
+    DashboeardComponent
   ],
   imports: [
     BrowserModule,
