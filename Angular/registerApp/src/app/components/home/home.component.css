@@ -1,0 +1,9 @@
+.imagen {
+    max-width: 200px;
+    height: auto;
+    transition: 0.5s;
+}
+
+.imagen:hover {
+    max-width: 220px;
+}

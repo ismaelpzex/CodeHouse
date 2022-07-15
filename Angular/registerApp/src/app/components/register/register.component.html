@@ -1,0 +1,40 @@
+<form novalidate class="p-3 container shadow mt-5" [formGroup]="formModel" (ngSubmit)="getDataForm()">
+
+    <div class="my-2">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+    </div>
+
+    <div class="my-2">
+        <label for="surname" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="surname" formControlName="surname">
+    </div>
+
+    <div class="my-2">
+        <label for="mail" class="form-label">Email</label>
+        <input type="text" class="form-control" id="mail" formControlName="mail">
+    </div>
+
+    <div class="my-2">
+        <label for="address" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="address" formControlName="address">
+    </div>
+
+    <div class="my-2">
+        <label for="age" class="form-label">edad</label>
+        <input type="number" class="form-control" id="age" formControlName="age">
+    </div>
+
+    <div class="my-2">
+        <label for="username" class="form-label">Nick</label>
+        <input type="nick" class="form-control" id="username" formControlName="username">
+    </div>
+
+    <div class="my-2">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+    </div>
+
+
+    <input type="submit" class="btn btn-danger mt-2 ms-auto d-block" value="Enviar">
+</form>

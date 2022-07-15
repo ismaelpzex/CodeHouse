@@ -1,0 +1,14 @@
+<section class="container mt-4 shadow p-4">
+    <form novalidate #formTemplate="ngForm" (ngSubmit)="getDataForm(formTemplate)">
+        <div class="my-2">
+            <label for="username" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="username" name="username" ngModel>
+        </div>
+        <div class="my-2">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" ngModel>
+        </div>
+
+        <input type="submit" class="btn btn-danger mt-2 d-block ms-auto mt-4" value="Login">
+    </form>
+</section>
