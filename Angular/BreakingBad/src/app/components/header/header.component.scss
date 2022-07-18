@@ -1,0 +1,45 @@
+@import 'variables';
+
+nav {
+    padding: $marginGrid;
+    background-color: $secondaryColor;
+    box-shadow: 1px 1px 7px #aaa;
+    border-bottom: 2px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        img {
+            max-width: 100px;
+        }
+    }
+
+    .search {
+        padding-top: $marginGrid;
+
+        input {
+            padding: $marginGrid;
+        }
+
+        .logout {
+            padding: $marginGrid * 2;
+            font-size: 1.25em;
+            cursor: pointer;
+        }
+    }
+
+    button {
+        padding: $marginGrid;
+        margin-inline-start: auto;
+        margin-block-end: $marginGrid;
+        margin-block-start: $marginGrid;
+        background-color: $primaryColor;
+        color: white;
+
+        &:hover {
+            background-color: black;
+        }
+    }
+
+
+}

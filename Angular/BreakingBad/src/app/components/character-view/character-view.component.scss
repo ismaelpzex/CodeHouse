@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'layout';
+
+section.container {
+    margin-top: 40px;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: $marginGrid;
+        text-decoration: underline;
+    }
+
+    p {
+        margin-bottom: $marginGrid;
+    }
+
+    button {
+        padding: $marginGrid;
+        margin-block-end: $marginGrid;
+        margin-block-start: $marginGrid;
+        background-color: $primaryColor;
+        color: white;
+        border: 0;
+        border-radius: 10px;
+    }
+}

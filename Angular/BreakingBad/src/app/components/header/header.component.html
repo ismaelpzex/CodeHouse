@@ -1,1 +1,10 @@
-<p>header works!</p>
+<nav>
+    <div class="logo">
+        <img class="logo" src="./assets/images/Breaking_Bad_logo.svg.png" alt="BreakingBad">
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Buscar..." [(ngModel)]="search">
+        <button class="btn" (click)="getSearch()">Search</button>
+        <a class="logout" (click)="logOut()"><i class="fa-solid fa-power-off"></i></a>
+    </div>
+</nav>

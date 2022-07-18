@@ -1,0 +1,45 @@
+@import 'variables';
+
+.card {
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 1px 1px 5px $primaryColor;
+    }
+
+    &:hover .info {
+        margin-top: 0px;
+    }
+
+    figure img {
+        height: 400px;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .info {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        margin-top: -700px;
+        transition: 0.5s;
+
+        figcaption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+        }
+    }
+}

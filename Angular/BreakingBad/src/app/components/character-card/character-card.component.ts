@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Character } from 'src/app/interfaces/character.interface';
 
 @Component({
   selector: 'app-character-card',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterCardComponent implements OnInit {
 
+  @Input() myCharacter: Character | any;
   constructor() { }
 
   ngOnInit(): void {

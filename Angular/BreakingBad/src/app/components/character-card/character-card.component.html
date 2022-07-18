@@ -1,1 +1,8 @@
-<p>character-card works!</p>
+<div class="card" [routerLink]="['/dashboard','character-view', myCharacter.char_id]">
+    <figure>
+        <img [src]="myCharacter?.img" [alt]="myCharacter?.name">
+        <div class="info">
+            <figcaption>{{myCharacter?.name}}</figcaption>
+        </div>
+    </figure>
+</div>

@@ -1,1 +1,7 @@
-<p>characters-list works!</p>
+<section class="container">
+    <div class="row">
+        <article class="col-12 col-t-4 col-d-3" *ngFor="let character of characters">
+            <app-character-card [myCharacter]="character"></app-character-card>
+        </article>
+    </div>
+</section>

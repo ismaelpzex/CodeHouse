@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Character } from 'src/app/interfaces/character.interface';
+import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
   selector: 'app-characters-list',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersListComponent implements OnInit {
 
-  constructor() { }
+  characters: Character[] | any;
+  constructor(
+    private charactersService: CharactersService,
+    private activadteRoute: ActivatedRoute,
+  ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    this.activadteRoute.queryParams.subscribe(async (queryParams: any) => {
+      console.log(queryParams);
+      if (queryParams.name !== undefined) {
+
+        this.characters = await this.charactersService.getByName(queryParams.name)
+      }
+      else {
+        this.characters = await this.charactersService.getAll();
+      }
+    })
   }
 
 }

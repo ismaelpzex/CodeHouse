@@ -1,1 +1,15 @@
-<p>character-view works!</p>
+<section class="container">
+    <h1>{{character?.name}}</h1>
+    <div class="row">
+        <figure class="col-12 col-t-3">
+            <img [src]="character?.img" [alt]="character?.nickname">
+        </figure>
+        <div class="col-12 col-t-9">
+            <h2>{{character?.nickname}}</h2>
+            <p>Estado: {{character?.status}}</p>
+            <p>Ocupación: {{character?.occupation}}</p>
+            <p>Nacimiento: {{character?.birthday}}</p>
+            <button class="button" [routerLink]="['/dashboard']">Volver atrás</button>
+        </div>
+    </div>
+</section>
