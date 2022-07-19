@@ -1,0 +1,40 @@
+<p>{{nombre | uppercase}}</p>
+<p>{{nombre | lowercase}}</p>
+<p>{{'ismael de la poza' | titlecase}}</p>
+<p>{{iva | percent}} {{iva}}</p>
+
+<!-- ' minNumerosEnteros . MinNumerosDecimal - MaxNumeroDecimal' -->
+<p>{{racional | percent : '2.2-4'}}</p>
+<!-- pipe de depuracion -->
+<p>{{arrNumeros | json}}</p>
+<p>{{precio | currency: 'EUR'}}</p>
+<p>{{fecha | date: 'EEEE: dd/MMMM/yyyy HH:MM:ss mmmm'}}</p>
+<p>{{nacimiento | date: 'dd - MMMM'}}</p>
+
+<!-- Formato Equivale Salida
+---------- -------------------- --------------------------------
+
+short       M/d/yy h:mm          6/15/15 9:03 AM
+medium      MMM d y h:mm:ss      Jun 15 2015 9:03:01 AM
+long        MMMM d y h:mm:ss     z June 15 2015 at 9:03:01 AM GMT+1
+shortDate   M/d/yy               6/15/15
+mediumDate  MMM d y              Jun 15 2015
+longDate    MMMM d y             June 15 2015
+fullDate    EEEE MMMM d y        Monday June 15 2015
+shortTime   h:mm a               9:03 AM
+mediumTime  h:mm:ss a            9:03:01 AM
+longTime    h:mm:ss a z          9:03:01 AM GMT+1
+fullTime    h:mm:ss a zzzz       9:03:01 AM GMT+01:00
+full        EEEE MMMM d y        Monday June 15 2015
+h:mm:ss      zzzz at             9:03:01 AM GMT+01:00 -->
+
+<p>Racional: {{pi | number: '2.1-8'}}</p>
+<p>{{ arrAnimales | slice: 1: 3 }}</p>
+<p>{{'alistate a la marina ' | nombreDelPipe}}</p>
+
+<article>
+  <h2>TITULO</h2>
+  <p>{{texto | recortarString: 40: '=>' }}</p>
+</article>
+
+<p [innerHTML]="texto | formateador: 'tomato': 'bold': 'uppercase' "></p>
