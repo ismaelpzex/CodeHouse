@@ -1,0 +1,20 @@
+<section class="container">
+    <div class="card mt-5 p-4 shadow" *ngFor="let country of countries | async">
+        <h2 class="card-title">{{ country?.name.common }}</h2>
+        <hr>
+        <div class="row">
+            <figure class="col-12 col-md-9">
+                <img class="img-fluid shadow" [src]="country?.flags.svg" [alt]="country?.name.common">
+            </figure>
+            <div class="col-12 col-md-3">
+                <ul>
+                    <li>Población: {{country?.population | number}}</li>
+                    <li>Moneda: {{country?.currencies}}</li>
+                    <li>Superficie: {{country?.area}}</li>
+                    <li>Capital: {{country?.capital}}</li>
+                </ul>
+                <h4 class="text-muted" *ngIf="country?.unMember">Este país es miembro de la Unión Europea</h4>
+            </div>
+        </div>
+    </div>
+</section>
