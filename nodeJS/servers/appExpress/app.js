@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const dayjs = require('dayjs');
+const fs = require('fs');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -20,6 +22,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//MIDDLEWARES
+app.use((req, res, next) => {
+  console.log(new Date());
+  next();
+});
+
+// app.use((req, res, next) => {
+//   if (Math.random() > 0.6) res.end('el numero aletatorio es mayor de 0.6')
+//   else next();
+// });
+
+app.use((req, res, next) => {
+  const line = `[${dayjs().format('DD-MM-YYYY HH:mm:ss')} Método: ${req.method}. Url: ${req.url}]\n`
+  console.log(line);
+  fs.appendFile('./logs/main.log', line, () => {
+    next();
+  })
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

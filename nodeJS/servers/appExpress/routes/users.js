@@ -14,4 +14,9 @@ router.post('/new/create', (req, res) => {
   res.end('petición post /users/new/create');
 })
 
+router.get('/view/:id', (req, res, next) => {
+  const { id } = req.params;
+  res.end(`La variable ID de la url es ${id}\n`);
+});
+
 module.exports = router;
