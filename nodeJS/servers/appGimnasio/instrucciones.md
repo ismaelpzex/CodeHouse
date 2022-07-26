@@ -7,4 +7,3 @@
 2 - Crear el modelo para teacher;
 3 - crear la función getAll();
 4 - ejecutar la función dentro del manejador
-test;
