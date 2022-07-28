@@ -1,10 +1,12 @@
-
+const jwt = require('jsonwebtoken');
 /**
  * @description Executes an sql statement and returns an array/object with the result
  * @param {*} sql 
  * @param {*} arr 
- * @returns 
+ * @returns return a array of query
  */
+
+const dayjs = require("dayjs");
 
 const executeQuery = (sql, arr = []) => {
     return new Promise((resolve, reject) => {
@@ -19,7 +21,7 @@ const executeQuery = (sql, arr = []) => {
  * @description Executes an SQL statement and returns a single element or null if it does not exist
  * @param {*} sql 
  * @param {*} arr
- * @returns 
+ * @returns return a first value or null of query.
  */
 
 const executeQueryOne = (sql, arr = []) => {
@@ -31,4 +33,18 @@ const executeQueryOne = (sql, arr = []) => {
     });
 }
 
-module.exports = { executeQuery, executeQueryOne }
+/**
+ * @description Create token for user.
+ * @param {*} user 
+ * @return return token
+ */
+
+const createToken = (user) => {
+    const obj = {
+        user_id: user.id,
+        exp_date: dayjs().add(5, "minute").unix(),
+    }
+    return jwt.sign(obj, 'en un lugar de la mancha',);
+}
+
+module.exports = { executeQuery, executeQueryOne, createToken };
