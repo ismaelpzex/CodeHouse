@@ -1,0 +1,45 @@
+<section class="container">
+    <div class="col-12 offset-0 col-md-6 offset-md-3">
+        <form [formGroup]="formulario" class="card shadow border-0 p-4 mt-5" (ngSubmit)="onSubmit()">
+            <div class="mb-2">
+                <label class="form-label" for="">Nombre</label>
+                <input class="form-control" type="text" formControlName="nombre">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Apellidos</label>
+                <input class="form-control" type="text" formControlName="apellidos">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Dirección</label>
+                <input class="form-control" type="text" formControlName="direccion">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Email</label>
+                <input class="form-control" type="text" formControlName="email">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Edad</label>
+                <input class="form-control" type="text" formControlName="edad">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Género</label>
+                <input class="form-control" type="text" formControlName="genero">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Cuota</label>
+                <input class="form-control" type="text" formControlName="cuota">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Fecha Nacimiento</label>
+                <input class="form-control" type="date" formControlName="fecha_nacimiento">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">DNI</label>
+                <input class="form-control" type="text" formControlName="dni">
+            </div>
+            <div>
+                <input type="submit" class="btn btn-primary d-block ms-auto mt-3">
+            </div>
+        </form>
+    </div>
+</section>

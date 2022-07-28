@@ -1,19 +1,19 @@
+const { executeQuery, executeQueryOne } = require('../helpers/utils');
+
 const getAll = () => {
-    return new Promise((resolve, reject) => {
-        db.query('select * from profesores', (err, result) => {
-            if (err) return reject(err);
-            resolve(result);
-        })
-    })
+    return executeQuery('select * from profesores');
 }
 
 const getNames = () => {
-    return new Promise((resolve, reject) => {
-        db.query('SELECT nombre FROM profesores', (err, result) => {
-            if (err) reject(err)
-            resolve(result);
-        })
-    })
+    return executeQuery('SELECT nombre FROM profesores');
 }
 
-module.exports = { getAll, getNames }
+const getById = (id) => {
+    return executeQueryOne('select * from profesores where id = ?', [id]);
+}
+
+const create = ({ nombre, experiencia, hora_entrada, hora_salida }) => {
+    return executeQuery('insert into profesores (nombre, experiencia, hora_entrada, hora_salida) values (?, ?, ?, ?)', [nombre, experiencia, hora_entrada, hora_salida]);
+}
+
+module.exports = { getAll, getNames, getById, create }
