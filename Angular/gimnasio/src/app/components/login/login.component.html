@@ -1,0 +1,18 @@
+<section class="container">
+    <div class="col-12 offset-0 col-md-6 offset-md-3">
+        <form [formGroup]="login" class="card shadow border-0 p-4 mt-5" (ngSubmit)="onSubmit()">
+            <div class="mb-2">
+                <label class="form-label" for="">Email</label>
+                <input class="form-control" type="text" formControlName="email">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="">Password</label>
+                <input class="form-control" type="password" formControlName="password">
+            </div>
+            <p *ngIf="hasError" class="text-danger"> Error en email y/o contraseña</p>
+            <div>
+                <input type="submit" class="btn btn-primary d-block ms-auto mt-3">
+            </div>
+        </form>
+    </div>
+</section>

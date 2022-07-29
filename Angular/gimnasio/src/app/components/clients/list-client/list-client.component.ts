@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ClientsService } from 'src/app/services/clients.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class ListClientComponent implements OnInit {
   prev: string;
   error: string;
   constructor(
-    private clientsService: ClientsService
+    private clientsService: ClientsService,
+    private router: Router
   ) {
     this.clients = [];
     this.next = "";
@@ -27,9 +29,10 @@ export class ListClientComponent implements OnInit {
       this.clients = response.result;
       this.next = response.info.next;
       this.prev = response.info.prev;
-      console.log(this.clients);
     } catch (err: any) {
       this.error = err.message;
+      localStorage.removeItem('token_gym');
+      this.router.navigate(['/login'])
     }
   }
 

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 
@@ -13,10 +13,20 @@ export class ClientsService {
   ) { }
 
   getAll(): Promise<any> {
-    return lastValueFrom(this.httpClient.get<any>(this.baseUrl));
+    const httpOptions = {
+      headers: new HttpHeaders({
+        authorization: localStorage.getItem('token_gym')!
+      })
+    }
+    return lastValueFrom(this.httpClient.get<any>(this.baseUrl, httpOptions));
   }
 
   create(formValues: any): Promise<any> {
-    return lastValueFrom(this.httpClient.post<any>(this.baseUrl, formValues));
+    const httpOptions = {
+      headers: new HttpHeaders({
+        authorization: localStorage.getItem('token_gym')!
+      })
+    }
+    return lastValueFrom(this.httpClient.post<any>(this.baseUrl, formValues, httpOptions));
   }
 }
