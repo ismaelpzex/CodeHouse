@@ -44,7 +44,7 @@ const createToken = (user) => {
         user_id: user.id,
         exp_date: dayjs().add(5, "minute").unix(),
     }
-    return jwt.sign(obj, 'en un lugar de la mancha',);
+    return jwt.sign(obj, 'clave para decodificar token',);
 }
 
 module.exports = { executeQuery, executeQueryOne, createToken };
