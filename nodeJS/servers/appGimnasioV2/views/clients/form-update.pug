@@ -1,0 +1,37 @@
+extends ../layout.pug
+
+block content
+    .container.shadow.mt-3.boder-0.p-4
+        form(action="/update", method="POST")
+            div 
+            input(type="hidden", value=client.id)
+            div.mb-3 
+                label.form-label Nombre
+                input.form-control(type="text", name="nombre", value=client.nombre) 
+            div.mb-3 
+                label.form-label Apellidos
+                input.form-control(type="text", name="apellidos", value=client.apellidos)
+            div.mb-3 
+                label.form-label Dirección
+                input.form-control(type="text", name="direccion", value=client.direccion)
+            div.mb-3 
+                label.form-label Email
+                input.form-control(type="email", name="email", value=client.email)
+            div.mb-3 
+                label.form-label Edad
+                input.form-control(type="number", name="edad", value=client.edad)
+            div.mb-3 
+                label.form-label Género
+                select.form-control(name="genero")
+                    option(value="") Género 
+                    option(value="m") m 
+                    option(value="f") f 
+                label.form-label Cuota
+                input.form-control(type="text", name="cuota", value=client.cuota)
+            div.mb-3 
+                label.form-label Fecha Nacimiento
+                input.form-control(type="date", name="fecha_nacimiento", value=client.fecha_nacimiento)
+            div.mb-3 
+                label.form-label DNI
+                input.form-control(type="text", name="dni", value=client.dni)
+            input.btn.btn-primary.d-block.ms-auto(type="submit", value="Enviar") 

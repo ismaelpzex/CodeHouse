@@ -1,0 +1,35 @@
+h1 Título de la página
+h2 Subtítulo de la página
+
+div 
+  p Párrafo 1
+  P Párrafo 2
+  p Párrafo 3
+
+div 
+  a(href='https://google.es', id='enlace-google') Google.es
+  a#enlace-20min(href='https://20minutos.es') 20 Minutos
+  a#enlace-youtube.enlace.rojo(href='https://youtube.com') Youtube
+
+.varibales 
+  p= nombre
+  p Mi nombre es: #{nombre}
+
+.bucles
+  ul 
+    - for(let i = 0; i < animales.length; i ++)
+        li= animales[i]
+
+  - animales = []
+  ul
+    each animal in animales 
+      li= animal + ' <- each de pug'
+    else 
+      li No hay animales
+
+.botones 
+  button click
+  script.
+    document.querySelector('.botones button').addEventListener('click', () => {
+      alert('no tengo ganas de na hoy');
+    })

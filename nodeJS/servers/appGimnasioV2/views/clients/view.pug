@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block content
+    h1 Vista cliente 
+    hr
+    .client
+        table 
+            thead 
+                tr 
+                    th ID
+                    th NOMBRE
+                    th DIRECCIÓN
+                    th EMAIL
+                    th EDAD
+                    th GENERO
+                    th FECHA INSCRIPCIÓN
+                    th CUOTA
+                    th FECHA NACIMIENTO
+                    th DNI
+                    th PROFESOR ID
+            tbody 
+                tr 
+                    td= cliente.id
+                    td= cliente.nombre + " " + cliente.apellidos
+                    td= cliente.direccion
+                    td= cliente.email
+                    td= cliente.edad
+                    td= cliente.genero
+                    td= cliente.fecha_inscripcion 
+                    td= cliente.cuota 
+                    td= cliente.fecha_nacimiento 
+                    td= cliente.dni 
+                    td= cliente.profesor_id 

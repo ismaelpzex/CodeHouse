@@ -1,0 +1,37 @@
+//- mostrar todos los clientes en una tabla html
+extend ../layout.pug
+
+block content
+    .clients 
+        table.table.text-center
+            thead 
+                tr 
+                    th ID
+                    th NOMBRE
+                    th DIRECCIÓN
+                    th EMAIL
+                    th EDAD
+                    th GENERO
+                    th FECHA INSCRIPCIÓN
+                    th CUOTA
+                    th FECHA NACIMIENTO
+                    th DNI
+                    th PROFESOR ID
+                    th DETALLE
+            tbody 
+                each cliente in clientes 
+                    tr 
+                        td= cliente.id
+                        td= cliente.nombre + " " + cliente.apellidos
+                        td= cliente.direccion
+                        td= cliente.email
+                        td= cliente.edad
+                        td= cliente.genero
+                        td= cliente.fecha_inscripcion 
+                        td= cliente.cuota 
+                        td= cliente.fecha_nacimiento 
+                        td= cliente.dni 
+                        td= cliente.profesor_id 
+                        td
+                            a(href="/clients/" + cliente.id).btn.btn-sm.btn-primary Detalles
+                            a(href="/clients/edit/" + cliente.id).btn.btn-sm.btn-danger Editar
