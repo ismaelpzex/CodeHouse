@@ -30,4 +30,11 @@ const checkAdmin = (req, res, next) => {
     next();
 }
 
-module.exports = { checkToken, checkAdmin };
+const checkRole = (role) => {
+    return (req, res, next) => {
+        if (req.user.roll !== role) return res.json({ error: 'no tienes permisos' });
+        next();
+    }
+}
+
+module.exports = { checkToken, checkAdmin, checkRole };
