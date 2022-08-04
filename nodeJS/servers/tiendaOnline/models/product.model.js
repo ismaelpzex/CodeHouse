@@ -5,7 +5,7 @@ const productSchema = new Schema({
     name: String,
     description: String,
     price: Number,
-    departament: String,
+    department: String,
     avaliable: Boolean,
     created_at: Date
 });
