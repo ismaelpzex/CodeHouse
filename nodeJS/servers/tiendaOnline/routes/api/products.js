@@ -1,9 +1,12 @@
 const router = require('express').Router();
 const { checkSchema, validationResult } = require('express-validator');
 
-const Product = require('../../models/product.model');
-const { checkValidationErrors } = require('../../utils/middlewares');
+
+const { checkValidationErrors } = require('../../helpers/middlewares');
 const createProductValidator = require('../../validators/createProducts.validator');
+
+const User = require('../../models/user.model');
+const Product = require('../../models/product.model');
 
 router.get('/', async (req, res) => {
     try {
@@ -13,6 +16,22 @@ router.get('/', async (req, res) => {
         res.status(500).json({ err: err.message });
     }
 
+});
+
+router.get('/add/:idProduct', async (req, res) => {
+    const { idProduct } = req.params;
+    req.user.products.push(idProduct);
+    await req.user.save();
+    res.status(200).json({ success: 'Producto agregado' });
+});
+
+router.get('/cart', async (req, res) => {
+    try {
+        const user = await User.findById(req.user._id).populate('products');
+        res.status(200).json(user);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 router.post('/', checkSchema(createProductValidator), checkValidationErrors, async (req, res) => {
