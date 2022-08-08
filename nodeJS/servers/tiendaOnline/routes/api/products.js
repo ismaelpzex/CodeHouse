@@ -34,6 +34,40 @@ router.get('/cart', async (req, res) => {
     }
 });
 
+router.get('/taxes', async (req, res) => {
+    try {
+        let products = await Product.find();
+        products = products.map(product => {
+            return { name: product.name, price_taxes: product.price_taxes }
+        });
+        res.status(200).json(products);
+
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+router.get('/same', async (req, res) => {
+    const p = new Product();
+    p.name = 'Prueba';
+    p.department = 'moda';
+    try {
+        const response = await p.sameDepartment();
+        res.status(200).json(response);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+router.get('/activos', async (req, res) => {
+    try {
+        const result = await Product.avaliables();
+        res.status(200).json(result);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 router.post('/', checkSchema(createProductValidator), checkValidationErrors, async (req, res) => {
     try {
         const response = await Product.create(req.body);

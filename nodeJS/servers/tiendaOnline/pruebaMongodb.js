@@ -10,7 +10,7 @@ const Product = require('./models/product.model');
         name: 'Lapiz Rojo',
         description: 'Pinta cosas rojas',
         price: 14,
-        departament: 'Oficina',
+        department: 'Oficina',
         avaliable: true,
         created_at: new Date()
     });
@@ -18,7 +18,7 @@ const Product = require('./models/product.model');
         name: 'Lapiz Rojo',
         description: 'Pinta cosas rojas',
         price: 14,
-        departament: 'Oficina',
+        department: 'Oficina',
         avaliable: true,
         created_at: new Date()
     });
@@ -26,7 +26,7 @@ const Product = require('./models/product.model');
         name: 'Lapiz Rojo',
         description: 'Pinta cosas rojas',
         price: 14,
-        departament: 'Oficina',
+        department: 'Oficina',
         avaliable: true,
         created_at: new Date()
     });
@@ -34,7 +34,7 @@ const Product = require('./models/product.model');
         name: 'Pantalón de pinzas',
         description: 'pa salir de fiestuki',
         price: 67,
-        departament: 'moda',
+        department: 'moda',
         avaliable: false,
         created_at: new Date()
     });
