@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(117, 117, 117) !important;
+}
+
+.chatBox {
+  height: 75vh;
+  background-color: rgb(54, 54, 54) !important;
+  color: white;
+}
+
+.mensajes li {
+  list-style: none;
+}
+
+li.propietario {
+  color: greenyellow;
+}
+
+li.info {
+  color: orange;
+}
+
+.users {
+  color: green !important;
+}
