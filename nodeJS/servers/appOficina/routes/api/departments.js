@@ -16,6 +16,7 @@ router.get('/:idDepartment', async (req, res) => {
     try {
         const response = await Departments.findById(idDepartment).populate('manager');
         const employees = await Employees.find({ department: idDepartment });
+        console.log(employees);
         res.status(200).json(new Object({
             Departament: response,
             Empleados: employees

@@ -5,7 +5,7 @@ const employeesSchema = new Schema({
     name: String,
     lastName: String,
     address: String,
-    department: [{ type: Schema.Types.ObjectId, ref: 'department' }]
+    department: { type: Schema.Types.ObjectId, ref: 'department' }
 });
 
 module.exports = mongoose.model('employee', employeesSchema);
