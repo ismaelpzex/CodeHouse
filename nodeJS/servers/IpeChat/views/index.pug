@@ -5,6 +5,8 @@ block content
   h3(id= 'users', class='text-warning mt-1 users text-center')
   div(class="shadow mt-3 container chatBox p-4 border border-dark rounded-top")
     ul(class="mensajes" id="mensajes")
+      each mensaje in mensajes 
+        li #{mensaje.username}: #{mensaje.text}
   div(class="container bg-black p-4 d-flex justify-content-between gap-4 rounded-bottom")
     input(type="text" id="inputNombre" placeholder="Nickname" class="p-2" value="[The_Rana]")
     input(class="w-100" type="text" id="inputMensaje" placeholder="Mensaje" class="p-2")
