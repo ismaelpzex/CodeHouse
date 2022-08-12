@@ -1,0 +1,19 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "fast-xml-parser": "^4.0.9",
+    "got": "^11.8.3",
+    "terminal-image": "^1.2.1",
+    "vorpal": "^1.12.0"
+  }
+}

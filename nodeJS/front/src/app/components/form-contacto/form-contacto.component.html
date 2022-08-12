@@ -1,0 +1,26 @@
+<img [src]="'http://localhost:3000/'+ imagen" *ngIf="imagen">
+<div class="container shadow p-3 mt-5">
+    <form [formGroup]="formulario">
+        <div>
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" formControlName="nombre">
+        </div>
+        <div>
+            <label class="form-label">Apellidos</label>
+            <input type="text" class="form-control" formControlName="apellidos">
+        </div>
+        <div>
+            <label class="form-label">Dirección</label>
+            <input type="text" class="form-control" formControlName="direccion">
+        </div>
+        <div>
+            <label class="form-label">Teléfono</label>
+            <input type="text" class="form-control" formControlName="telefono">
+        </div>
+        <div>
+            <label class="form-label">Imagen</label>
+            <input type="file" class="form-control" name="imagen" (change)="onChange($event)">
+        </div>
+        <input class="mt-3 btn btn-primary d-block ms-auto" type="submit" value="Enviar" (click)="onSubmit()">
+    </form>
+</div>
